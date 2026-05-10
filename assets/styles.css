@@ -1,0 +1,709 @@
+/* ==========================================================================
+   BCOBM214 — Entrepreneurship & Business Development
+   Shared stylesheet · © 2026 Dr. Hildegard Haas · EU Business School
+   ========================================================================== */
+
+:root {
+  --ink:        #0f1a17;
+  --ink-soft:   #2a3936;
+  --muted:      #6b7c78;
+  --muted-soft: #9aa8a4;
+  --line:       #d9dedc;
+  --line-soft:  #ecefee;
+  --paper:      #fbfaf6;
+  --paper-tint: #f5f3ec;
+  --card:       #ffffff;
+
+  /* Entrepreneurship accents */
+  --emerald:    #155e4a;
+  --emerald-2:  #1e7a60;
+  --emerald-3:  #2d9377;
+  --gold:       #b8893a;
+  --gold-soft:  #e9d9b3;
+  --crimson:    #8a2a2a;
+
+  --serif: Arial, Helvetica, sans-serif;
+  --sans:  Arial, Helvetica, sans-serif;
+  --mono:  Arial, Helvetica, sans-serif;
+
+  --radius:    14px;
+  --radius-sm: 8px;
+  --shadow-1:  0 1px 2px rgba(15,26,23,.04), 0 2px 8px rgba(15,26,23,.04);
+  --shadow-2:  0 2px 4px rgba(15,26,23,.05), 0 12px 30px rgba(15,26,23,.08);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a { color: var(--emerald); text-decoration: none; }
+a:hover { color: var(--emerald-2); text-decoration: underline; }
+
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; color: var(--ink); margin: 0 0 .5em; line-height: 1.2; }
+h1 { font-size: clamp(2rem, 4vw, 3.2rem); letter-spacing: -.01em; }
+h2 { font-size: clamp(1.5rem, 2.5vw, 2.1rem); }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1.05rem; }
+
+p { margin: 0 0 1em; }
+
+/* ---------- Layout ---------- */
+
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+.wrap-narrow { max-width: 820px; margin: 0 auto; padding: 0 28px; }
+
+.topbar {
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+  position: sticky; top: 0; z-index: 20;
+  backdrop-filter: saturate(140%) blur(10px);
+}
+.topbar .row {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 0; gap: 18px;
+}
+.brand {
+  font-family: var(--serif); font-weight: 600;
+  color: var(--ink);
+  font-size: 1rem; letter-spacing: .01em;
+}
+.brand small { color: var(--muted); font-weight: 400; font-style: italic; margin-left: 6px; }
+.nav a {
+  color: var(--ink-soft); margin-left: 22px; font-size: .92rem; letter-spacing: .02em;
+}
+.nav a:hover { color: var(--emerald); text-decoration: none; }
+
+/* ---------- Hero ---------- */
+
+.hero { padding: 64px 0 36px; }
+.kicker {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: .75rem; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--emerald);
+  background: rgba(21,94,74,.08);
+  padding: 6px 12px; border-radius: 100px;
+  margin-bottom: 18px;
+}
+.hero h1 { margin-bottom: .15em; }
+.hero .subtitle { font-family: var(--serif); color: var(--muted); font-size: 1.15rem; font-style: italic; max-width: 760px; }
+.hero .byline { color: var(--muted); font-size: .92rem; margin-top: 18px; }
+
+/* ---------- Stats row ---------- */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  padding: 24px 0 8px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin: 32px 0 24px;
+}
+.stat { padding: 12px 0; }
+.stat .num {
+  font-family: var(--serif);
+  font-size: 2.4rem;
+  color: var(--emerald);
+  line-height: 1;
+}
+.stat .label {
+  display: block; margin-top: 8px;
+  color: var(--muted);
+  font-size: .82rem; letter-spacing: .08em; text-transform: uppercase;
+}
+
+@media (max-width: 720px) {
+  .stats { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ---------- Section heading ---------- */
+
+.section-h {
+  display: flex; align-items: baseline; justify-content: space-between;
+  margin: 48px 0 18px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 10px;
+}
+.section-h h2 { margin: 0; font-size: 1.25rem; letter-spacing: .02em; }
+.section-h .meta { color: var(--muted); font-size: .85rem; }
+
+/* ---------- Unit cards (index) ---------- */
+
+.units { display: grid; gap: 14px; }
+.unit-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-1);
+  overflow: hidden;
+  transition: box-shadow .2s ease, transform .2s ease;
+}
+.unit-card:hover { box-shadow: var(--shadow-2); }
+
+.unit-head {
+  display: grid;
+  grid-template-columns: 64px 1fr auto auto;
+  gap: 18px; align-items: center;
+  padding: 18px 22px;
+  cursor: pointer;
+  user-select: none;
+}
+.unit-num {
+  font-family: var(--serif); font-size: 2rem; font-weight: 600;
+  color: var(--emerald); line-height: 1; text-align: center;
+}
+.unit-title { font-family: var(--serif); font-size: 1.15rem; color: var(--ink); }
+.unit-phase { font-family: var(--mono); font-size: .7rem; color: var(--muted); letter-spacing: .12em; text-transform: uppercase; display: block; margin-bottom: 4px; }
+.pedagogy-chip {
+  font-size: .78rem; padding: 5px 11px; border-radius: 100px;
+  background: var(--paper-tint); color: var(--ink-soft);
+  border: 1px solid var(--line); white-space: nowrap;
+}
+.pedagogy-chip.presentation { background: #f3eedc; color: #7a5a14; border-color: #e3d9b8; }
+.pedagogy-chip.case-study   { background: #e9efe7; color: #3a5a2e; border-color: #c9d8c2; }
+.pedagogy-chip.role-play    { background: #efe5e3; color: #7a3329; border-color: #e0c8c2; }
+.pedagogy-chip.hackathon    { background: #e2eef0; color: #1f5563; border-color: #c0d9de; }
+.pedagogy-chip.business-challenge { background: #ecdce6; color: #6b264c; border-color: #d6b3c4; }
+
+.caret { color: var(--muted); transition: transform .2s ease; }
+.unit-card.open .caret { transform: rotate(180deg); }
+
+.unit-resources {
+  display: none;
+  padding: 0 22px 22px 104px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.unit-card.open .unit-resources { display: flex; }
+
+.resource-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 12px; border-radius: 8px;
+  background: var(--paper-tint); border: 1px solid var(--line);
+  color: var(--ink-soft); font-size: .85rem;
+  text-decoration: none; transition: background .15s ease, border-color .15s ease;
+}
+.resource-pill:hover { background: #fff; border-color: var(--emerald-3); color: var(--emerald); text-decoration: none; }
+.resource-pill .tag {
+  font-family: var(--mono); font-size: .68rem; letter-spacing: .1em;
+  background: var(--emerald); color: #fff; padding: 2px 6px; border-radius: 3px;
+}
+
+@media (max-width: 720px) {
+  .unit-head { grid-template-columns: 48px 1fr; gap: 12px; padding: 14px 16px; }
+  .unit-head .pedagogy-chip, .unit-head .caret { grid-column: 2; justify-self: end; margin-top: 6px; }
+  .unit-resources { padding: 0 16px 16px 16px; }
+}
+
+/* ---------- Framework gallery (unit pages) ---------- */
+
+.back-link {
+  display: inline-block; margin: 18px 0 0;
+  color: var(--muted); font-size: .9rem;
+}
+.back-link:hover { color: var(--emerald); text-decoration: none; }
+
+.unit-hero { padding: 36px 0 18px; }
+.unit-hero .kicker { background: rgba(184,137,58,.12); color: var(--gold); }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+.framework-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 18px;
+  cursor: pointer;
+  transition: box-shadow .15s ease, border-color .15s ease, transform .15s ease;
+  position: relative;
+}
+.framework-card:hover {
+  box-shadow: var(--shadow-2);
+  border-color: var(--emerald-3);
+}
+.framework-card .num {
+  font-family: var(--mono); font-size: .68rem; letter-spacing: .14em; color: var(--gold);
+  text-transform: uppercase;
+}
+.framework-card h4 { font-family: var(--serif); margin: 6px 0 6px; font-size: 1.05rem; }
+.framework-card p { color: var(--muted); font-size: .88rem; margin: 0; }
+.framework-card .slib {
+  display: inline-block; margin-top: 10px;
+  font-family: var(--mono); font-size: .68rem; letter-spacing: .12em; color: var(--muted-soft);
+  text-transform: uppercase;
+}
+
+.slibrary-block {
+  margin-top: 28px;
+  padding: 20px 22px;
+  border-left: 3px solid var(--emerald);
+  background: var(--paper-tint);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.slibrary-block h3 {
+  font-family: var(--serif);
+  font-size: 1.05rem; color: var(--emerald); margin: 0 0 4px;
+}
+.slibrary-block .count {
+  font-family: var(--mono); font-size: .75rem; color: var(--muted);
+}
+
+/* ---------- Activity / Case / Pre-Reading / Reflection pages ---------- */
+
+.doc {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 44px 56px;
+  margin: 24px 0 60px;
+  box-shadow: var(--shadow-1);
+}
+.doc h1, .doc h2, .doc h3 { font-family: var(--serif); }
+.doc h1 { font-size: 2rem; margin-bottom: .15em; }
+.doc h2 { font-size: 1.3rem; margin-top: 1.6em; padding-top: .6em; border-top: 1px solid var(--line-soft); }
+.doc h3 { font-size: 1.05rem; margin-top: 1.4em; color: var(--emerald); }
+
+.doc .lede { font-family: var(--serif); font-size: 1.1rem; color: var(--muted); font-style: italic; margin-bottom: 1.4em; }
+.doc blockquote {
+  border-left: 3px solid var(--gold);
+  padding: 4px 18px;
+  margin: 1.2em 0;
+  color: var(--ink-soft);
+  background: rgba(184,137,58,.05);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-family: var(--serif);
+  font-style: italic;
+}
+
+.phase-list { list-style: none; padding: 0; margin: 1em 0 1.4em; counter-reset: phase; }
+.phase-list li {
+  counter-increment: phase;
+  padding: 14px 18px 14px 64px;
+  border: 1px solid var(--line);
+  background: var(--paper-tint);
+  border-radius: var(--radius-sm);
+  margin-bottom: 10px;
+  position: relative;
+}
+.phase-list li::before {
+  content: counter(phase);
+  position: absolute; top: 14px; left: 18px;
+  width: 30px; height: 30px; border-radius: 50%;
+  background: var(--emerald); color: #fff;
+  font-family: var(--mono); font-size: .82rem;
+  display: flex; align-items: center; justify-content: center;
+}
+.phase-list li b { display: block; font-family: var(--serif); font-size: 1rem; margin-bottom: 2px; color: var(--ink); }
+.phase-list li small { color: var(--muted); display: block; margin-top: 2px; font-size: .85rem; }
+
+.callout {
+  background: var(--paper-tint);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--emerald);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  margin: 1.2em 0;
+}
+.callout.gold { border-left-color: var(--gold); }
+.callout.crimson { border-left-color: var(--crimson); }
+.callout h4 { margin: 0 0 6px; font-family: var(--mono); font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+
+table.table {
+  width: 100%; border-collapse: collapse; margin: 1em 0 1.6em;
+  font-size: .92rem;
+}
+table.table th, table.table td {
+  border: 1px solid var(--line);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+table.table th { background: var(--paper-tint); font-family: var(--mono); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+
+@media (max-width: 720px) {
+  .doc { padding: 26px 22px; }
+}
+
+/* ---------- Slibrary / Authors page ---------- */
+
+.author-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+.author-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 16px 18px;
+}
+.author-card h4 {
+  margin: 0 0 4px; font-family: var(--serif); font-size: 1rem;
+}
+.author-card .role { color: var(--gold); font-size: .8rem; font-family: var(--mono); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 6px; }
+.author-card p { font-size: .85rem; color: var(--muted); margin: 0; }
+.author-card .frameworks { margin-top: 8px; font-size: .8rem; color: var(--ink-soft); font-style: italic; }
+
+.unit-anchor {
+  margin-top: 36px; padding: 6px 12px;
+  font-family: var(--mono); font-size: .78rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--emerald); background: rgba(21,94,74,.08); border-radius: 4px; display: inline-block;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  border-top: 1px solid var(--line);
+  margin-top: 80px;
+  padding: 28px 0 36px;
+  color: var(--muted);
+  font-size: .85rem;
+  text-align: center;
+}
+footer strong { color: var(--ink); }
+
+/* ---------- Utilities ---------- */
+
+.hide { display: none !important; }
+.center { text-align: center; }
+.muted { color: var(--muted); }
+.mono { font-family: var(--mono); }
+.serif { font-family: var(--serif); }
+.row-flex { display: flex; gap: 12px; flex-wrap: wrap; }
+.tag-emerald { background: rgba(21,94,74,.1); color: var(--emerald); padding: 3px 9px; border-radius: 4px; font-size: .78rem; font-family: var(--mono); letter-spacing: .06em; }
+.tag-gold { background: rgba(184,137,58,.12); color: var(--gold); padding: 3px 9px; border-radius: 4px; font-size: .78rem; font-family: var(--mono); letter-spacing: .06em; }
+
+/* ==========================================================================
+   Slibrary Sheet — Modal & PDF layout
+   Design adapted from JD Meier's Thumbnail Thinking (Author Distilled /
+   Framework Distilled patterns) and Kurt Bostellaar's Core Message playbook.
+   ========================================================================== */
+
+.framework-card, .author-card { cursor: pointer; }
+
+#fw-modal {
+  position: fixed; inset: 0; z-index: 1000;
+  display: none;
+  align-items: flex-start; justify-content: center;
+  background: rgba(15,26,23,0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 30px 16px;
+  overflow-y: auto;
+  animation: fwFadeIn .18s ease-out;
+}
+#fw-modal.open { display: flex; }
+@keyframes fwFadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fwSlide  { from { transform: translateY(8px); opacity: 0; } to { transform: none; opacity: 1; } }
+
+/* The Slibrary sheet itself — designed to render cleanly to A4 via html2pdf.js */
+.fw-sheet {
+  background: #ffffff;
+  width: 100%;
+  max-width: 880px;
+  border-radius: var(--radius);
+  box-shadow: 0 24px 80px rgba(15,26,23,.32);
+  position: relative;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  animation: fwSlide .22s ease-out;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Top bar: course code · unit · slibrary */
+.fw-bar {
+  background: var(--emerald);
+  color: #ffffff;
+  padding: 10px 28px;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 600;
+}
+.fw-bar .left  { color: rgba(255,255,255,.85); }
+.fw-bar .right { color: #ffffff; }
+
+/* Close button */
+.fw-close {
+  position: absolute; top: 8px; right: 12px;
+  width: 28px; height: 28px; border-radius: 50%;
+  background: rgba(255,255,255,.18); border: none; cursor: pointer;
+  font-size: 16px; line-height: 1; color: #ffffff;
+  display: flex; align-items: center; justify-content: center;
+  transition: background .15s ease;
+  z-index: 5;
+}
+.fw-close:hover { background: rgba(255,255,255,.32); }
+
+/* Title section */
+.fw-title-row {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  padding: 22px 36px 6px;
+  gap: 18px;
+}
+.fw-title-row h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-size: 1.65rem; line-height: 1.15; font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+.fw-sheet-num {
+  font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--muted); white-space: nowrap;
+  padding-top: 6px;
+  font-weight: 600;
+}
+.fw-subtitle {
+  padding: 0 36px 18px;
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: .98rem;
+  border-bottom: 1px solid var(--line);
+}
+
+/* Body */
+.fw-body { padding: 18px 36px 22px; }
+
+/* Section header style — small caps mono, emerald */
+.fw-h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .68rem; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--emerald); margin: 0 0 6px;
+  font-weight: 700;
+}
+
+/* Highlighted boxes — Professional definition / Innovation vs predecessor */
+.fw-box {
+  background: rgba(21,94,74,.06);
+  border-left: 3px solid var(--emerald);
+  padding: 12px 16px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-bottom: 18px;
+}
+.fw-box .fw-h3 { margin-bottom: 4px; }
+.fw-box p { margin: 0; font-size: .92rem; line-height: 1.55; color: var(--ink-soft); }
+
+/* Two-column block */
+.fw-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-bottom: 18px;
+}
+.fw-2col h4 { font-family: Arial; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--emerald); margin: 0 0 4px; }
+.fw-2col p  { margin: 0 0 10px; font-size: .9rem; line-height: 1.55; color: var(--ink-soft); }
+
+/* Three-column row (How / When / By Whom) */
+.fw-3col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 18px;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.fw-3col h4 { font-family: Arial; font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--emerald); margin: 0 0 4px; }
+.fw-3col p  { margin: 0; font-size: .85rem; line-height: 1.5; color: var(--ink-soft); }
+
+/* Figure box */
+.fw-figure {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  font-size: .85rem;
+  color: var(--muted);
+}
+.fw-figure .fw-h3 { color: var(--gold); margin-bottom: 8px; font-size: .65rem; }
+.fw-figure svg { width: 100%; height: auto; max-height: 180px; }
+.fw-figure .caption { margin: 8px 0 0; font-size: .8rem; font-style: italic; color: var(--muted); line-height: 1.4; }
+
+/* Pills — related frameworks */
+.fw-pills { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 14px; }
+.fw-pill {
+  font-size: .72rem; padding: 4px 10px; border-radius: 100px;
+  background: #fff; border: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-weight: 600; letter-spacing: .02em;
+}
+.fw-pill em { font-style: italic; color: var(--muted); margin-left: 6px; font-weight: 400; }
+
+/* Sources (Harvard) */
+.fw-sources {
+  font-size: .78rem; line-height: 1.5; color: var(--muted);
+  padding-top: 8px;
+}
+.fw-sources p { margin: 0 0 4px; }
+
+/* Footer bar */
+.fw-footer-bar {
+  background: var(--emerald);
+  color: rgba(255,255,255,.95);
+  padding: 8px 28px;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: .68rem; letter-spacing: .08em;
+}
+
+/* Action footer — outside the rendered "sheet" element so it doesn't appear in PDFs */
+.fw-actions {
+  padding: 12px 28px 18px;
+  background: var(--paper-tint);
+  display: flex; gap: 10px; justify-content: flex-end; align-items: center;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--line);
+}
+.fw-btn {
+  font-family: Arial; font-size: .85rem;
+  padding: 8px 14px; border-radius: 8px;
+  border: 1px solid var(--line); background: #fff;
+  color: var(--ink-soft); cursor: pointer;
+  transition: background .15s ease, border-color .15s ease, color .15s ease;
+}
+.fw-btn:hover { border-color: var(--emerald-3); color: var(--emerald); }
+.fw-btn.primary {
+  background: var(--emerald); border-color: var(--emerald); color: #fff;
+}
+.fw-btn.primary:hover { background: var(--emerald-2); border-color: var(--emerald-2); color: #fff; }
+
+/* ---------- Author thumbnail card ---------- */
+
+.author-thumb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+.author-thumb {
+  position: relative;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  transition: box-shadow .15s ease, transform .15s ease, border-color .15s ease;
+}
+.author-thumb:hover {
+  box-shadow: var(--shadow-2);
+  border-color: var(--emerald-3);
+  transform: translateY(-1px);
+}
+.author-thumb svg {
+  display: block;
+  width: 100%; height: auto;
+}
+.author-thumb .label {
+  padding: 10px 12px 12px;
+  border-top: 1px solid var(--line);
+  background: var(--paper-tint);
+}
+.author-thumb .label h4 {
+  margin: 0; font-family: Arial; font-size: .92rem;
+  font-weight: 700; color: var(--ink);
+}
+.author-thumb .label p {
+  margin: 2px 0 0; font-size: .75rem; color: var(--muted); line-height: 1.3;
+}
+
+/* ---------- Author Slibrary modal — shares .fw-sheet skeleton ---------- */
+
+.fw-sheet.author-sheet .fw-title-row h2 { font-size: 1.55rem; }
+.fw-sheet.author-sheet .author-cm {
+  font-style: italic; font-size: 1rem; color: var(--ink);
+  border-left: 3px solid var(--gold);
+  padding: 8px 14px; margin: 0 36px 18px; background: rgba(184,137,58,.05);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.fw-sheet.author-sheet .author-cm::before {
+  content: "Core message"; display: block;
+  font-size: .65rem; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--gold); font-style: normal; margin-bottom: 4px; font-weight: 700;
+}
+
+@media (max-width: 720px) {
+  .fw-title-row { padding: 16px 20px 4px; }
+  .fw-subtitle  { padding: 0 20px 14px; }
+  .fw-body      { padding: 14px 20px 18px; }
+  .fw-2col, .fw-3col { grid-template-columns: 1fr; gap: 12px; }
+  .fw-bar, .fw-footer-bar { padding-left: 18px; padding-right: 18px; }
+  .fw-title-row h2 { font-size: 1.3rem; }
+}
+
+/* Make the rendered sheet (the inner element passed to html2pdf) visually
+   independent of the modal chrome — used both for on-screen display and
+   for PDF export. */
+.fw-renderable { background: #fff; }
+
+/* @media print fallback: if the user uses Cmd+P from inside the modal,
+   show only the rendered sheet. (Primary path is html2pdf.js.) */
+@media print {
+  html.printing-fw body > *:not(#fw-modal) { display: none !important; }
+  html.printing-fw body::before { display: none !important; content: none !important; }
+  html.printing-fw #fw-modal {
+    display: block !important; position: static !important;
+    background: #fff !important; backdrop-filter: none !important; padding: 0 !important;
+  }
+  html.printing-fw .fw-sheet { box-shadow: none !important; border: none !important; max-width: none !important; }
+  html.printing-fw .fw-close, html.printing-fw .fw-actions { display: none !important; }
+  html.printing-fw, html.printing-fw body { background: #fff !important; }
+}
+
+/* ==========================================================================
+   Anti-copy / anti-print deterrent layer
+   These are deterrents only — public pages can always be circumvented by
+   determined users. For genuine access control, host behind authentication.
+   ========================================================================== */
+
+body,
+.doc, .gallery, .author-grid, .units, .unit-card,
+.framework-card, .author-card, .phase-list, .callout,
+.hero, .stats, h1, h2, h3, h4, p, li, td, th, blockquote {
+  -webkit-user-select: none;
+  -moz-user-select:    none;
+  -ms-user-select:     none;
+  user-select:         none;
+  -webkit-touch-callout: none;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+}
+
+/* Block printing — replace the page with a notice */
+@media print {
+  @page { margin: 0; }
+  html, body { background: #fff !important; height: auto !important; }
+  body > * { display: none !important; visibility: hidden !important; }
+  body::before {
+    content: "Printing this material is not permitted.\A\A © 2026 Dr. Hildegard Haas \00B7 EU Business School\A BCOBM214 \00B7 Entrepreneurship & Business Development\A\A Please contact the course facilitator if you require a printable copy.";
+    white-space: pre;
+    display: block !important;
+    visibility: visible !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #155e4a;
+    padding: 80px 48px;
+    text-align: center;
+    border: 2px solid #155e4a;
+    margin: 24px;
+    border-radius: 12px;
+  }
+}

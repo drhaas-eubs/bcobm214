@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BCOBM214 — Author Slibrary · The Thinkers Behind the Frameworks</title>
+<meta name="description" content="Visual author Slibrary for BCOBM214 — the 25 thinkers anchoring the entrepreneurship and business development frameworks taught at EU Business School.">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap row">
+    <div class="brand">BCOBM214 <small>· Author Slibrary</small></div>
+    <nav class="nav">
+      <a href="index.html">Course</a>
+      <a href="all-frameworks.html">Slibrary Wall</a>
+      <a href="pedagogy.html">Pedagogy</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <a class="back-link" href="index.html">← Back to Course Overview</a>
+
+  <section class="unit-hero">
+    <span class="kicker">BCOBM214 · Author Slibrary</span>
+    <h1>The Thinkers Behind the Frameworks</h1>
+    <p class="subtitle">A visual reference library of the 25 thinkers whose frameworks anchor BCOBM214. Each card is a Slibrary in the JD Meier Author Distilled tradition — showing why the thinker matters, the foundation they built on, the frameworks they anchor, and a Bostellaar-style core message in their own voice. Click any card to open the full sheet and download as PDF.</p>
+    <p class="byline">© 2026 Dr. Hildegard Haas · EU Business School</p>
+  </section>
+
+  <section class="stats">
+    <div class="stat"><span class="num">25</span><span class="label">Thinkers</span></div>
+    <div class="stat"><span class="num">10</span><span class="label">Units</span></div>
+    <div class="stat"><span class="num">80</span><span class="label">Frameworks anchored</span></div>
+    <div class="stat"><span class="num">PDF</span><span class="label">Per-author Slibrary sheet</span></div>
+  </section>
+
+  <p class="muted" style="margin: 18px 0 8px; font-size:.9rem;">Jump to:</p>
+  <div class="row-flex" id="unit-nav" style="margin-bottom: 10px;"></div>
+
+  <div id="authors-by-unit"></div>
+
+</main>
+
+<footer>
+  <strong>BCOBM214</strong> · Entrepreneurship &amp; Business Development · © 2026 Dr. Hildegard Haas · EU Business School<br>
+  Click any author thumbnail to open their Slibrary sheet · Download as PDF
+</footer>
+
+<script src="assets/authors.js"></script>
+<script src="assets/frameworks.js"></script>
+<script>
+(function () {
+  'use strict';
+  var UNIT_TITLES = {
+    1:"Introduction to Entrepreneurship & BD",
+    2:"Identifying & Testing a Business Idea",
+    3:"Market Research & Opportunity",
+    4:"Business Planning & Strategy",
+    5:"Developing the Business Plan",
+    6:"Intrapreneurship & Corporate BD",
+    7:"Growth Management",
+    8:"Funding & Financial Strategies",
+    9:"Pitching & Presentation Skills",
+    10:"Finalizing & Presenting the Plan"
+  };
+
+  function escapeHtml(s) {
+    if (s === undefined || s === null) return '';
+    return String(s)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+      .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  }
+
+  function render() {
+    var authors = window.BCOBM214_AUTHORS || [];
+    if (!authors.length) {
+      document.getElementById('authors-by-unit').innerHTML = '<p class="muted">Author data is loading…</p>';
+      return;
+    }
+
+    // Group authors by their primary unit (first in units array).
+    var byUnit = {};
+    authors.forEach(function (a) {
+      var primary = (a.units && a.units[0]) || 0;
+      if (!byUnit[primary]) byUnit[primary] = [];
+      byUnit[primary].push(a);
+    });
+
+    // Unit nav
+    var navHtml = '';
+    Object.keys(byUnit).sort(function(a,b){return +a-+b;}).forEach(function (u) {
+      navHtml += '<a class="resource-pill" href="#unit' + u + '"><span class="tag">U' + u + '</span> ' + escapeHtml(UNIT_TITLES[u]) + '</a>';
+    });
+    document.getElementById('unit-nav').innerHTML = navHtml;
+
+    // Sections per unit
+    var html = '';
+    Object.keys(byUnit).sort(function(a,b){return +a-+b;}).forEach(function (u) {
+      html +=
+        '<section style="margin-top:42px;">' +
+          '<div class="section-h" style="margin-top:0;">' +
+            '<h2 id="unit' + u + '" style="scroll-margin-top: 80px;">Unit ' + u + ' · ' + escapeHtml(UNIT_TITLES[u]) + '</h2>' +
+            '<span class="meta">' + byUnit[u].length + ' thinker' + (byUnit[u].length === 1 ? '' : 's') + '</span>' +
+          '</div>' +
+          '<div class="author-thumb-grid">';
+
+      byUnit[u].forEach(function (a) {
+        html +=
+          '<article class="author-thumb" data-author="' + escapeHtml(a.id) + '" tabindex="0" role="button" aria-label="Open Slibrary for ' + escapeHtml(a.name) + '" style="position:relative;">' +
+            '<a href="sheet.html#A-' + escapeHtml(a.id) + '" target="_blank" rel="noopener" title="Open printable PDF sheet for ' + escapeHtml(a.name) + '" ' +
+              'style="position:absolute;top:10px;right:10px;font-family:Arial;font-size:.65rem;letter-spacing:.1em;font-weight:700;' +
+                     'color:#fff;background:#155e4a;padding:4px 8px;border-radius:4px;text-decoration:none;z-index:5;" ' +
+              'onclick="event.stopPropagation();">PDF →</a>' +
+            (a.thumbnailSvg || '') +
+            '<div class="label">' +
+              '<h4>' + escapeHtml(a.name) + '</h4>' +
+              '<p>' + escapeHtml(a.discipline || a.role || '') + '</p>' +
+            '</div>' +
+          '</article>';
+      });
+      html += '</div></section>';
+    });
+
+    document.getElementById('authors-by-unit').innerHTML = html;
+
+    // Keyboard activation: pressing Enter or Space on a focused thumbnail opens its modal
+    document.querySelectorAll('.author-thumb').forEach(function (el) {
+      el.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          el.click();
+        }
+      });
+    });
+  }
+
+  if (window.BCOBM214_AUTHORS) {
+    render();
+  } else {
+    var attempts = 0;
+    var t = setInterval(function () {
+      attempts++;
+      if (window.BCOBM214_AUTHORS) { clearInterval(t); render(); }
+      else if (attempts > 40) { clearInterval(t); render(); }
+    }, 50);
+  }
+})();
+</script>
+<script defer src="assets/protect.js"></script>
+</body>
+</html>

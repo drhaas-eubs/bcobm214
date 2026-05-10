@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BCOBM214 — All 80 Frameworks · Slibrary Wall</title>
+<meta name="description" content="The complete framework library for BCOBM214 — 80 entrepreneurship and business development frameworks across 20 Slibraries.">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap row">
+    <div class="brand">BCOBM214 <small>· Slibrary Wall</small></div>
+    <nav class="nav">
+      <a href="index.html">Course</a>
+      <a href="pedagogy.html">Pedagogy</a>
+      <a href="slibrary.html">Authors</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <a class="back-link" href="index.html">← Back to Course Overview</a>
+
+  <section class="unit-hero">
+    <span class="kicker">BCOBM214 · Complete Slibrary Wall</span>
+    <h1>All 80 Frameworks</h1>
+    <p class="subtitle">Every framework taught in this course on a single page. Click any card to open the full Slibrary sheet, with core idea, when-to-use guidance, application steps, limitations and source — and to download it as a PDF.</p>
+    <p class="byline">© 2026 Dr. Hildegard Haas · EU Business School</p>
+  </section>
+
+  <section class="stats">
+    <div class="stat"><span class="num">10</span><span class="label">Units</span></div>
+    <div class="stat"><span class="num">20</span><span class="label">Slibraries</span></div>
+    <div class="stat"><span class="num">80</span><span class="label">Frameworks</span></div>
+    <div class="stat"><span class="num">5</span><span class="label">Pedagogies</span></div>
+  </section>
+
+  <div id="wall"></div>
+
+</main>
+
+<footer>
+  <strong>BCOBM214</strong> · Entrepreneurship &amp; Business Development · © 2026 Dr. Hildegard Haas · EU Business School<br>
+  Click any framework to open its Slibrary sheet · Download as PDF for offline reference
+</footer>
+
+<script src="assets/frameworks.js"></script>
+<script>
+(function () {
+  'use strict';
+  var unitTitles = {
+    1: "Introduction to Entrepreneurship & Business Development",
+    2: "Identifying & Testing a Business Idea",
+    3: "Market Research & Opportunity Identification",
+    4: "Business Planning & Strategy",
+    5: "Developing the Business Plan",
+    6: "Intrapreneurship & Corporate Business Development",
+    7: "Growth Management & Strategies",
+    8: "Funding & Financial Strategies",
+    9: "Pitching & Presentation Skills",
+    10: "Finalizing & Presenting the Business Plan"
+  };
+  var unitPedagogy = {
+    1:"Presentation",2:"Case Study",3:"Role Play",4:"Hackathon",5:"Hackathon",
+    6:"Case Study",7:"Role Play",8:"Hackathon",9:"Presentation",10:"Business Challenge"
+  };
+  var slibraryTitles = {
+    1:"Defining Entrepreneurship & BD", 2:"Vision, Mission, Purpose & Goals",
+    3:"Idea Viability & Proof of Concept", 4:"Product Development & Lifecycle",
+    5:"Market Research Methods", 6:"Opportunity Identification",
+    7:"Business Plan Components", 8:"Go-to-Market & Roadmap",
+    9:"Plan Architecture", 10:"Pitfalls & Plan Quality",
+    11:"Intrapreneurship", 12:"Innovation, BD & Leadership",
+    13:"Growth Lifecycle", 14:"Growth Strategies",
+    15:"Sources of Capital", 16:"Investment Stages & Terms",
+    17:"Pitch Architecture", 18:"Delivery Craft",
+    19:"Plan Evaluation", 20:"Iteration & Closing"
+  };
+
+  function render() {
+    var data = window.BCOBM214_FRAMEWORKS || [];
+    var wall = document.getElementById('wall');
+    if (!wall) return;
+    if (!data.length) {
+      wall.innerHTML = '<p class="muted">Framework data is loading…</p>';
+      return;
+    }
+    // Group by unit, then by slibrary
+    var byUnit = {};
+    data.forEach(function (fw) {
+      if (!byUnit[fw.unit]) byUnit[fw.unit] = {};
+      if (!byUnit[fw.unit][fw.slibrary]) byUnit[fw.unit][fw.slibrary] = [];
+      byUnit[fw.unit][fw.slibrary].push(fw);
+    });
+
+    var html = '';
+    Object.keys(byUnit).sort(function(a,b){return +a-+b;}).forEach(function (u) {
+      html += '<div class="section-h" style="margin-top:48px;">' +
+                '<h2>Unit ' + u + ' · ' + unitTitles[u] + '</h2>' +
+                '<span class="meta">' + unitPedagogy[u] + '</span>' +
+              '</div>';
+      Object.keys(byUnit[u]).sort(function(a,b){return +a-+b;}).forEach(function (s) {
+        var slibs = byUnit[u][s];
+        html += '<div class="slibrary-block">' +
+                  '<h3>Slibrary ' + s + ' — ' + (slibraryTitles[s] || '') + '</h3>' +
+                  '<span class="count">' + slibs.length + ' frameworks</span>' +
+                '</div>';
+        html += '<div class="gallery">';
+        slibs.forEach(function (fw) {
+          html += '<div class="framework-card" data-fw="' + fw.num + '" style="position:relative;">' +
+                    '<a href="sheet.html#' + fw.num + '" target="_blank" rel="noopener" title="Open printable PDF sheet" ' +
+                       'style="position:absolute;top:10px;right:10px;font-family:Arial;font-size:.65rem;letter-spacing:.1em;font-weight:700;' +
+                              'color:#fff;background:#155e4a;padding:4px 8px;border-radius:4px;text-decoration:none;z-index:2;" ' +
+                       'onclick="event.stopPropagation();">PDF →</a>' +
+                    '<span class="num">' + fw.num + '</span>' +
+                    '<h4>' + fw.title + '</h4>' +
+                    '<p>' + fw.summary + '</p>' +
+                    '<span class="slib">Slibrary ' + fw.slibrary + '</span>' +
+                  '</div>';
+        });
+        html += '</div>';
+      });
+    });
+    wall.innerHTML = html;
+  }
+
+  // Render once data is available; retry briefly if frameworks.js loads after this script
+  if (window.BCOBM214_FRAMEWORKS) {
+    render();
+  } else {
+    var attempts = 0;
+    var t = setInterval(function () {
+      attempts++;
+      if (window.BCOBM214_FRAMEWORKS) { clearInterval(t); render(); }
+      else if (attempts > 40) { clearInterval(t); render(); }
+    }, 50);
+  }
+})();
+</script>
+<script defer src="assets/protect.js"></script>
+</body>
+</html>
