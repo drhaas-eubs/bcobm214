@@ -182,6 +182,9 @@
 
   /* ---------- Render short framework modal ---------- */
   function renderFrameworkSheet(fw) {
+    // IMPORTANT: ensureModal() must be called FIRST so the #fw-rendered-sheet
+    // element exists in the DOM before we try to populate it.
+    var modal = ensureModal();
     var slibTitle = SLIBRARY_TITLES[fw.slibrary] || '';
     var unitTitle = UNIT_TITLES[fw.unit] || '';
 
@@ -225,7 +228,6 @@
       '</div>';
 
     // Wire the "View Full A4 Reference Sheet" button to sheet.html#FX
-    var modal = ensureModal();
     var viewBtn = modal.querySelector('#fw-view-sheet');
     if (viewBtn) viewBtn.setAttribute('href', sheetPath() + '#' + fw.num);
     modal.querySelector('.fw-sheet').classList.remove('author-sheet');
@@ -235,6 +237,9 @@
 
   /* ---------- Render short author modal ---------- */
   function renderAuthorSheet(a) {
+    // IMPORTANT: ensureModal() must be called FIRST so the #fw-rendered-sheet
+    // element exists in the DOM before we try to populate it.
+    var modal = ensureModal();
     var coreMessage = a.coreMessage || '';
     var bullets = (a.frameworks || []).slice(0, 4).map(function (f) {
       return '<li>' + escapeHtml(f) + '</li>';
@@ -266,7 +271,6 @@
       '</div>';
 
     // Wire the button to sheet.html#A-<id>
-    var modal = ensureModal();
     var viewBtn = modal.querySelector('#fw-view-sheet');
     if (viewBtn) viewBtn.setAttribute('href', sheetPath() + '#A-' + a.id);
     modal.querySelector('.fw-sheet').classList.add('author-sheet');
