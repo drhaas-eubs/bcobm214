@@ -1,0 +1,191 @@
+
+:root{
+  /* EU Business School brand identity: deep crimson red, black, white.
+     NB: exact hex from the official Frontify portal could not be machine-verified
+     (the portal blocks automated access); these match the EUBS logo/website crimson. */
+  --ink:#1a1a1a;          /* EUBS black */
+  --ink-2:#3a3a3a;
+  --paper:#ffffff;        /* white */
+  --paper-2:#f4f1f1;      /* light warm grey */
+  --card:#ffffff;
+  --accent:#9e1b32;       /* EUBS crimson red */
+  --accent-2:#7d1426;     /* darker crimson */
+  --teal:#9e1b32;         /* unify secondary accent to brand red */
+  --line:rgba(26,26,26,.16);
+  --muted:#5e5e5e;
+  --shadow:0 1px 2px rgba(26,26,26,.06),0 12px 32px -16px rgba(26,26,26,.30);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(circle at 12% 8%,rgba(158,27,50,.05),transparent 42%),radial-gradient(circle at 88% 0%,rgba(158,27,50,.04),transparent 38%);
+}
+.wrap{max-width:1140px;margin:0 auto;padding:0 28px}
+.serif{font-family:Arial,Helvetica,sans-serif}
+.mono{font-family:Arial,Helvetica,sans-serif;font-size:.72em;letter-spacing:.06em}
+a{color:inherit}
+h1,h2,h3{font-family:Arial,Helvetica,sans-serif;font-weight:900;line-height:1.04;letter-spacing:-.01em;margin:0}
+
+/* ---- top bar ---- */
+.topbar{position:sticky;top:0;z-index:40;background:rgba(22,32,46,.96);color:var(--paper);
+  backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;min-height:56px;gap:10px}
+.topbar .nm{font-family:Arial,Helvetica,sans-serif;font-weight:600;font-size:1rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbar .tb-left{display:flex;align-items:center;gap:8px;min-width:0;overflow:hidden}
+.topbar .code{font-family:Arial,Helvetica,sans-serif;font-size:.72rem;letter-spacing:.16em;color:var(--accent);text-transform:uppercase;flex:0 0 auto}
+.topbar a.back{font-size:.82rem;text-decoration:none;opacity:.85;border:1px solid rgba(255,255,255,.18);padding:6px 12px;border-radius:999px;white-space:nowrap;flex:0 0 auto}
+.topbar a.back:hover{opacity:1;border-color:var(--accent)}
+
+/* ---- hero ---- */
+.hero{background:var(--ink);color:var(--paper);position:relative;overflow:hidden;padding:64px 0 56px}
+.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:42px 42px;mask-image:radial-gradient(circle at 70% 30%,#000,transparent 75%);opacity:.5}
+.hero .wrap{position:relative}
+.eyebrow{font-family:Arial,Helvetica,sans-serif;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+.hero h1{font-size:clamp(2rem,5.2vw,4.4rem);line-height:1.05;max-width:18ch;overflow-wrap:break-word}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--accent)}
+.hero .sub{margin-top:18px;font-size:1.12rem;max-width:46ch;color:rgba(255,255,255,.82)}
+.hero .meta{margin-top:22px;font-family:Arial,Helvetica,sans-serif;font-size:.74rem;letter-spacing:.08em;color:rgba(255,255,255,.6)}
+
+/* ---- stat strip ---- */
+.stats{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--line);border-radius:16px;background:var(--card);box-shadow:var(--shadow);margin:-34px auto 0;position:relative;z-index:5;overflow:hidden}
+.stat{flex:1 1 0;min-width:120px;padding:20px 22px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat .num{font-family:Arial,Helvetica,sans-serif;font-weight:900;font-size:2rem;line-height:1}
+.stat .lbl{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+
+/* ---- section ---- */
+section{padding:46px 0}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:8px}
+.sec-head .kicker{font-family:Arial,Helvetica,sans-serif;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-2)}
+.sec-head h2{font-size:clamp(1.5rem,3vw,2rem)}
+.sec-sub{color:var(--muted);max-width:60ch;margin:4px 0 26px}
+
+/* ---- unit accordion (index) ---- */
+.unit{border:1px solid var(--line);border-radius:16px;background:var(--card);box-shadow:var(--shadow);margin-bottom:16px;overflow:hidden}
+.unit-head{display:flex;align-items:center;gap:18px;padding:20px 24px;cursor:pointer;user-select:none}
+.unit-head:hover{background:var(--paper-2)}
+.unit-num{font-family:Arial,Helvetica,sans-serif;font-weight:900;font-size:1.7rem;width:46px;height:46px;flex:0 0 46px;display:grid;place-items:center;border-radius:12px;background:var(--ink);color:var(--paper)}
+.unit-meta{flex:1}
+.unit-meta .t{font-family:Arial,Helvetica,sans-serif;font-weight:600;font-size:1.16rem}
+.unit-meta .ped{font-family:Arial,Helvetica,sans-serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-top:3px}
+.chev{transition:transform .25s;color:var(--muted)}
+.unit.open .chev{transform:rotate(180deg)}
+.unit-body{display:none;padding:6px 24px 22px;border-top:1px solid var(--line)}
+.unit.open .unit-body{display:block;animation:fade .3s ease}
+@keyframes fade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+.res-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;margin-top:14px}
+.res{display:flex;gap:12px;padding:13px 15px;border:1px solid var(--line);border-radius:11px;text-decoration:none;background:var(--paper);transition:.18s}
+.res:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:var(--shadow)}
+.res .tag{font-family:Arial,Helvetica,sans-serif;font-size:.66rem;font-weight:600;letter-spacing:.05em;background:var(--ink);color:var(--paper);width:30px;height:30px;flex:0 0 30px;display:grid;place-items:center;border-radius:8px}
+.res .tag.gd{background:var(--teal)} .res .tag.fg{background:var(--accent-2)}
+.res .rt{font-weight:600;font-size:.92rem;line-height:1.2}
+.res .rd{font-size:.76rem;color:var(--muted);margin-top:2px;line-height:1.35}
+
+/* ---- core message banner (Bostelaar) ---- */
+.core{border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:12px;background:var(--card);padding:20px 24px;box-shadow:var(--shadow)}
+.core .lab{font-family:Arial,Helvetica,sans-serif;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-2)}
+.core .msg{font-family:Arial,Helvetica,sans-serif;font-style:italic;font-weight:500;font-size:1.34rem;line-height:1.3;margin-top:8px}
+.wyw{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.wyw .b{border:1px solid var(--line);border-radius:10px;padding:14px 16px;background:var(--paper)}
+.wyw .b .h{font-family:Arial,Helvetica,sans-serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:6px}
+.wyw .b.why{border-top:3px solid var(--teal)} .wyw .b.what{border-top:3px solid var(--accent)}
+/* spectrum bar */
+.spectrum{margin-top:18px}
+.spectrum .ends{display:flex;justify-content:space-between;font-family:Arial,Helvetica,sans-serif;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.spectrum .track{position:relative;height:10px;border-radius:999px;background:linear-gradient(90deg,var(--teal),var(--accent))}
+.spectrum .dot{position:absolute;top:50%;width:20px;height:20px;border-radius:50%;background:var(--card);border:3px solid var(--ink);transform:translate(-50%,-50%);box-shadow:var(--shadow)}
+.spectrum .note{font-size:.82rem;color:var(--muted);margin-top:10px;line-height:1.4}
+
+/* ---- thumbnail gallery (Thumbnail Thinking) ---- */
+.setblock{margin-bottom:30px}
+.setname{display:flex;align-items:center;gap:12px;font-family:Arial,Helvetica,sans-serif;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-2);margin-bottom:14px}
+.setname:after{content:"";flex:1;height:1px;background:var(--line)}
+.thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.thumb{border:1px solid var(--line);border-radius:13px;background:var(--card);box-shadow:var(--shadow);overflow:hidden;transition:.2s;cursor:default}
+.thumb:hover{transform:translateY(-3px);border-color:var(--accent)}
+.thumb .canvas{aspect-ratio:16/10;background:var(--paper-2);border-bottom:1px solid var(--line);display:grid;place-items:center;padding:14px}
+.thumb .canvas svg{width:100%;height:100%}
+.thumb .meta{padding:12px 14px}
+.thumb .meta .t{font-family:Arial,Helvetica,sans-serif;font-weight:600;font-size:.98rem;line-height:1.15}
+.thumb .meta .d{font-size:.78rem;color:var(--muted);margin-top:4px;line-height:1.35}
+.thumb .meta .s{font-family:Arial,Helvetica,sans-serif;font-size:.62rem;letter-spacing:.08em;color:var(--teal);margin-top:8px;text-transform:uppercase}
+
+/* ---- giants (Council of Giants) ---- */
+.giants{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.giant{border:1px solid var(--line);border-radius:13px;background:var(--ink);color:var(--paper);padding:20px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.giant:before{content:"";position:absolute;right:-30px;top:-30px;width:110px;height:110px;border-radius:50%;background:radial-gradient(circle,rgba(224,118,42,.22),transparent 70%)}
+.giant .av{width:42px;height:42px;border-radius:50%;background:var(--accent);color:var(--ink);display:grid;place-items:center;font-family:Arial,Helvetica,sans-serif;font-weight:900;font-size:1.1rem;margin-bottom:12px}
+.giant .gn{font-family:Arial,Helvetica,sans-serif;font-weight:600;font-size:1.08rem}
+.giant .gr{font-family:Arial,Helvetica,sans-serif;font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-top:3px}
+.giant .gl{font-style:italic;font-size:.9rem;color:rgba(255,255,255,.84);margin-top:12px;line-height:1.4}
+
+/* ---- generic content (case/prereading/reflection) ---- */
+.doc{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:38px 44px;max-width:780px;margin:0 auto}
+.doc .badge{display:inline-block;font-family:Arial,Helvetica,sans-serif;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-2);border:1px solid var(--line);border-radius:999px;padding:5px 12px;margin-bottom:18px}
+.doc h2{font-size:clamp(1.6rem,3.4vw,2.3rem);margin-bottom:6px}
+.doc .lede{color:var(--muted);font-size:1.05rem;margin-bottom:8px}
+.doc .keyfw{font-family:Arial,Helvetica,sans-serif;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);background:var(--paper-2);border-radius:8px;padding:8px 12px;display:inline-block;margin:14px 0 22px}
+.doc p{margin:0 0 16px}
+.doc h3{font-family:Arial,Helvetica,sans-serif;font-size:1.25rem;margin:26px 0 10px}
+.doc .refs{font-size:.82rem;color:var(--muted);border-top:1px solid var(--line);margin-top:28px;padding-top:18px}
+.doc .refs p{margin-bottom:8px}
+.task{border-left:4px solid var(--accent);background:var(--paper-2);border-radius:0 10px 10px 0;padding:16px 20px;margin:22px 0}
+.task .h{font-family:Arial,Helvetica,sans-serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-2);margin-bottom:6px}
+
+/* 7-phase session */
+.phases{counter-reset:ph;display:grid;gap:12px}
+.phase{display:flex;gap:18px;border:1px solid var(--line);border-radius:13px;background:var(--card);box-shadow:var(--shadow);padding:18px 20px}
+.phase .pn{flex:0 0 92px}
+.phase .pn .ph{font-family:Arial,Helvetica,sans-serif;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-2)}
+.phase .pn .mn{font-family:Arial,Helvetica,sans-serif;font-weight:600;color:var(--muted);font-size:.8rem;margin-top:2px}
+.phase .pc .t{font-family:Arial,Helvetica,sans-serif;font-weight:600;font-size:1.05rem}
+.phase .pc .d{font-size:.88rem;color:var(--muted);margin-top:4px;line-height:1.45}
+
+/* reflection */
+.refl{border:1px solid var(--line);border-radius:13px;background:var(--card);box-shadow:var(--shadow);padding:20px 22px;margin-bottom:14px}
+.refl .n{font-family:Arial,Helvetica,sans-serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-2);margin-bottom:8px}
+.refl p{margin:0;font-size:1.02rem}
+
+/* footer */
+footer{background:var(--ink);color:rgba(255,255,255,.7);padding:34px 0;margin-top:30px;font-size:.85rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+footer strong{color:var(--paper)}
+footer .acc{color:var(--accent)}
+
+@media(max-width:640px){
+  .wyw{grid-template-columns:1fr}
+  .doc{padding:26px 22px}
+  .stat{flex-basis:50%;border-bottom:1px solid var(--line)}
+  .hero{padding:36px 0 32px}
+  .hero h1{font-size:clamp(1.9rem,8.5vw,2.8rem);max-width:100%}
+  .hero .sub{font-size:1rem;margin-top:14px}
+  .wrap{padding:0 20px}
+  .topbar .wrap{gap:8px}
+  .topbar .nm{font-size:.88rem}
+  .copybar .wrap{font-size:.6rem;line-height:1.3}
+}
+
+/* EUBS brand persistent copyright bar */
+.copybar{background:var(--accent);color:#fff;font-size:.7rem;letter-spacing:.04em}
+.copybar .wrap{padding-top:6px;padding-bottom:6px}
+
+/* ---- content protection: disable selection ---- */
+body,.wrap,.doc,.thumb,.giant,.core,.phase,.refl,.res,.unit{
+  -webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;
+  -webkit-touch-callout:none;
+}
+/* allow selection only where genuinely needed (none for students) */
+input,textarea{-webkit-user-select:text;user-select:text}
+/* print protection: hide everything, show a notice */
+@media print{
+  body *{visibility:hidden !important}
+  body:before{
+    visibility:visible !important;content:"\00A9 Dr. Hildegard Haas 2026 \2014 EU Business School. Printing of this material is disabled.";
+    position:fixed;top:40%;left:0;right:0;text-align:center;font-family:Arial,Helvetica,sans-serif;
+    font-size:16pt;color:#9e1b32;padding:0 10%;
+  }
+  html,body{background:#fff !important}
+}
