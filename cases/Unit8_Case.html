@@ -71,5 +71,23 @@
 </div>
 </main>
 <footer><strong>BCOBM214</strong> · Unit 8 Case · © 2026 Dr. Hildegard Haas</footer>
+<style id="bco-protect-css">
+  *{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none}
+  input,textarea{-webkit-user-select:text;-moz-user-select:text;-ms-user-select:text;user-select:text}
+  @media print{html,body{display:none !important}}
+</style>
+<script id="bco-protect-js">
+(function(){
+  document.addEventListener('contextmenu',function(e){e.preventDefault();},{capture:true});
+  ['copy','cut'].forEach(function(ev){document.addEventListener(ev,function(e){e.preventDefault();},{capture:true});});
+  document.addEventListener('dragstart',function(e){e.preventDefault();},{capture:true});
+  document.addEventListener('keydown',function(e){
+    var k=(e.key||'').toLowerCase(),meta=e.ctrlKey||e.metaKey;
+    if(meta&&['c','x','s','p','u','a'].indexOf(k)!==-1){e.preventDefault();return false;}
+    if(k==='f12'){e.preventDefault();return false;}
+    if(meta&&e.shiftKey&&['i','j','c'].indexOf(k)!==-1){e.preventDefault();return false;}
+  },{capture:true});
+})();
+</script>
 </body>
 </html>

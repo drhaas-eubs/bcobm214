@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Slibrary Sheet · BCOBM214</title>
-<meta name="description" content="Standalone printable Slibrary sheet for any BCOBM214 framework or author — designed to print cleanly as a single A4 PDF.">
+<meta name="description" content="Slibrary reference sheet for any BCOBM214 framework or author — view only.">
 <style>
-/* Self-contained styles — this page renders a clean printable sheet
-   regardless of the rest of the site's CSS. Designed to print as A4. */
+/* Self-contained styles — this page renders a clean reference sheet
+   regardless of the rest of the site's CSS. View only — printing and copying are disabled. */
 
 :root {
   --emerald: #155e4a;
@@ -166,14 +166,9 @@ ol li, ul li { margin-bottom: 6px; line-height: 1.55; font-size: .9rem; }
 }
 .error h2 { font-family: Arial; color: var(--ink); }
 
-/* Print rules — hide chrome, print only the sheet */
-@media print {
-  @page { margin: 12mm; size: A4 portrait; }
-  html, body { background: #fff !important; }
-  .toolbar { display: none !important; }
-  .sheet-wrap { max-width: none !important; margin: 0 !important; padding: 0 !important; }
-  .sheet { box-shadow: none !important; border: none !important; border-radius: 0 !important; overflow: visible; }
-}
+/* Printing is disabled for students */
+@media print { html, body { display: none !important; } }
+
 </style>
 </head>
 <body>
@@ -184,7 +179,6 @@ ol li, ul li { margin-bottom: 6px; line-height: 1.55; font-size: .9rem; }
     <a class="btn" href="index.html">← Course</a>
     <a class="btn" href="all-frameworks.html">Slibrary Wall</a>
     <a class="btn" href="slibrary.html">Authors</a>
-    <button class="btn primary" id="print-btn" type="button">Print as PDF</button>
   </div>
 </div>
 
@@ -389,11 +383,6 @@ ol li, ul li { margin-bottom: 6px; line-height: 1.55; font-size: .9rem; }
     }
   }
 
-  // Wire the print button
-  document.getElementById('print-btn').addEventListener('click', function () {
-    window.print();
-  });
-
   // Initial route
   function attempt() {
     if (window.BCOBM214_FRAMEWORKS && window.BCOBM214_AUTHORS) { route(); return; }
@@ -406,5 +395,23 @@ ol li, ul li { margin-bottom: 6px; line-height: 1.55; font-size: .9rem; }
 })();
 </script>
 
+<style id="bco-protect-css">
+  *{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none}
+  input,textarea{-webkit-user-select:text;-moz-user-select:text;-ms-user-select:text;user-select:text}
+  @media print{html,body{display:none !important}}
+</style>
+<script id="bco-protect-js">
+(function(){
+  document.addEventListener('contextmenu',function(e){e.preventDefault();},{capture:true});
+  ['copy','cut'].forEach(function(ev){document.addEventListener(ev,function(e){e.preventDefault();},{capture:true});});
+  document.addEventListener('dragstart',function(e){e.preventDefault();},{capture:true});
+  document.addEventListener('keydown',function(e){
+    var k=(e.key||'').toLowerCase(),meta=e.ctrlKey||e.metaKey;
+    if(meta&&['c','x','s','p','u','a'].indexOf(k)!==-1){e.preventDefault();return false;}
+    if(k==='f12'){e.preventDefault();return false;}
+    if(meta&&e.shiftKey&&['i','j','c'].indexOf(k)!==-1){e.preventDefault();return false;}
+  },{capture:true});
+})();
+</script>
 </body>
 </html>
