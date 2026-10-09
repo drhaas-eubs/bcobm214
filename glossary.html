@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BCOBM214 · Glossary &amp; Key Terms</title>
+<meta name="description" content="BCOBM214 glossary: 80 key terms across ten units, each with a professional definition and Harvard-referenced source. Dr. Hildegard Haas, EU Business School.">
+<style>
+  :root{--navy:#1D2660;--teal:#00B388;--ink:#1D3A5C;--gray:#F4F6F9;--line:#E3E8F0;--muted:#5A6072;--shadow:0 2px 8px rgba(29,38,96,.08);--shadow-h:0 10px 26px rgba(29,38,96,.18)}
+  *{box-sizing:border-box}html{scroll-behavior:smooth}
+  body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#1a1a1a;background:#FAFBFC}
+  .topbar{background:#eef4f0;padding:14px 22px;display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center}
+  .topbar a{color:#2E8B6F;text-decoration:none;font-weight:bold;font-size:14px}
+  .topbar a:hover{text-decoration:underline}
+  .topbar .sp{flex:1}
+  .searchwrap{max-width:1180px;margin:20px auto 0;padding:0 22px}
+  .searchwrap input{width:100%;font-family:inherit;font-size:15px;padding:13px 16px 13px 42px;border:1px solid #DADEE6;border-radius:9px;background:#fff url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2'><circle cx='11' cy='11' r='7'/><line x1='21' y1='21' x2='16.65' y2='16.65'/></svg>") no-repeat 15px center;box-shadow:var(--shadow)}
+  .searchwrap input:focus{outline:none;border-color:var(--teal)}
+  .unit-sec{max-width:1180px;margin:26px auto;padding:0 22px;scroll-margin-top:12px}
+  .unit-hd{color:#fff;border-radius:12px;padding:26px 28px 22px;position:relative;overflow:hidden}
+  .unit-hd::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--teal)}
+  .unit-hd-kick{font-size:12px;font-weight:bold;letter-spacing:2px;opacity:.85}
+  .unit-hd h2{margin:8px 0 4px;font-size:clamp(22px,3vw,30px)}
+  .unit-hd-core{margin:10px 0 0;font-size:15px;font-style:italic;font-weight:bold;max-width:820px;line-height:1.45}
+  .unit-hd-sub{margin:10px 0 0;opacity:.9;font-size:14px}
+  .unit-hd-c{margin:6px 0 0;font-size:12px;opacity:.6;font-style:italic}
+  .unit-hd-stats{display:flex;flex-wrap:wrap;gap:16px 40px;margin-top:16px}
+  .unit-hd-stats div{font-size:11px;letter-spacing:1px;opacity:.85}
+  .unit-hd-stats span{display:block;font-size:26px;font-weight:bold;letter-spacing:0;color:#fff}
+  .set-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:28px 0 14px}
+  .set-dot{width:11px;height:11px;border-radius:50%}
+  .set-name{font-size:16px;font-weight:bold;color:var(--ink)}
+  .set-count{font-size:12px;color:var(--muted);background:var(--gray);border:1px solid var(--line);border-radius:12px;padding:3px 10px}
+  .fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:18px}
+  .fcard{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;cursor:pointer;text-align:left;font-family:inherit;padding:0;box-shadow:var(--shadow);transition:transform .16s,box-shadow .16s,border-color .16s;display:flex;flex-direction:column;border-top:3px solid var(--acc);scroll-margin-top:16px}
+  .fcard:hover{transform:translateY(-4px);box-shadow:var(--shadow-h);border-color:var(--acc)}
+  .fcard:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+  .fcard-fig{background:var(--gray);padding:12px;height:150px;display:flex;align-items:center;justify-content:center}
+  .fcard-fig svg{width:100%;height:100%}
+  .fcard-body{padding:14px 15px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .fcard-body h3{margin:0;color:var(--ink);font-size:14.5px;line-height:1.25}
+  .fcard-def{margin:0;color:var(--muted);font-size:12px;line-height:1.4;flex:1}
+  .fcard-badge{align-self:flex-start;color:#fff;font-size:11px;font-weight:bold;padding:4px 11px;border-radius:5px}
+  .overlay{position:fixed;inset:0;background:rgba(20,25,50,.8);display:none;z-index:100;overflow-y:auto;padding:28px 16px}
+  .overlay.open{display:flex;justify-content:center;align-items:flex-start}
+  .qbox{background:#fff;border-radius:12px;max-width:600px;width:100%;margin:20px auto;box-shadow:0 16px 44px rgba(0,0,0,.4);position:relative;padding:30px 30px 26px}
+  .qclose{position:absolute;top:14px;right:16px;width:36px;height:36px;border-radius:50%;background:var(--gray);border:1px solid var(--line);cursor:pointer;font-size:19px;color:#555;display:flex;align-items:center;justify-content:center}
+  .qclose:hover{background:#e2e7f0}
+  .qmodal{display:none}.qmodal.active{display:block}
+  .qm-slib{font-size:11px;font-weight:bold;letter-spacing:1.2px;padding-right:40px}
+  .qm-title{color:var(--ink);font-size:22px;margin:6px 0 4px}
+  .qm-author{color:var(--muted);font-size:13px;margin:0 0 12px}
+  .qm-reddef{border-left:4px solid;font-weight:bold;font-size:14.5px;line-height:1.45;padding:4px 0 4px 14px;margin:0 0 12px}
+  .qm-sub{color:var(--muted);font-size:13px;margin:0 0 16px}
+  .qm-fig{background:var(--gray);border-radius:8px;padding:18px;display:flex;align-items:center;justify-content:center;margin:0 0 18px}
+  .qm-fig svg{width:100%;max-width:480px;height:auto}
+  .qm-ref{background:var(--gray);border-left:4px solid #2E8B6F;border-radius:0 6px 6px 0;padding:12px 15px;margin:0 0 20px}
+  .qm-ref-l{font-size:11px;font-weight:bold;letter-spacing:.6px;display:block;margin-bottom:4px}
+  .qm-ref p{margin:0;font-size:12px;line-height:1.5;color:#333}
+  .qm-full{display:block;text-align:center;color:#fff;text-decoration:none;font-weight:bold;font-size:14px;padding:14px;border-radius:26px;transition:opacity .15s}
+  .qm-full:hover{opacity:.9}
+  .unit-nav{max-width:1180px;margin:34px auto 0;padding:0 22px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .unit-nav a{flex:1;min-width:220px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 18px;text-decoration:none;color:var(--ink);font-weight:bold;font-size:14px;box-shadow:var(--shadow)}
+  .unit-nav a:hover{border-color:var(--teal)}
+  .unit-nav a small{display:block;color:var(--muted);font-weight:normal;font-size:11px;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px}
+  .unit-nav a.next{text-align:right}
+  .jump{max-width:1180px;margin:18px auto 0;padding:0 22px;display:flex;flex-wrap:wrap;gap:8px}
+  .jump a{font-size:12px;font-weight:bold;text-decoration:none;color:#fff;padding:6px 11px;border-radius:6px}
+  .hidden{display:none !important}
+  footer.site{background:var(--navy);color:#fff;padding:28px 22px;text-align:center;margin-top:44px}
+  footer.site .divider{height:2px;width:60px;background:var(--teal);border:none;margin:0 auto 14px}
+  footer.site p{margin:4px 0;font-size:13px;opacity:.9}
+  footer.site strong{color:var(--teal)}
+  @media(max-width:600px){.fgrid{grid-template-columns:1fr 1fr;gap:12px}.fcard-fig{height:110px;padding:8px}.unit-hd{padding:22px 20px 20px}.qbox{padding:26px 18px 20px}}
+  @media(max-width:380px){.fgrid{grid-template-columns:1fr}.fcard-fig{height:150px}}
+
+  .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+  .course-hd{background:#1D2660;color:#fff;border-radius:12px;padding:26px 28px 22px;position:relative;overflow:hidden;margin:20px 0 0}
+  .course-hd::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--teal)}
+  .course-hd .kick{font-size:12px;font-weight:bold;letter-spacing:2px;opacity:.85}
+  .course-hd h1{margin:8px 0 4px;font-size:clamp(24px,3.4vw,32px)}
+  .course-hd .sub{margin:8px 0 0;opacity:.9;font-size:14px;max-width:820px}
+  .course-hd .c{margin:6px 0 0;font-size:12px;opacity:.6;font-style:italic}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0}
+  .chip{font-family:inherit;font-size:12.5px;font-weight:bold;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer}
+  .chip:hover{border-color:var(--teal)}
+  .chip.on{background:var(--uc,#1D2660);border-color:var(--uc,#1D2660);color:#fff}
+  .gl-count{font-size:12px;font-weight:bold;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin:22px 0 0}
+  .gl-group{margin:26px 0 0;scroll-margin-top:12px}
+  .gl-ghead{display:flex;gap:14px;align-items:flex-start;border-left:5px solid var(--uc);padding:2px 0 2px 14px;margin:0 0 16px}
+  .unit-dot{flex:none;width:38px;height:38px;border-radius:9px;background:var(--uc);color:#fff;font-weight:bold;font-size:17px;display:flex;align-items:center;justify-content:center}
+  .gl-kick{font-size:11px;font-weight:bold;letter-spacing:1.5px;text-transform:uppercase;color:var(--uc)}
+  .gl-ghead h2{margin:4px 0 0;font-size:19px;color:var(--ink);line-height:1.3}
+  .gl-ilo{margin:7px 0 0;font-size:13.5px;color:var(--muted);max-width:820px}
+  .gl-ilo b{color:var(--ink)}
+  .gl-ghead a{color:var(--uc);font-weight:bold;font-size:12.5px;text-decoration:none}
+  .gl-ghead a:hover{text-decoration:underline}
+  .gl-list{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .gl-item{background:#fff;border:1px solid var(--line);border-top:4px solid var(--uc);border-radius:11px;box-shadow:0 2px 8px rgba(29,38,96,.06);padding:16px 18px;display:flex;flex-direction:column}
+  .gl-h{display:flex;align-items:center;gap:10px}
+  .gl-num{flex:none;background:var(--uc);color:#fff;font-weight:bold;font-size:11px;border-radius:5px;padding:3px 8px;letter-spacing:.5px}
+  .gl-term{margin:0;font-size:16px;color:var(--ink);line-height:1.3}
+  .gl-strap{margin:8px 0 0;font-size:13px;font-style:italic;color:var(--muted)}
+  .gl-def{margin:9px 0 0;font-size:13.5px;line-height:1.55;flex:1}
+  .gl-ref{background:var(--gray);border-left:3px solid #2E8B6F;border-radius:0 7px 7px 0;padding:10px 12px;margin-top:12px}
+  .gl-ref span{display:block;font-size:10.5px;font-weight:bold;letter-spacing:.6px;text-transform:uppercase;color:#2E8B6F;margin-bottom:4px}
+  .gl-ref p{margin:0;font-size:12.5px;line-height:1.5}
+  .gl-empty{background:#fff;border:1px dashed var(--line);border-radius:11px;padding:28px;text-align:center;color:var(--muted);margin-top:16px}
+  mark{background:#FFF1B8;color:inherit;padding:0 1px;border-radius:2px}
+  @media(max-width:760px){.gl-list{grid-template-columns:1fr}.course-hd{padding:22px 20px 20px}}
+</style>
+</head>
+<body>
+<div class="topbar"><a href="index.html">&larr; Back to Course Overview</a><span class="sp"></span><a href="all-frameworks.html">All 80 Frameworks</a><a href="slibrary.html">Authors</a><a href="pedagogy.html">Pedagogy</a></div>
+<div class="wrap">
+  <section class="course-hd">
+    <div class="kick">BCOBM214 &middot; GLOSSARY &amp; KEY TERMS</div>
+    <h1>Glossary &amp; Definitions</h1>
+    <p class="sub">80 key terms across ten units &mdash; each with a one-line meaning, a professional definition and its Harvard-referenced source. Use them in the exam and cite them in your business plan.</p>
+    <p class="c">&copy; 2026 Dr. Hildegard Haas &middot; EU Business School</p>
+    <div class="unit-hd-stats"><div><span>80</span>DEFINITIONS</div><div><span>10</span>UNITS</div><div><span>8</span>TERMS PER UNIT</div></div>
+  </section>
+  <div class="searchwrap" style="padding:0;margin-top:20px"><input id="gsearch" type="text" placeholder="Search 80 terms, definitions or authors…" aria-label="Search the glossary"></div>
+  <div class="chips" role="group" aria-label="Filter by unit"><button class="chip on" data-u="all">All units</button><button class="chip" data-u="1" style="--uc:#4A5AA8">Unit 1</button><button class="chip" data-u="2" style="--uc:#7A4FA3">Unit 2</button><button class="chip" data-u="3" style="--uc:#2C7A9E">Unit 3</button><button class="chip" data-u="4" style="--uc:#C77C2E">Unit 4</button><button class="chip" data-u="5" style="--uc:#2E8B6F">Unit 5</button><button class="chip" data-u="6" style="--uc:#3E6E8E">Unit 6</button><button class="chip" data-u="7" style="--uc:#A0527A">Unit 7</button><button class="chip" data-u="8" style="--uc:#2F5D8C">Unit 8</button><button class="chip" data-u="9" style="--uc:#B8862E">Unit 9</button><button class="chip" data-u="10" style="--uc:#B4444E">Unit 10</button></div>
+  <p class="gl-count" id="glcount">80 terms</p>
+  <section class="gl-group" id="unit1" data-u="1" style="--uc:#4A5AA8">
+    <div class="gl-ghead"><span class="unit-dot">1</span><div>
+      <div class="gl-kick">Unit 1 &middot; Starting a Business &middot; 8 terms</div>
+      <h2>Introduction to Entrepreneurship &amp; Business Development</h2>
+      <p class="gl-ilo"><b>Learning focus &middot; ILOs 2 &amp; 3</b> &mdash; Critically review the key aspects of entrepreneurship and investigate the purpose of business development.</p>
+      <a href="unit1.html">Unit 1 Framework Gallery &rarr;</a></div></div>
+    <div class="gl-list">
+      <article class="gl-item" id="term-1-1">
+        <div class="gl-h"><span class="gl-num">1.1</span><h3 class="gl-term">Entrepreneurship</h3></div>
+        <p class="gl-strap">The discovery, evaluation and exploitation of opportunities to create future goods and services</p>
+        <p class="gl-def">Entrepreneurship is the process by which individuals discover, evaluate and exploit opportunities to create future goods and services. Defining the field around the nexus of enterprising individuals and valuable opportunities shifts attention away from the personality traits of founders and the mere act of firm creation, and towards the questions of why, when and how opportunities come into existence and why some people rather than others act upon them. On this view, entrepreneurship can also take place inside established organisations (Shane and Venkataraman, 2000).</p>
+        <div class="gl-ref"><span>Reference</span><p>Shane, S. and Venkataraman, S. (2000) &#x27;The promise of entrepreneurship as a field of research&#x27;, Academy of Management Review, 25(1), pp. 217–226.</p></div>
+      </article>
+      <article class="gl-item" id="term-1-2">
+        <div class="gl-h"><span class="gl-num">1.2</span><h3 class="gl-term">Business Development</h3></div>
+        <p class="gl-strap">The ongoing work of creating long-term value for a firm from customers, markets and relationships</p>
+        <p class="gl-def">Business development refers to the tasks and processes concerned with creating long-term value for an organisation from customers, markets and relationships. It is distinguished from day-to-day sales, which converts existing demand into revenue, because it is concerned with preparing and analysing new growth opportunities, building partnerships and supporting their implementation. For a new venture, business development connects the entrepreneurial idea to a viable market position, and it remains a continuous activity rather than a single launch event (Sørensen, 2012).</p>
+        <div class="gl-ref"><span>Reference</span><p>Sørensen, H.E. (2012) Business Development: A Market-Oriented Perspective. Chichester: John Wiley &amp; Sons.</p></div>
+      </article>
+      <article class="gl-item" id="term-1-3">
+        <div class="gl-h"><span class="gl-num">1.3</span><h3 class="gl-term">Creative Destruction</h3></div>
+        <p class="gl-strap">The way new products, methods and firms continually replace old ones and so renew the economy</p>
+        <p class="gl-def">Creative destruction is the process of industrial mutation that incessantly revolutionises the economic structure from within, destroying the old one and creating a new one. Schumpeter identified the entrepreneur as the agent who introduces new combinations, such as new goods, methods of production, markets, sources of supply or forms of organisation, and so disrupts the existing equilibrium. The concept is distinguished from price competition within a stable industry, because the decisive competition comes from innovations that threaten the very existence of incumbents (Schumpeter, 1942; Aghion and Howitt, 1992).</p>
+        <div class="gl-ref"><span>Reference</span><p>Schumpeter, J.A. (1942) Capitalism, Socialism and Democracy. New York: Harper &amp; Brothers.</p></div>
+      </article>
+      <article class="gl-item" id="term-1-4">
+        <div class="gl-h"><span class="gl-num">1.4</span><h3 class="gl-term">Entrepreneurial Alertness</h3></div>
+        <p class="gl-strap">The ability to notice profit opportunities that others have overlooked in existing markets</p>
+        <p class="gl-def">Entrepreneurial alertness is the capacity to notice opportunities that have hitherto been overlooked, such as unexploited price differences or unmet wants within existing markets. In contrast to Schumpeter&#x27;s entrepreneur, who disrupts equilibrium, Kirzner&#x27;s alert entrepreneur moves markets towards equilibrium by discovering and correcting the errors of other market participants. Alertness is not the possession of specific knowledge but a sensitivity to where profitable knowledge might be found, which explains why different people see different opportunities in the same information (Kirzner, 1973; 1997).</p>
+        <div class="gl-ref"><span>Reference</span><p>Kirzner, I.M. (1973) Competition and Entrepreneurship. Chicago: University of Chicago Press.</p></div>
+      </article>
+      <article class="gl-item" id="term-1-5">
+        <div class="gl-h"><span class="gl-num">1.5</span><h3 class="gl-term">Purposeful Innovation</h3></div>
+        <p class="gl-strap">Systematic search for change and the opportunities it offers, rather than waiting for a flash of genius</p>
+        <p class="gl-def">Purposeful innovation is the deliberate and systematic search for changes, and the analysis of the opportunities such changes might offer for economic or social innovation. Drucker identified seven sources of innovative opportunity: four within an industry (the unexpected, incongruities, process needs and changes in industry or market structure) and three in the wider environment (demographics, changes in perception and new knowledge). The concept treats innovation as a discipline that can be learned and practised, distinguishing it from reliance on inspiration or individual genius (Drucker, 1985).</p>
+        <div class="gl-ref"><span>Reference</span><p>Drucker, P.F. (1985) Innovation and Entrepreneurship: Practice and Principles. New York: Harper &amp; Row.</p></div>
+      </article>
+      <article class="gl-item" id="term-1-6">
+        <div class="gl-h"><span class="gl-num">1.6</span><h3 class="gl-term">Effectuation</h3></div>
+        <p class="gl-strap">Starting from the means you have and building the venture step by step with committed partners</p>
+        <p class="gl-def">Effectuation is a logic of entrepreneurial decision-making in which founders take a set of available means as given and select among possible effects that can be created with them. It is distinguished from causation, in which a predetermined goal is fixed and the optimal means of achieving it are chosen on the basis of prediction. Expert entrepreneurs start from who they are, what they know and whom they know, and co-create the venture with self-selected stakeholders, treating the future as something to be shaped rather than forecast (Sarasvathy, 2001; Read et al., 2017).</p>
+        <div class="gl-ref"><span>Reference</span><p>Sarasvathy, S.D. (2001) &#x27;Causation and effectuation: toward a theoretical shift from economic inevitability to entrepreneurial contingency&#x27;, Academy of Management Review, 26(2), pp. 243–263.</p></div>
+      </article>
+      <article class="gl-item" id="term-1-7">
+        <div class="gl-h"><span class="gl-num">1.7</span><h3 class="gl-term">Affordable Loss</h3></div>
+        <p class="gl-strap">Deciding how much you can afford to lose on a step, instead of predicting how much you might gain</p>
+        <p class="gl-def">Affordable loss is an effectual principle according to which entrepreneurs commit resources to a next step on the basis of what they are able and willing to lose, rather than on calculations of expected return. It is distinguished from the causal logic of maximising forecast profit, which depends on reliable predictions that are rarely available for new markets. By limiting downside exposure, the principle allows founders to act quickly, test opportunities cheaply and continue experimenting even when early attempts fail (Sarasvathy, 2008; Read et al., 2017).</p>
+        <div class="gl-ref"><span>Reference</span><p>Sarasvathy, S.D. (2008) Effectuation: Elements of Entrepreneurial Expertise. Cheltenham: Edward Elgar.</p></div>
+      </article>
+      <article class="gl-item" id="term-1-8">
+        <div class="gl-h"><span class="gl-num">1.8</span><h3 class="gl-term">Strategic Intent</h3></div>
+        <p class="gl-strap">An ambitious long-term aspiration that stretches the organisation far beyond its current resources</p>
+        <p class="gl-def">Strategic intent is an obsession with winning that is sustained over the long term and expressed as an ambition out of all proportion to an organisation&#x27;s current resources and capabilities. It provides a stable sense of direction while leaving room for flexibility in the means used to get there, and it is distinguished from a conventional strategic plan that matches ambitions to existing resources. A related idea is the Big Hairy Audacious Goal, a clear and compelling ten-to-thirty-year target within a company&#x27;s envisioned future (Hamel and Prahalad, 1989; Collins and Porras, 1996).</p>
+        <div class="gl-ref"><span>Reference</span><p>Hamel, G. and Prahalad, C.K. (1989) &#x27;Strategic intent&#x27;, Harvard Business Review, May–June, pp. 63–76.</p></div>
+      </article>
+    </div>
+  </section>
+  <section class="gl-group" id="unit2" data-u="2" style="--uc:#7A4FA3">
+    <div class="gl-ghead"><span class="unit-dot">2</span><div>
+      <div class="gl-kick">Unit 2 &middot; Starting a Business &middot; 8 terms</div>
+      <h2>Identifying &amp; Testing a Business Idea</h2>
+      <p class="gl-ilo"><b>Learning focus &middot; ILO 3</b> &mdash; Critically review the key aspects of entrepreneurship by testing ideas against evidence before committing resources.</p>
+      <a href="unit2.html">Unit 2 Framework Gallery &rarr;</a></div></div>
+    <div class="gl-list">
+      <article class="gl-item" id="term-2-1">
+        <div class="gl-h"><span class="gl-num">2.1</span><h3 class="gl-term">Validated Learning</h3></div>
+        <p class="gl-strap">Progress measured by evidence from real customers that an assumption about the business is true or false</p>
+        <p class="gl-def">Validated learning is the process of demonstrating empirically, through experiments with real customers, that a team has discovered valuable truths about a venture&#x27;s present and future business prospects. It is the unit of progress in the Lean Startup&#x27;s build–measure–learn feedback loop and is distinguished from progress measured by output, such as features built or plans written. Because ideas are treated as hypotheses, learning is only validated when customer behaviour, rather than opinion, confirms or refutes the underlying assumption (Ries, 2011; Blank, 2013).</p>
+        <div class="gl-ref"><span>Reference</span><p>Ries, E. (2011) The Lean Startup: How Today&#x27;s Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses. New York: Crown Business.</p></div>
+      </article>
+      <article class="gl-item" id="term-2-2">
+        <div class="gl-h"><span class="gl-num">2.2</span><h3 class="gl-term">Minimum Viable Product</h3></div>
+        <p class="gl-strap">The simplest version of a product that lets a team learn the most from customers with the least effort</p>
+        <p class="gl-def">A minimum viable product (MVP) is the version of a new product that allows a team to collect the maximum amount of validated learning about customers with the least effort. It is designed as an experiment to test fundamental business hypotheses, not as a smaller or lower-quality first release, and may take the form of a landing page, a video or a manually delivered service. The MVP is distinguished from a prototype built to test technical feasibility, because its purpose is to test whether customers will actually behave as the founders expect (Ries, 2011).</p>
+        <div class="gl-ref"><span>Reference</span><p>Ries, E. (2011) The Lean Startup: How Today&#x27;s Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses. New York: Crown Business.</p></div>
+      </article>
+      <article class="gl-item" id="term-2-3">
+        <div class="gl-h"><span class="gl-num">2.3</span><h3 class="gl-term">Pivot</h3></div>
+        <p class="gl-strap">A structured change of direction designed to test a new hypothesis about the product, strategy or growth</p>
+        <p class="gl-def">A pivot is a structured course correction designed to test a new fundamental hypothesis about the product, business model or engine of growth, while retaining what has already been learned. Ries distinguishes several types, including zoom-in, customer-segment, customer-need and channel pivots. A pivot is distinguished both from persevering with an unchanged plan and from abandoning the venture altogether; it is triggered when experimental evidence shows that a core assumption is false and that the current strategy is not producing sufficient progress (Ries, 2011; Blank and Dorf, 2012).</p>
+        <div class="gl-ref"><span>Reference</span><p>Ries, E. (2011) The Lean Startup: How Today&#x27;s Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses. New York: Crown Business.</p></div>
+      </article>
+      <article class="gl-item" id="term-2-4">
+        <div class="gl-h"><span class="gl-num">2.4</span><h3 class="gl-term">Customer Development</h3></div>
+        <p class="gl-strap">A process of getting out of the building to test business assumptions directly with customers</p>
+        <p class="gl-def">Customer development is a four-step process of customer discovery, customer validation, customer creation and company building, run in parallel with product development. Founders are urged to get out of the building and test their hypotheses about customers, problems, channels and pricing directly with potential buyers before scaling. It is distinguished from the traditional product development model, in which a product is specified, built and launched before market acceptance is known, so that startups search for a repeatable business model rather than execute an untested plan (Blank, 2005; Blank and Dorf, 2012).</p>
+        <div class="gl-ref"><span>Reference</span><p>Blank, S. (2005) The Four Steps to the Epiphany: Successful Strategies for Products that Win. Pescadero, CA: K&amp;S Ranch.</p></div>
+      </article>
+      <article class="gl-item" id="term-2-5">
+        <div class="gl-h"><span class="gl-num">2.5</span><h3 class="gl-term">Problem–Solution Fit</h3></div>
+        <p class="gl-strap">Evidence that a problem worth solving exists and that the proposed solution actually addresses it</p>
+        <p class="gl-def">Problem–solution fit is the stage at which a founder has evidence that a sufficiently painful problem exists for an identifiable customer segment and that the proposed solution addresses it in a way customers value. In Maurya&#x27;s Running Lean approach it is established through problem and solution interviews, recorded on a Lean Canvas, before a product is built at scale. It is distinguished from product–market fit, which requires evidence that the market demands the finished product, and therefore marks an earlier and less costly checkpoint in testing an idea (Maurya, 2012).</p>
+        <div class="gl-ref"><span>Reference</span><p>Maurya, A. (2012) Running Lean: Iterate from Plan A to a Plan That Works. 2nd edn. Sebastopol, CA: O&#x27;Reilly Media.</p></div>
+      </article>
+      <article class="gl-item" id="term-2-6">
+        <div class="gl-h"><span class="gl-num">2.6</span><h3 class="gl-term">Job to Be Done</h3></div>
+        <p class="gl-strap">The progress a customer is trying to make in a particular circumstance, for which they hire a product</p>
+        <p class="gl-def">A job to be done is the progress that a person is trying to make in a particular circumstance, which leads them to hire a product or service and fire alternatives that do it less well. Jobs have functional, social and emotional dimensions and are relatively stable over time, even as the solutions used to perform them change. The concept is distinguished from segmentation by customer demographics or product attributes, because it explains causally why customers buy and therefore helps founders judge whether an idea addresses real demand (Christensen et al., 2016).</p>
+        <div class="gl-ref"><span>Reference</span><p>Christensen, C.M., Hall, T., Dillon, K. and Duncan, D.S. (2016) Competing Against Luck: The Story of Innovation and Customer Choice. New York: HarperBusiness.</p></div>
+      </article>
+      <article class="gl-item" id="term-2-7">
+        <div class="gl-h"><span class="gl-num">2.7</span><h3 class="gl-term">Go/Kill Decision</h3></div>
+        <p class="gl-strap">A formal checkpoint at which a project is approved to continue, or stopped, on the basis of evidence</p>
+        <p class="gl-def">A go/kill decision is a formal review point, or gate, in the idea-to-launch process at which decision-makers assess a project against defined criteria and decide whether to invest in the next stage, hold, recycle or terminate it. Gates separate stages of activity such as scoping, building the business case, development, testing and launch. The discipline is distinguished from an open-ended commitment to an idea, because resources are released incrementally as uncertainty is reduced, and weak projects are stopped before significant sums are spent (Cooper and Edgett, 2012).</p>
+        <div class="gl-ref"><span>Reference</span><p>Cooper, R.G. and Edgett, S.J. (2012) &#x27;Best practices in the idea-to-launch process and its governance&#x27;, Research-Technology Management, 55(2), pp. 43–54.</p></div>
+      </article>
+      <article class="gl-item" id="term-2-8">
+        <div class="gl-h"><span class="gl-num">2.8</span><h3 class="gl-term">The Chasm</h3></div>
+        <p class="gl-strap">The gap between visionary early adopters and the pragmatic mainstream market that many products fail to cross</p>
+        <p class="gl-def">The chasm is the gap in the technology adoption life cycle between early adopters, who buy a new product for its novelty or strategic promise, and the early majority, pragmatists who want proven, complete solutions and references from peers. Moore builds on Rogers&#x27; classification of adopters into innovators, early adopters, early majority, late majority and laggards, arguing that these groups are not continuous. Early sales therefore do not prove that an idea will reach the mainstream market, and many ventures stall when they attempt this transition (Moore, 1991; Rogers, 2003).</p>
+        <div class="gl-ref"><span>Reference</span><p>Moore, G.A. (1991) Crossing the Chasm: Marketing and Selling High-Tech Products to Mainstream Customers. New York: HarperBusiness.</p></div>
+      </article>
+    </div>
+  </section>
+  <section class="gl-group" id="unit3" data-u="3" style="--uc:#2C7A9E">
+    <div class="gl-ghead"><span class="unit-dot">3</span><div>
+      <div class="gl-kick">Unit 3 &middot; Starting a Business &middot; 8 terms</div>
+      <h2>Market Research &amp; Opportunity Identification</h2>
+      <p class="gl-ilo"><b>Learning focus &middot; ILOs 1 &amp; 3</b> &mdash; Ground the business plan in market evidence and critically review how entrepreneurs identify real opportunities.</p>
+      <a href="unit3.html">Unit 3 Framework Gallery &rarr;</a></div></div>
+    <div class="gl-list">
+      <article class="gl-item" id="term-3-1">
+        <div class="gl-h"><span class="gl-num">3.1</span><h3 class="gl-term">Opportunity Recognition</h3></div>
+        <p class="gl-strap">Identifying situations in which new products or services can be introduced and sold at a profit</p>
+        <p class="gl-def">Opportunity recognition is the process through which individuals identify situations in which new goods, services, raw materials or organising methods can be introduced and sold at greater than their cost of production. Opportunities are distinguished from ideas because they must be supported by evidence of demand and of a viable means of serving it. Because information about markets is unevenly distributed, not everyone recognises the same opportunity, and prior knowledge, alertness and systematic market research all shape whether a real opportunity is discovered (Shane and Venkataraman, 2000).</p>
+        <div class="gl-ref"><span>Reference</span><p>Shane, S. and Venkataraman, S. (2000) &#x27;The promise of entrepreneurship as a field of research&#x27;, Academy of Management Review, 25(1), pp. 217–226.</p></div>
+      </article>
+      <article class="gl-item" id="term-3-2">
+        <div class="gl-h"><span class="gl-num">3.2</span><h3 class="gl-term">Customer Discovery Interview</h3></div>
+        <p class="gl-strap">A conversation with potential customers about their real behaviour and problems, not about your idea</p>
+        <p class="gl-def">A customer discovery interview is a structured conversation with prospective customers designed to learn about their problems, current behaviour and willingness to pay, rather than to seek approval for a proposed solution. Fitzpatrick&#x27;s Mom Test advises asking about specifics in the past instead of hypothetical futures, talking about the customer&#x27;s life rather than the idea, and listening more than talking. Such primary research is distinguished from opinion gathering, since compliments and hypothetical promises are unreliable evidence of genuine demand (Fitzpatrick, 2013; Blank and Dorf, 2012).</p>
+        <div class="gl-ref"><span>Reference</span><p>Fitzpatrick, R. (2013) The Mom Test: How to Talk to Customers and Learn If Your Business Is a Good Idea When Everyone Is Lying to You. Founder Centric.</p></div>
+      </article>
+      <article class="gl-item" id="term-3-3">
+        <div class="gl-h"><span class="gl-num">3.3</span><h3 class="gl-term">Total Addressable Market</h3></div>
+        <p class="gl-strap">The total revenue available if a product captured every possible customer for it</p>
+        <p class="gl-def">Total addressable market (TAM) is the total revenue opportunity that would be available if a product or service achieved full market share among all potential customers. It is usually narrowed to the serviceable available market (SAM), the portion a venture&#x27;s business model and channels can reach, and the serviceable obtainable market (SOM), the share it can realistically capture in the near term. Market sizing should be built bottom-up from customer numbers and prices, and is distinguished from top-down percentages of large industry figures, which tend to overstate opportunity (Blank and Dorf, 2012).</p>
+        <div class="gl-ref"><span>Reference</span><p>Blank, S. and Dorf, B. (2012) The Startup Owner&#x27;s Manual: The Step-by-Step Guide for Building a Great Company. Pescadero, CA: K&amp;S Ranch.</p></div>
+      </article>
+      <article class="gl-item" id="term-3-4">
+        <div class="gl-h"><span class="gl-num">3.4</span><h3 class="gl-term">Barriers to Entry</h3></div>
+        <p class="gl-strap">Obstacles that make it hard and costly for new firms to enter an industry</p>
+        <p class="gl-def">Barriers to entry are the advantages that incumbents hold relative to new entrants, such as economies of scale, network effects, customer switching costs, capital requirements, access to distribution channels and restrictive government policy. They determine the threat of new entry, one of the five competitive forces that shape industry structure and long-run profitability. For an entrepreneur the concept is double-edged: high barriers make an industry harder to enter, but barriers the venture can build for itself help protect its own position once established (Porter, 1980; 2008).</p>
+        <div class="gl-ref"><span>Reference</span><p>Porter, M.E. (2008) &#x27;The five competitive forces that shape strategy&#x27;, Harvard Business Review, January, pp. 78–93.</p></div>
+      </article>
+      <article class="gl-item" id="term-3-5">
+        <div class="gl-h"><span class="gl-num">3.5</span><h3 class="gl-term">Macro-environment</h3></div>
+        <p class="gl-strap">The broad political, economic, social, technological, environmental and legal forces outside a firm</p>
+        <p class="gl-def">The macro-environment is the outermost layer of an organisation&#x27;s environment, consisting of broad forces that affect almost all organisations to varying degrees. These are commonly analysed through the PESTEL framework: political, economic, social, technological, environmental and legal factors. The macro-environment is distinguished from the industry or sector level, analysed through tools such as the five forces, and from the organisation&#x27;s internal resources. Scanning it helps entrepreneurs identify trends that create opportunities as well as threats to a business idea (Aguilar, 1967; Johnson et al., 2017).</p>
+        <div class="gl-ref"><span>Reference</span><p>Johnson, G., Whittington, R., Scholes, K., Angwin, D. and Regnér, P. (2017) Exploring Strategy: Text and Cases. 11th edn. Harlow: Pearson.</p></div>
+      </article>
+      <article class="gl-item" id="term-3-6">
+        <div class="gl-h"><span class="gl-num">3.6</span><h3 class="gl-term">Value Proposition</h3></div>
+        <p class="gl-strap">The bundle of benefits that makes customers choose your product to relieve their pains and create gains</p>
+        <p class="gl-def">A value proposition describes the benefits customers can expect from a firm&#x27;s products and services, showing how they relieve specific pains and create specific gains for a defined customer segment. In the Value Proposition Canvas, the customer profile (jobs, pains and gains) is mapped against the value map (products and services, pain relievers and gain creators). Fit is achieved when the value map addresses the jobs, pains and gains that matter most to customers, and it is distinguished from a list of product features (Osterwalder et al., 2014).</p>
+        <div class="gl-ref"><span>Reference</span><p>Osterwalder, A., Pigneur, Y., Bernarda, G. and Smith, A. (2014) Value Proposition Design: How to Create Products and Services Customers Want. Hoboken, NJ: John Wiley &amp; Sons.</p></div>
+      </article>
+      <article class="gl-item" id="term-3-7">
+        <div class="gl-h"><span class="gl-num">3.7</span><h3 class="gl-term">Value Innovation</h3></div>
+        <p class="gl-strap">Creating a leap in value for buyers while lowering costs, which makes the competition irrelevant</p>
+        <p class="gl-def">Value innovation is the simultaneous pursuit of differentiation and low cost, creating a leap in value for both buyers and the company and opening uncontested market space. It is operationalised through the four actions of eliminating, reducing, raising and creating factors of competition. Value innovation is distinguished from technology innovation and from incremental value creation, and it challenges the conventional assumption that firms must choose between differentiation and cost leadership when competing in existing industries (Kim and Mauborgne, 1997; 2005).</p>
+        <div class="gl-ref"><span>Reference</span><p>Kim, W.C. and Mauborgne, R. (1997) &#x27;Value innovation: the strategic logic of high growth&#x27;, Harvard Business Review, January–February, pp. 103–112.</p></div>
+      </article>
+      <article class="gl-item" id="term-3-8">
+        <div class="gl-h"><span class="gl-num">3.8</span><h3 class="gl-term">Desired Outcome</h3></div>
+        <p class="gl-strap">A measurable result customers use to judge how well a product helps them get a job done</p>
+        <p class="gl-def">A desired outcome is a measurable metric that customers use to evaluate how well they are getting a job done, typically expressed in terms of minimising time, cost or the likelihood of error. Mapping a job into its steps and identifying outcomes that are both important and poorly satisfied reveals underserved needs and therefore attractive market opportunities. The approach is distinguished from asking customers for solutions or features, which they are poorly placed to specify, and gives market research a more precise and testable basis (Bettencourt and Ulwick, 2008; Ulwick, 2016).</p>
+        <div class="gl-ref"><span>Reference</span><p>Ulwick, A.W. (2016) Jobs to Be Done: Theory to Practice. Idea Bite Press.</p></div>
+      </article>
+    </div>
+  </section>
+  <section class="gl-group" id="unit4" data-u="4" style="--uc:#C77C2E">
+    <div class="gl-ghead"><span class="unit-dot">4</span><div>
+      <div class="gl-kick">Unit 4 &middot; Starting a Business &middot; 8 terms</div>
+      <h2>Business Planning &amp; Strategy</h2>
+      <p class="gl-ilo"><b>Learning focus &middot; ILOs 1 &amp; 2</b> &mdash; Translate the opportunity into a business model and strategy, and investigate what business development contributes to it.</p>
+      <a href="unit4.html">Unit 4 Framework Gallery &rarr;</a></div></div>
+    <div class="gl-list">
+      <article class="gl-item" id="term-4-1">
+        <div class="gl-h"><span class="gl-num">4.1</span><h3 class="gl-term">Business Model</h3></div>
+        <p class="gl-strap">A description of how a venture creates, delivers and captures value</p>
+        <p class="gl-def">A business model describes the rationale of how an organisation creates, delivers and captures value. Osterwalder and Pigneur represent it through nine building blocks: customer segments, value propositions, channels, customer relationships, revenue streams, key resources, key activities, key partnerships and cost structure. Magretta argues that a good model must pass a narrative test, telling a story that makes sense, and a numbers test, adding up financially. A business model is distinguished from a strategy, which explains how a firm will do better than its rivals (Magretta, 2002; Osterwalder and Pigneur, 2010).</p>
+        <div class="gl-ref"><span>Reference</span><p>Osterwalder, A. and Pigneur, Y. (2010) Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers. Hoboken, NJ: John Wiley &amp; Sons.</p></div>
+      </article>
+      <article class="gl-item" id="term-4-2">
+        <div class="gl-h"><span class="gl-num">4.2</span><h3 class="gl-term">Unfair Advantage</h3></div>
+        <p class="gl-strap">Something a venture has that cannot easily be copied or bought by competitors</p>
+        <p class="gl-def">An unfair advantage is a source of advantage that cannot easily be copied or bought, such as insider information, a dream team, personal authority, network effects, a large community or existing customers. It is one of the nine boxes of the Lean Canvas and is often left blank at the start, because genuine advantages usually emerge over time. Maurya distinguishes it from claims such as passion, more features or being first to market, which competitors can readily replicate or overtake (Maurya, 2012).</p>
+        <div class="gl-ref"><span>Reference</span><p>Maurya, A. (2012) Running Lean: Iterate from Plan A to a Plan That Works. 2nd edn. Sebastopol, CA: O&#x27;Reilly Media.</p></div>
+      </article>
+      <article class="gl-item" id="term-4-3">
+        <div class="gl-h"><span class="gl-num">4.3</span><h3 class="gl-term">Emergent Strategy</h3></div>
+        <p class="gl-strap">A strategy that forms from a pattern of actions over time rather than from a formal plan</p>
+        <p class="gl-def">Emergent strategy is a pattern in a stream of actions that takes shape over time, even though it was not expressly intended in advance. It is distinguished from deliberate strategy, in which intentions are formulated as a plan and then realised. In Mintzberg&#x27;s five Ps, strategy can be understood as a plan, ploy, pattern, position or perspective, and realised strategies usually combine deliberate and emergent elements. For a new venture, this implies that a business plan should state choices clearly while remaining open to learning from the market (Mintzberg, 1987; Mintzberg, Ahlstrand and Lampel, 2009).</p>
+        <div class="gl-ref"><span>Reference</span><p>Mintzberg, H. (1987) &#x27;The strategy concept I: five Ps for strategy&#x27;, California Management Review, 30(1), pp. 11–24.</p></div>
+      </article>
+      <article class="gl-item" id="term-4-4">
+        <div class="gl-h"><span class="gl-num">4.4</span><h3 class="gl-term">Strategic Positioning</h3></div>
+        <p class="gl-strap">Choosing to perform different activities from rivals, or similar ones differently, and accepting trade-offs</p>
+        <p class="gl-def">Strategic positioning means performing different activities from rivals, or performing similar activities in different ways, so as to deliver a unique and valuable position. Sustainable positions require trade-offs, because choosing what to do also means choosing what not to do, and fit among activities makes the position harder to imitate. Porter distinguishes strategic positioning from operational effectiveness, which is performing the same activities better than rivals; the latter is necessary but insufficient, as best practices are quickly copied (Porter, 1996).</p>
+        <div class="gl-ref"><span>Reference</span><p>Porter, M.E. (1996) &#x27;What is strategy?&#x27;, Harvard Business Review, November–December, pp. 61–78.</p></div>
+      </article>
+      <article class="gl-item" id="term-4-5">
+        <div class="gl-h"><span class="gl-num">4.5</span><h3 class="gl-term">Economic Logic</h3></div>
+        <p class="gl-strap">The explanation of how a venture will earn returns above its cost of capital</p>
+        <p class="gl-def">Economic logic is the element of a strategy that explains how the firm will earn returns, typically through lower costs, premium prices or both, made possible by its other strategic choices. In the strategy diamond it sits at the centre, alongside arenas (where the firm will be active), vehicles (how it will get there), differentiators (how it will win) and staging (the speed and sequence of moves). It is distinguished from a list of goals or initiatives, since a coherent strategy must show how the elements reinforce one another to produce profit (Hambrick and Fredrickson, 2001).</p>
+        <div class="gl-ref"><span>Reference</span><p>Hambrick, D.C. and Fredrickson, J.W. (2001) &#x27;Are you sure you have a strategy?&#x27;, Academy of Management Executive, 15(4), pp. 48–59.</p></div>
+      </article>
+      <article class="gl-item" id="term-4-6">
+        <div class="gl-h"><span class="gl-num">4.6</span><h3 class="gl-term">Marketing Mix</h3></div>
+        <p class="gl-strap">The set of controllable tools a firm combines to reach its target market: product, price, place, promotion</p>
+        <p class="gl-def">The marketing mix is the set of controllable marketing tools that a firm blends to produce the response it wants in its target market. McCarthy grouped these as the 4Ps of product, price, place and promotion, building on Borden&#x27;s earlier idea of the manager as a mixer of ingredients. For services, Booms and Bitner extended the mix to 7Ps by adding people, process and physical evidence, reflecting the intangibility and co-production of services. The mix translates a positioning choice into concrete decisions within a business plan (McCarthy, 1960; Booms and Bitner, 1981).</p>
+        <div class="gl-ref"><span>Reference</span><p>McCarthy, E.J. (1960) Basic Marketing: A Managerial Approach. Homewood, IL: Richard D. Irwin.</p></div>
+      </article>
+      <article class="gl-item" id="term-4-7">
+        <div class="gl-h"><span class="gl-num">4.7</span><h3 class="gl-term">Product Portfolio</h3></div>
+        <p class="gl-strap">The set of products a firm offers, managed so that mature cash generators fund promising new ones</p>
+        <p class="gl-def">A product portfolio is the set of products or business units a firm manages, which the Boston Consulting Group framed as a balance of cash generation and cash use. The growth-share matrix classifies offerings by market growth rate and relative market share into stars, cash cows, question marks and dogs, implying that profits from mature cash cows should finance promising question marks and stars. The concept is distinguished from evaluating each product in isolation, and reminds entrepreneurs that resource allocation across offerings is itself a strategic choice (Henderson, 1970; Reeves, Moose and Venema, 2014).</p>
+        <div class="gl-ref"><span>Reference</span><p>Henderson, B.D. (1970) &#x27;The product portfolio&#x27;, BCG Perspectives. Boston, MA: Boston Consulting Group.</p></div>
+      </article>
+      <article class="gl-item" id="term-4-8">
+        <div class="gl-h"><span class="gl-num">4.8</span><h3 class="gl-term">Beachhead Segment</h3></div>
+        <p class="gl-strap">A narrow, well-defined niche a venture dominates first before expanding to neighbouring segments</p>
+        <p class="gl-def">A beachhead segment is a specific, narrowly defined niche market that a venture targets first in order to establish a dominant position before expanding into adjacent segments. Moore compares this approach to the D-Day landings, in which a concentrated force secures a foothold from which wider territory can be taken. Winning one segment generates the references and word of mouth that pragmatic buyers require, so that adjacent segments then fall like bowling pins. The approach is distinguished from attempting to serve a broad market from the outset (Moore, 1991; 1995).</p>
+        <div class="gl-ref"><span>Reference</span><p>Moore, G.A. (1991) Crossing the Chasm: Marketing and Selling High-Tech Products to Mainstream Customers. New York: HarperBusiness.</p></div>
+      </article>
+    </div>
+  </section>
+  <section class="gl-group" id="unit5" data-u="5" style="--uc:#2E8B6F">
+    <div class="gl-ghead"><span class="unit-dot">5</span><div>
+      <div class="gl-kick">Unit 5 &middot; Scaling a Business &middot; 8 terms</div>
+      <h2>Developing the Business Plan</h2>
+      <p class="gl-ilo"><b>Learning focus &middot; ILO 1</b> &mdash; Develop a comprehensive business plan that covers the marketing, financial and operational aspects of the venture.</p>
+      <a href="unit5.html">Unit 5 Framework Gallery &rarr;</a></div></div>
+    <div class="gl-list">
+      <article class="gl-item" id="term-5-1">
+        <div class="gl-h"><span class="gl-num">5.1</span><h3 class="gl-term">Business Plan</h3></div>
+        <p class="gl-strap">A document setting out the people, opportunity, context and risks of a venture and how it will succeed</p>
+        <p class="gl-def">A business plan is a written document that sets out how a venture intends to create and capture value, covering its market, operations, marketing and financial projections. Sahlman argues that a great plan focuses on four interdependent factors: the people, the opportunity, the context and the risk and reward. He warns that plans over-invest in detailed financial forecasts and under-invest in the evidence and assumptions that determine success. A plan is therefore distinguished from a forecast; its value lies in showing how the team will respond when circumstances change (Sahlman, 1997).</p>
+        <div class="gl-ref"><span>Reference</span><p>Sahlman, W.A. (1997) &#x27;How to write a great business plan&#x27;, Harvard Business Review, July–August, pp. 98–108.</p></div>
+      </article>
+      <article class="gl-item" id="term-5-2">
+        <div class="gl-h"><span class="gl-num">5.2</span><h3 class="gl-term">Leap-of-Faith Assumption</h3></div>
+        <p class="gl-strap">A critical assumption the whole venture depends on, which must be tested first</p>
+        <p class="gl-def">A leap-of-faith assumption is one of the riskiest elements of a business plan, on which the success of the entire venture depends. Ries highlights two in particular: the value hypothesis, whether customers find the product valuable, and the growth hypothesis, how new customers will discover it. Such assumptions are distinguished from routine planning estimates because, if they are wrong, the business fails regardless of execution quality. A credible plan names these assumptions explicitly and sets out how they will be tested before major resources are committed (Ries, 2011).</p>
+        <div class="gl-ref"><span>Reference</span><p>Ries, E. (2011) The Lean Startup: How Today&#x27;s Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses. New York: Crown Business.</p></div>
+      </article>
+      <article class="gl-item" id="term-5-3">
+        <div class="gl-h"><span class="gl-num">5.3</span><h3 class="gl-term">SMART Objective</h3></div>
+        <p class="gl-strap">A goal that is specific, measurable, assignable, realistic and time-related</p>
+        <p class="gl-def">A SMART objective is a goal written to be specific, measurable, assignable, realistic and time-related, the criteria Doran proposed for management objectives; later versions often substitute achievable and relevant. The format turns broad aspirations into targets against which progress can be monitored and responsibility allocated. It is supported by goal-setting research showing that specific, challenging goals lead to higher performance than vague instructions to do one&#x27;s best. In a business plan, SMART objectives connect the vision to operational milestones (Doran, 1981; Locke and Latham, 2002).</p>
+        <div class="gl-ref"><span>Reference</span><p>Doran, G.T. (1981) &#x27;There&#x27;s a S.M.A.R.T. way to write management&#x27;s goals and objectives&#x27;, Management Review, 70(11), pp. 35–36.</p></div>
+      </article>
+      <article class="gl-item" id="term-5-4">
+        <div class="gl-h"><span class="gl-num">5.4</span><h3 class="gl-term">Objectives and Key Results</h3></div>
+        <p class="gl-strap">A goal-setting system pairing an ambitious objective with a few measurable results that prove progress</p>
+        <p class="gl-def">Objectives and key results (OKRs) is a goal-setting system in which each objective states what is to be achieved and is paired with a small number of key results that are specific, time-bound and measurable, showing how achievement will be verified. Originating with Andy Grove at Intel and popularised by Doerr, OKRs are typically set quarterly, made transparent across the organisation and allowed to be ambitious. They are distinguished from key performance indicators, which monitor ongoing health, and from task lists, which describe activity rather than outcomes (Grove, 1983; Doerr, 2018).</p>
+        <div class="gl-ref"><span>Reference</span><p>Doerr, J. (2018) Measure What Matters: How Google, Bono, and the Gates Foundation Rock the World with OKRs. New York: Portfolio/Penguin.</p></div>
+      </article>
+      <article class="gl-item" id="term-5-5">
+        <div class="gl-h"><span class="gl-num">5.5</span><h3 class="gl-term">Balanced Scorecard</h3></div>
+        <p class="gl-strap">A performance system that tracks financial results alongside customer, process and learning measures</p>
+        <p class="gl-def">The balanced scorecard is a performance measurement system that complements financial measures with operational measures from three further perspectives: the customer, internal business processes, and innovation and learning. Kaplan and Norton argued that financial results are lagging indicators of past actions, whereas the other perspectives capture drivers of future performance. The scorecard is distinguished from a purely financial dashboard because it links strategy to a limited set of measures across the organisation, helping a venture to translate its business plan into actions it can monitor (Kaplan and Norton, 1992; 1996).</p>
+        <div class="gl-ref"><span>Reference</span><p>Kaplan, R.S. and Norton, D.P. (1992) &#x27;The balanced scorecard: measures that drive performance&#x27;, Harvard Business Review, January–February, pp. 71–79.</p></div>
+      </article>
+      <article class="gl-item" id="term-5-6">
+        <div class="gl-h"><span class="gl-num">5.6</span><h3 class="gl-term">North Star Metric</h3></div>
+        <p class="gl-strap">The single measure that best captures the core value a product delivers to its customers</p>
+        <p class="gl-def">A North Star metric is the single measure that best captures the core value a product delivers to its customers, and which therefore serves as the primary indicator of sustainable success for the whole team. Examples include nights booked for a lodging marketplace or messages sent for a communication tool. It is distinguished from vanity metrics, such as page views or downloads, which may rise without reflecting delivered value. Choosing it forces founders to state explicitly what customer behaviour the business plan depends on (Ellis and Brown, 2017).</p>
+        <div class="gl-ref"><span>Reference</span><p>Ellis, S. and Brown, M. (2017) Hacking Growth: How Today&#x27;s Fastest-Growing Companies Drive Breakout Success. New York: Currency.</p></div>
+      </article>
+      <article class="gl-item" id="term-5-7">
+        <div class="gl-h"><span class="gl-num">5.7</span><h3 class="gl-term">False Start</h3></div>
+        <p class="gl-strap">Launching too quickly without first researching customer needs, then wasting resources on the wrong product</p>
+        <p class="gl-def">A false start is a pattern of startup failure in which founders rush to launch a product without first doing sufficient research on customer needs, often in the belief that a lean, launch-first approach removes the need for upfront discovery. When the product misses, the team must pivot, but by then it has consumed scarce time and capital. Eisenmann distinguishes it from failures caused by poor resources or partners, and identifies it as one of six recurring failure patterns that a business plan should anticipate (Eisenmann, 2021).</p>
+        <div class="gl-ref"><span>Reference</span><p>Eisenmann, T. (2021) Why Startups Fail: A New Roadmap for Entrepreneurial Success. New York: Currency.</p></div>
+      </article>
+      <article class="gl-item" id="term-5-8">
+        <div class="gl-h"><span class="gl-num">5.8</span><h3 class="gl-term">Sustaining Innovation</h3></div>
+        <p class="gl-strap">Improvements that make good products better for an incumbent&#x27;s existing, most demanding customers</p>
+        <p class="gl-def">A sustaining innovation improves the performance of established products along the dimensions that mainstream customers have historically valued, whether incrementally or through a technological breakthrough. Incumbents usually win sustaining battles because they have the resources and customer relationships to do so. It is distinguished from disruptive innovation, which starts with simpler, cheaper offerings for overlooked or new customers. The innovator&#x27;s dilemma arises because well-managed firms, by rationally listening to their best customers, neglect disruptive opportunities, which is where new ventures often find their opening (Christensen, 1997).</p>
+        <div class="gl-ref"><span>Reference</span><p>Christensen, C.M. (1997) The Innovator&#x27;s Dilemma: When New Technologies Cause Great Firms to Fail. Boston, MA: Harvard Business School Press.</p></div>
+      </article>
+    </div>
+  </section>
+  <section class="gl-group" id="unit6" data-u="6" style="--uc:#3E6E8E">
+    <div class="gl-ghead"><span class="unit-dot">6</span><div>
+      <div class="gl-kick">Unit 6 &middot; Scaling a Business &middot; 8 terms</div>
+      <h2>Intrapreneurship &amp; Corporate Business Development</h2>
+      <p class="gl-ilo"><b>Learning focus &middot; ILOs 2 &amp; 4</b> &mdash; Investigate the purpose of business development inside established firms and distinguish the skills and personality the BD role requires.</p>
+      <a href="unit6.html">Unit 6 Framework Gallery &rarr;</a></div></div>
+    <div class="gl-list">
+      <article class="gl-item" id="term-6-1">
+        <div class="gl-h"><span class="gl-num">6.1</span><h3 class="gl-term">Intrapreneurship</h3></div>
+        <p class="gl-strap">Acting as an entrepreneur inside an established organisation, using its resources to build new business</p>
+        <p class="gl-def">Intrapreneurship is entrepreneurial behaviour by employees who take hands-on responsibility for turning an idea into a profitable new product, process or business within an existing organisation. Unlike the independent entrepreneur, the intrapreneur works with corporate resources and must secure sponsorship, protection and tolerance of failure from the wider firm. It is distinguished from routine product management by its focus on ventures that the organisation&#x27;s established systems would otherwise neglect or reject (Pinchot, 1985; Burgelman, 1983).</p>
+        <div class="gl-ref"><span>Reference</span><p>Pinchot, G. (1985) Intrapreneuring: Why You Don&#x27;t Have to Leave the Corporation to Become an Entrepreneur. New York: Harper &amp; Row.</p></div>
+      </article>
+      <article class="gl-item" id="term-6-2">
+        <div class="gl-h"><span class="gl-num">6.2</span><h3 class="gl-term">Systematic Innovation</h3></div>
+        <p class="gl-strap">The purposeful, organised search for change and the opportunities it offers, not waiting for inspiration</p>
+        <p class="gl-def">Systematic innovation is the deliberate and organised search for changes, and the methodical analysis of the opportunities such changes might offer for economic or social innovation. Drucker identifies sources such as the unexpected, incongruities, process needs, industry and market changes, demographics, shifts in perception and new knowledge. Innovation is thus distinguished from invention: an invention is a new idea or device, whereas an innovation exists only when that change creates new value or satisfaction for customers in the market (Drucker, 1985).</p>
+        <div class="gl-ref"><span>Reference</span><p>Drucker, P.F. (1985) Innovation and Entrepreneurship: Practice and Principles. New York: Harper &amp; Row.</p></div>
+      </article>
+      <article class="gl-item" id="term-6-3">
+        <div class="gl-h"><span class="gl-num">6.3</span><h3 class="gl-term">Growth Horizons</h3></div>
+        <p class="gl-strap">Managing today&#x27;s core, tomorrow&#x27;s emerging businesses and future options in parallel rather than in sequence</p>
+        <p class="gl-def">Growth horizons describe three time-bound categories of business that a firm must manage simultaneously: Horizon 1 extends and defends the current core, Horizon 2 builds emerging businesses that will generate future profit, and Horizon 3 creates options on ideas that may become the businesses of the next decade. The concept warns that firms focusing only on Horizon 1 performance exhaust their growth pipeline, and it echoes the tension between exploiting existing competences and exploring new ones (Baghai, Coley and White, 1999; March, 1991).</p>
+        <div class="gl-ref"><span>Reference</span><p>Baghai, M., Coley, S. and White, D. (1999) The Alchemy of Growth: Practical Insights for Building the Enduring Enterprise. Cambridge, MA: Perseus Books.</p></div>
+      </article>
+      <article class="gl-item" id="term-6-4">
+        <div class="gl-h"><span class="gl-num">6.4</span><h3 class="gl-term">Selective Forgetting</h3></div>
+        <p class="gl-strap">Deliberately letting go of past assumptions, habits and practices that would block tomorrow&#x27;s business</p>
+        <p class="gl-def">Selective forgetting is the deliberate abandonment of the values, attitudes and practices that made the current business successful but that would constrain the creation of new ones. In Govindarajan&#x27;s three-box approach it sits between managing the present core (Box 1) and creating the future through breakthrough ideas (Box 3), and is treated as the hardest of the three tasks because past success is embedded in routines, metrics and careers. It is distinguished from simple cost-cutting because its purpose is to make room for nonlinear change (Govindarajan, 2016).</p>
+        <div class="gl-ref"><span>Reference</span><p>Govindarajan, V. (2016) The Three-Box Solution: A Strategy for Leading Innovation. Boston, MA: Harvard Business Review Press.</p></div>
+      </article>
+      <article class="gl-item" id="term-6-5">
+        <div class="gl-h"><span class="gl-num">6.5</span><h3 class="gl-term">Innovation Portfolio</h3></div>
+        <p class="gl-strap">The deliberate balance of core, adjacent and transformational innovation investments in a company</p>
+        <p class="gl-def">An innovation portfolio is the set of innovation initiatives a firm funds, classified by how far they depart from existing products and existing customers. Nagji and Tuff distinguish core initiatives that optimise current offerings, adjacent initiatives that expand into new-to-the-company markets or products, and transformational initiatives that create offerings for markets that do not yet exist. They report that higher-performing firms consciously set an allocation across these categories, often near 70:20:10, rather than letting individual project decisions determine the overall ambition (Nagji and Tuff, 2012).</p>
+        <div class="gl-ref"><span>Reference</span><p>Nagji, B. and Tuff, G. (2012) &#x27;Managing your innovation portfolio&#x27;, Harvard Business Review, May, pp. 66–74.</p></div>
+      </article>
+      <article class="gl-item" id="term-6-6">
+        <div class="gl-h"><span class="gl-num">6.6</span><h3 class="gl-term">Market Orientation</h3></div>
+        <p class="gl-strap">An organisation-wide focus on generating, sharing and acting on intelligence about customers and markets</p>
+        <p class="gl-def">Market orientation is the organisation-wide generation of market intelligence about current and future customer needs, the dissemination of that intelligence across departments, and the organisation-wide responsiveness to it. Narver and Slater conceptualise it as customer orientation, competitor orientation and interfunctional coordination, and link it to profitability. Sørensen builds on this construct to frame business development as a market-oriented activity that identifies and pursues growth opportunities, distinguishing it from a narrow sales or deal-making function (Kohli and Jaworski, 1990; Narver and Slater, 1990; Sørensen, 2012).</p>
+        <div class="gl-ref"><span>Reference</span><p>Kohli, A.K. and Jaworski, B.J. (1990) &#x27;Market orientation: the construct, research propositions, and managerial implications&#x27;, Journal of Marketing, 54(2), pp. 1–18.</p></div>
+      </article>
+      <article class="gl-item" id="term-6-7">
+        <div class="gl-h"><span class="gl-num">6.7</span><h3 class="gl-term">Influence Tactics</h3></div>
+        <p class="gl-strap">The proactive behaviours people use to win commitment from bosses, peers and others they do not control</p>
+        <p class="gl-def">Influence tactics are the specific behaviours an agent uses to change the attitudes or actions of a target person, such as rational persuasion, inspirational appeals, consultation, collaboration, exchange, ingratiation, pressure and coalition building. Research shows that rational persuasion, inspirational appeals and consultation are most likely to produce commitment, whereas pressure tends to produce resistance or mere compliance. The concept is central to business development roles, which depend on mobilising colleagues and partners without formal authority over them (Yukl and Tracey, 1992; Yukl, 2010).</p>
+        <div class="gl-ref"><span>Reference</span><p>Yukl, G.A. (2010) Leadership in Organizations. 7th edn. Upper Saddle River, NJ: Pearson.</p></div>
+      </article>
+      <article class="gl-item" id="term-6-8">
+        <div class="gl-h"><span class="gl-num">6.8</span><h3 class="gl-term">Emotional Intelligence</h3></div>
+        <p class="gl-strap">The ability to recognise and manage one&#x27;s own emotions and to read and influence those of others</p>
+        <p class="gl-def">Emotional intelligence is the capacity to perceive, understand and regulate one&#x27;s own emotions and to recognise and respond to the emotions of others in ways that guide thinking and action. Salovey and Mayer introduced the construct as a set of abilities; Goleman popularised it as a cluster of competences comprising self-awareness, self-regulation, motivation, empathy and social skill. It is distinguished from general cognitive ability and is frequently cited as a predictor of effectiveness in relationship-intensive roles such as leadership and business development (Salovey and Mayer, 1990; Goleman, 1995).</p>
+        <div class="gl-ref"><span>Reference</span><p>Goleman, D. (1995) Emotional Intelligence. New York: Bantam Books.</p></div>
+      </article>
+    </div>
+  </section>
+  <section class="gl-group" id="unit7" data-u="7" style="--uc:#A0527A">
+    <div class="gl-ghead"><span class="unit-dot">7</span><div>
+      <div class="gl-kick">Unit 7 &middot; Scaling a Business &middot; 8 terms</div>
+      <h2>Growth Management &amp; Strategies</h2>
+      <p class="gl-ilo"><b>Learning focus &middot; ILOs 2 &amp; 4</b> &mdash; Investigate how business development drives growth and how the founder&#x27;s role must change as the firm scales.</p>
+      <a href="unit7.html">Unit 7 Framework Gallery &rarr;</a></div></div>
+    <div class="gl-list">
+      <article class="gl-item" id="term-7-1">
+        <div class="gl-h"><span class="gl-num">7.1</span><h3 class="gl-term">Growth Crisis</h3></div>
+        <p class="gl-strap">A predictable breakdown that ends each phase of growth when the old management style no longer fits</p>
+        <p class="gl-def">A growth crisis is a period of organisational turmoil that ends a phase of relatively calm, evolutionary growth because the management practices that produced that growth have become inadequate for a larger firm. Greiner identifies a sequence of crises, of leadership, autonomy, control and red tape, each resolved only by a revolutionary change in structure and style that in turn sows the seeds of the next crisis. The concept implies that growth problems are often caused by past solutions rather than by external events (Greiner, 1972, 1998).</p>
+        <div class="gl-ref"><span>Reference</span><p>Greiner, L.E. (1972) &#x27;Evolution and revolution as organizations grow&#x27;, Harvard Business Review, July–August, pp. 37–46.</p></div>
+      </article>
+      <article class="gl-item" id="term-7-2">
+        <div class="gl-h"><span class="gl-num">7.2</span><h3 class="gl-term">Founder&#x27;s Trap</h3></div>
+        <p class="gl-strap">When a growing company cannot function without its founder because power and decisions remain centralised</p>
+        <p class="gl-def">The founder&#x27;s trap is a lifecycle pathology in which a young, fast-growing organisation remains dependent on its founder&#x27;s personal judgement, so that authority is not delegated and systems, policies and professional management fail to develop. Adizes treats it as a failure to move from the entrepreneurial Go-Go stage to Adolescence, when the founder must institutionalise leadership. It is distinguished from normal founder involvement because the organisation&#x27;s survival becomes tied to one individual, limiting further growth (Adizes, 1988).</p>
+        <div class="gl-ref"><span>Reference</span><p>Adizes, I. (1988) Corporate Lifecycles: How and Why Corporations Grow and Die and What to Do About It. Englewood Cliffs, NJ: Prentice Hall.</p></div>
+      </article>
+      <article class="gl-item" id="term-7-3">
+        <div class="gl-h"><span class="gl-num">7.3</span><h3 class="gl-term">Take-off Stage</h3></div>
+        <p class="gl-strap">The growth stage in which the owner must delegate and finance rapid expansion or risk losing control</p>
+        <p class="gl-def">The take-off stage is the fourth of five stages of small business growth, following existence, survival and success, in which the key problems are how to grow rapidly and how to finance that growth. Churchill and Lewis argue that the owner must delegate responsibility to managers and secure sufficient cash, and that the owner&#x27;s operational abilities become progressively less important while strategic abilities become more important. Firms that fail at this stage may revert to an earlier stage or be sold (Churchill and Lewis, 1983).</p>
+        <div class="gl-ref"><span>Reference</span><p>Churchill, N.C. and Lewis, V.L. (1983) &#x27;The five stages of small business growth&#x27;, Harvard Business Review, May–June, pp. 30–50.</p></div>
+      </article>
+      <article class="gl-item" id="term-7-4">
+        <div class="gl-h"><span class="gl-num">7.4</span><h3 class="gl-term">Diversification</h3></div>
+        <p class="gl-strap">Growing by offering new products to new markets, the riskiest of Ansoff&#x27;s four growth directions</p>
+        <p class="gl-def">Diversification is a growth strategy in which a firm simultaneously departs from its present product line and its present market structure. Ansoff contrasts it with market penetration (existing products in existing markets), market development (existing products in new markets) and product development (new products for existing markets), noting that diversification usually requires new skills, techniques and facilities. It therefore carries the greatest risk of the four product–market strategies and requires a stronger strategic rationale (Ansoff, 1957, 1965).</p>
+        <div class="gl-ref"><span>Reference</span><p>Ansoff, H.I. (1957) &#x27;Strategies for diversification&#x27;, Harvard Business Review, September–October, pp. 113–124.</p></div>
+      </article>
+      <article class="gl-item" id="term-7-5">
+        <div class="gl-h"><span class="gl-num">7.5</span><h3 class="gl-term">Penrose Effect</h3></div>
+        <p class="gl-strap">The limit on a firm&#x27;s growth rate set by the capacity of its existing managers to absorb new ones</p>
+        <p class="gl-def">The Penrose effect refers to the constraint that available managerial services place on the rate at which a firm can expand. Penrose argues that growth requires experienced managers to plan and integrate new activities and to train newcomers, so a firm attempting to grow too quickly suffers inefficiency. Her theory also views the firm as a collection of productive resources whose unused services create the incentive to grow, an idea that later informed the resource-based view of the firm (Penrose, 1959; Wernerfelt, 1984).</p>
+        <div class="gl-ref"><span>Reference</span><p>Penrose, E.T. (1959) The Theory of the Growth of the Firm. Oxford: Basil Blackwell.</p></div>
+      </article>
+      <article class="gl-item" id="term-7-6">
+        <div class="gl-h"><span class="gl-num">7.6</span><h3 class="gl-term">Reverse Income Statement</h3></div>
+        <p class="gl-strap">Starting from the profit a new venture must earn and working backwards to the revenues and costs required</p>
+        <p class="gl-def">A reverse income statement is a planning tool that begins with the required profit for a new venture and derives the revenues and maximum allowable costs needed to achieve it. It forms part of discovery-driven planning, which replaces conventional forecasts with explicit assumptions that are tested and revised at successive milestones. It is distinguished from a conventional pro forma statement because it exposes the assumptions on which a venture depends rather than treating projections as established facts (McGrath and MacMillan, 1995).</p>
+        <div class="gl-ref"><span>Reference</span><p>McGrath, R.G. and MacMillan, I.C. (1995) &#x27;Discovery-driven planning&#x27;, Harvard Business Review, July–August, pp. 44–54.</p></div>
+      </article>
+      <article class="gl-item" id="term-7-7">
+        <div class="gl-h"><span class="gl-num">7.7</span><h3 class="gl-term">Resource Leverage</h3></div>
+        <p class="gl-strap">Achieving ambitious goals by getting more out of limited resources rather than simply adding more</p>
+        <p class="gl-def">Resource leverage is the ability to achieve disproportionate results from a given resource base by concentrating, accumulating, complementing, conserving and recovering resources. Hamel and Prahalad pair it with strategic stretch, a deliberate misfit between ambitious aspirations and current resources, arguing that this gap stimulates creativity and explains why resource-poor challengers can overtake resource-rich incumbents. It is distinguished from resource allocation, which divides existing resources among projects without increasing their productivity (Hamel and Prahalad, 1993).</p>
+        <div class="gl-ref"><span>Reference</span><p>Hamel, G. and Prahalad, C.K. (1993) &#x27;Strategy as stretch and leverage&#x27;, Harvard Business Review, March–April, pp. 75–84.</p></div>
+      </article>
+      <article class="gl-item" id="term-7-8">
+        <div class="gl-h"><span class="gl-num">7.8</span><h3 class="gl-term">Level 5 Leadership</h3></div>
+        <p class="gl-strap">Leadership combining personal humility with intense professional will to build an enduring great company</p>
+        <p class="gl-def">Level 5 leadership denotes the top level of a five-level hierarchy of executive capability, in which leaders channel ambition into the organisation rather than themselves, combining personal humility with intense professional will. Collins found such leaders in every company in his study that moved from good to sustained great performance, and contrasted them with charismatic leaders whose firms declined after they left. For growing ventures, the concept highlights that the founder&#x27;s role must shift from hero to builder of a self-sustaining organisation (Collins, 2001).</p>
+        <div class="gl-ref"><span>Reference</span><p>Collins, J. (2001) Good to Great: Why Some Companies Make the Leap... and Others Don&#x27;t. New York: HarperBusiness.</p></div>
+      </article>
+    </div>
+  </section>
+  <section class="gl-group" id="unit8" data-u="8" style="--uc:#2F5D8C">
+    <div class="gl-ghead"><span class="unit-dot">8</span><div>
+      <div class="gl-kick">Unit 8 &middot; Growing a Business &middot; 8 terms</div>
+      <h2>Funding &amp; Financial Strategies</h2>
+      <p class="gl-ilo"><b>Learning focus &middot; ILO 5</b> &mdash; Select the right funding for a business idea by matching the venture&#x27;s stage and needs to the right capital partner.</p>
+      <a href="unit8.html">Unit 8 Framework Gallery &rarr;</a></div></div>
+    <div class="gl-list">
+      <article class="gl-item" id="term-8-1">
+        <div class="gl-h"><span class="gl-num">8.1</span><h3 class="gl-term">Financial Bootstrapping</h3></div>
+        <p class="gl-strap">Funding a venture through revenues, savings and resource-saving methods instead of external investors</p>
+        <p class="gl-def">Financial bootstrapping refers to methods for meeting a new venture&#x27;s need for resources without relying on long-term external finance from banks or investors. Winborg and Landström identify practices such as delaying payments, minimising stock, sharing resources with other firms, using owners&#x27; private funds and obtaining subsidies. Bootstrapping preserves ownership and forces discipline, but may slow growth; it is distinguished from informal investment by friends and family, which still introduces outside capital and expectations (Winborg and Landström, 2001).</p>
+        <div class="gl-ref"><span>Reference</span><p>Winborg, J. and Landström, H. (2001) &#x27;Financial bootstrapping in small businesses: examining small business managers&#x27; resource acquiring behaviors&#x27;, Journal of Business Venturing, 16(3), pp. 235–254.</p></div>
+      </article>
+      <article class="gl-item" id="term-8-2">
+        <div class="gl-h"><span class="gl-num">8.2</span><h3 class="gl-term">Crowdfunding</h3></div>
+        <p class="gl-strap">Raising relatively small amounts from many people, usually via an online platform</p>
+        <p class="gl-def">Crowdfunding is the effort by entrepreneurs to fund their ventures by drawing on relatively small contributions from a large number of individuals using the internet, without standard financial intermediaries. Models include donation-based, reward-based (pre-selling a product), lending-based and equity-based crowdfunding. Beyond capital, a campaign can validate demand and build a community of early customers; success is associated with signals of project quality and preparedness. It is distinguished from angel or venture finance by the absence of a single professional investor (Mollick, 2014; Belleflamme, Lambert and Schwienbacher, 2014).</p>
+        <div class="gl-ref"><span>Reference</span><p>Mollick, E. (2014) &#x27;The dynamics of crowdfunding: an exploratory study&#x27;, Journal of Business Venturing, 29(1), pp. 1–16.</p></div>
+      </article>
+      <article class="gl-item" id="term-8-3">
+        <div class="gl-h"><span class="gl-num">8.3</span><h3 class="gl-term">Business Angel</h3></div>
+        <p class="gl-strap">A wealthy individual who invests personal money, and often expertise, in early-stage ventures</p>
+        <p class="gl-def">A business angel is a high-net-worth individual who invests their own money directly in young private companies, typically at seed or early stage, in exchange for equity or convertible instruments. Angels often contribute industry experience, mentoring and contacts alongside capital, and may invest individually or through syndicates and networks. They are distinguished from venture capitalists, who invest other people&#x27;s money from a managed fund and usually write larger cheques at later stages with more formal governance rights (Lerner, Leamon and Hardymon, 2012).</p>
+        <div class="gl-ref"><span>Reference</span><p>Lerner, J., Leamon, A. and Hardymon, F. (2012) Venture Capital, Private Equity, and the Financing of Entrepreneurship. Hoboken, NJ: Wiley.</p></div>
+      </article>
+      <article class="gl-item" id="term-8-4">
+        <div class="gl-h"><span class="gl-num">8.4</span><h3 class="gl-term">Venture Capital</h3></div>
+        <p class="gl-strap">Professionally managed funds that buy equity in high-growth young companies in pursuit of large exits</p>
+        <p class="gl-def">Venture capital is independent, professionally managed equity finance provided to young, high-risk, high-potential private companies. Venture capitalists raise funds from limited partners, select and invest in portfolio firms, monitor and add value through board seats and staged financing, and seek returns through exits such as trade sales or initial public offerings. Venture capital is distinguished from private equity buyouts, which typically acquire controlling stakes in mature firms using substantial debt (Gompers and Lerner, 2001; Kaplan and Strömberg, 2009).</p>
+        <div class="gl-ref"><span>Reference</span><p>Gompers, P. and Lerner, J. (2001) The Venture Capital Cycle. 2nd edn. Cambridge, MA: MIT Press.</p></div>
+      </article>
+      <article class="gl-item" id="term-8-5">
+        <div class="gl-h"><span class="gl-num">8.5</span><h3 class="gl-term">Pre-Money Valuation</h3></div>
+        <p class="gl-strap">What a company is agreed to be worth immediately before new investment is added</p>
+        <p class="gl-def">Pre-money valuation is the value agreed for a company immediately before a financing round; adding the new investment gives the post-money valuation. The investor&#x27;s ownership percentage equals the investment divided by the post-money valuation, so founders must clarify which figure is being negotiated in a term sheet. Because headline valuations of venture-backed firms often ignore preferential terms attached to different share classes, the agreed figure may overstate the economic value of ordinary shares (Feld and Mendelson, 2019; Gornall and Strebulaev, 2020).</p>
+        <div class="gl-ref"><span>Reference</span><p>Feld, B. and Mendelson, J. (2019) Venture Deals: Be Smarter Than Your Lawyer and Venture Capitalist. 4th edn. Hoboken, NJ: Wiley.</p></div>
+      </article>
+      <article class="gl-item" id="term-8-6">
+        <div class="gl-h"><span class="gl-num">8.6</span><h3 class="gl-term">Dilution</h3></div>
+        <p class="gl-strap">The fall in existing shareholders&#x27; percentage ownership when a company issues new shares</p>
+        <p class="gl-def">Dilution is the reduction in the percentage ownership of existing shareholders that occurs when a company issues additional shares, for example in a financing round, through an employee option pool or on the conversion of notes or SAFEs. Dilution is not necessarily a loss of value: a smaller share of a more valuable company may be worth more. Founders therefore weigh dilution against the speed and resources that new capital provides, and anti-dilution clauses can shift its burden between investor groups (Feld and Mendelson, 2019).</p>
+        <div class="gl-ref"><span>Reference</span><p>Feld, B. and Mendelson, J. (2019) Venture Deals: Be Smarter Than Your Lawyer and Venture Capitalist. 4th edn. Hoboken, NJ: Wiley.</p></div>
+      </article>
+      <article class="gl-item" id="term-8-7">
+        <div class="gl-h"><span class="gl-num">8.7</span><h3 class="gl-term">Capitalisation Table</h3></div>
+        <p class="gl-strap">A record of who owns what in a company, showing every shareholder, share class and option</p>
+        <p class="gl-def">A capitalisation (cap) table is a ledger that lists a company&#x27;s securities, including ordinary and preferred shares, options, warrants and convertible instruments, and shows who holds them and the resulting percentage ownership. Pro forma cap tables model how ownership will change after a new round, option-pool expansion or conversion, making them essential for negotiating valuations and anticipating dilution. Errors or unclear entries in the cap table frequently surface during investor due diligence and can delay or derail financing (Feld and Mendelson, 2019).</p>
+        <div class="gl-ref"><span>Reference</span><p>Feld, B. and Mendelson, J. (2019) Venture Deals: Be Smarter Than Your Lawyer and Venture Capitalist. 4th edn. Hoboken, NJ: Wiley.</p></div>
+      </article>
+      <article class="gl-item" id="term-8-8">
+        <div class="gl-h"><span class="gl-num">8.8</span><h3 class="gl-term">Simple Agreement for Future Equity (SAFE)</h3></div>
+        <p class="gl-strap">A short contract giving an investor the right to shares in a later priced round, without debt terms</p>
+        <p class="gl-def">A SAFE is a seed financing contract, introduced by Y Combinator in 2013, under which an investor provides capital now in exchange for the right to receive equity at a future priced round, usually on terms set by a valuation cap and/or a discount. Unlike a convertible note, it is not debt: it carries no interest rate or maturity date. Its 2018 post-money version makes the investor&#x27;s resulting ownership easier to calculate for founders and investors (Coyle and Green, 2018; Levy, 2018).</p>
+        <div class="gl-ref"><span>Reference</span><p>Coyle, J.F. and Green, J.M. (2018) &#x27;The SAFE, the KISS, and the note: a survey of startup seed financing contracts&#x27;, Minnesota Law Review Headnotes, 103(1), pp. 42–63.</p></div>
+      </article>
+    </div>
+  </section>
+  <section class="gl-group" id="unit9" data-u="9" style="--uc:#B8862E">
+    <div class="gl-ghead"><span class="unit-dot">9</span><div>
+      <div class="gl-kick">Unit 9 &middot; Growing a Business &middot; 8 terms</div>
+      <h2>Pitching &amp; Presentation Skills</h2>
+      <p class="gl-ilo"><b>Learning focus &middot; ILO 5</b> &mdash; Pitch the business plan with a clear structure, a memorable message and a credible delivery.</p>
+      <a href="unit9.html">Unit 9 Framework Gallery &rarr;</a></div></div>
+    <div class="gl-list">
+      <article class="gl-item" id="term-9-1">
+        <div class="gl-h"><span class="gl-num">9.1</span><h3 class="gl-term">Elevator Pitch</h3></div>
+        <p class="gl-strap">A brief, spoken explanation of what a venture does and why it matters, short enough for a lift ride</p>
+        <p class="gl-def">An elevator pitch is a concise oral description of a venture, typically lasting under a minute, that states what the company does, for whom, and why it matters, with the aim of earning a further conversation rather than closing a deal. Kawasaki advises that founders explain what the company does in the opening moments and avoid jargon. It is distinguished from the full investor pitch, which elaborates the problem, solution, business model, traction, team and financing requirement (Kawasaki, 2004).</p>
+        <div class="gl-ref"><span>Reference</span><p>Kawasaki, G. (2004) The Art of the Start. New York: Portfolio.</p></div>
+      </article>
+      <article class="gl-item" id="term-9-2">
+        <div class="gl-h"><span class="gl-num">9.2</span><h3 class="gl-term">Pitch Deck</h3></div>
+        <p class="gl-strap">The short slide presentation founders use to tell investors the venture&#x27;s story and funding need</p>
+        <p class="gl-def">A pitch deck is a concise set of slides that supports a founder&#x27;s spoken presentation to investors, typically covering the problem, solution, market, business model, competition, team, traction, financials and the funding sought. Kawasaki&#x27;s 10/20/30 rule recommends around ten slides, twenty minutes and a minimum thirty-point font, while venture firms such as Sequoia publish comparable outlines. The deck is distinguished from the written business plan: it is a selective argument designed to secure a further meeting, not a comprehensive document (Kawasaki, 2004).</p>
+        <div class="gl-ref"><span>Reference</span><p>Kawasaki, G. (2004) The Art of the Start. New York: Portfolio.</p></div>
+      </article>
+      <article class="gl-item" id="term-9-3">
+        <div class="gl-h"><span class="gl-num">9.3</span><h3 class="gl-term">Throughline</h3></div>
+        <p class="gl-strap">The single connecting idea that runs through a talk and ties every element together</p>
+        <p class="gl-def">A throughline is the connecting theme of a presentation, expressible in roughly fifteen words, to which every story, data point and slide contributes. Anderson argues that the speaker&#x27;s task is to build one idea in the audience&#x27;s mind, and that material not serving the throughline should be cut, however interesting. In a venture pitch the throughline is the core reason to believe in the business, distinguished from a summary of the business plan that tries to cover everything with equal weight (Anderson, 2016).</p>
+        <div class="gl-ref"><span>Reference</span><p>Anderson, C. (2016) TED Talks: The Official TED Guide to Public Speaking. Boston, MA: Houghton Mifflin Harcourt.</p></div>
+      </article>
+      <article class="gl-item" id="term-9-4">
+        <div class="gl-h"><span class="gl-num">9.4</span><h3 class="gl-term">Curse of Knowledge</h3></div>
+        <p class="gl-strap">Once you know something, it becomes hard to imagine not knowing it, so you explain it badly</p>
+        <p class="gl-def">The curse of knowledge is the cognitive bias whereby people who possess expert information find it difficult to imagine the perspective of those who lack it, and consequently communicate in abstract terms that their audience cannot follow. Heath and Heath identify it as the main obstacle to creating sticky ideas and propose principles of simplicity, unexpectedness, concreteness, credibility, emotion and stories to overcome it. For founders it explains why pitches full of technical detail and insider jargon often fail to persuade investors (Heath and Heath, 2007).</p>
+        <div class="gl-ref"><span>Reference</span><p>Heath, C. and Heath, D. (2007) Made to Stick: Why Some Ideas Survive and Others Die. New York: Random House.</p></div>
+      </article>
+      <article class="gl-item" id="term-9-5">
+        <div class="gl-h"><span class="gl-num">9.5</span><h3 class="gl-term">Sparkline</h3></div>
+        <p class="gl-strap">A talk structure that moves repeatedly between &#x27;what is&#x27; and &#x27;what could be&#x27; to create tension</p>
+        <p class="gl-def">A sparkline, in Duarte&#x27;s sense, is the underlying contour of a persuasive presentation, which alternates between the audience&#x27;s current reality (&#x27;what is&#x27;) and a better future (&#x27;what could be&#x27;), before ending with a call to action and a vision of the new bliss. The contrast between the two states creates tension that holds attention and motivates change. It is distinguished from a linear informational presentation because the presenter casts the audience as the hero and the idea as the means of transformation (Duarte, 2010).</p>
+        <div class="gl-ref"><span>Reference</span><p>Duarte, N. (2010) Resonate: Present Visual Stories That Transform Audiences. Hoboken, NJ: Wiley.</p></div>
+      </article>
+      <article class="gl-item" id="term-9-6">
+        <div class="gl-h"><span class="gl-num">9.6</span><h3 class="gl-term">Ethos</h3></div>
+        <p class="gl-strap">The credibility and character of the speaker, one of three classical means of persuasion</p>
+        <p class="gl-def">Ethos is the mode of persuasion that depends on the audience&#x27;s perception of the speaker&#x27;s character, competence and goodwill. Aristotle distinguishes it from pathos, which persuades by putting the audience into a particular emotional state, and logos, which persuades through argument and evidence. In entrepreneurial pitching, ethos is built through the team&#x27;s track record, domain expertise and honesty about risks; investors who doubt the founder&#x27;s credibility will discount even strong logical and emotional appeals (Aristotle, 1924).</p>
+        <div class="gl-ref"><span>Reference</span><p>Aristotle (1924) Rhetoric. Translated by W.R. Roberts. Oxford: Clarendon Press.</p></div>
+      </article>
+      <article class="gl-item" id="term-9-7">
+        <div class="gl-h"><span class="gl-num">9.7</span><h3 class="gl-term">Nonverbal Communication</h3></div>
+        <p class="gl-strap">Messages sent through voice, posture, gesture and facial expression rather than words</p>
+        <p class="gl-def">Nonverbal communication comprises the vocal and visual cues, such as tone, pace, posture, gesture, eye contact and facial expression, that accompany and qualify spoken words. Mehrabian&#x27;s experiments on single words expressing feelings and attitudes produced the widely quoted 7-38-55 ratio, but this ratio applies only to such ambiguous emotional messages and is frequently overgeneralised to all communication. Speakers should therefore treat nonverbal delivery as reinforcing, not replacing, the content of a pitch (Mehrabian, 1971; Lapakko, 2007).</p>
+        <div class="gl-ref"><span>Reference</span><p>Mehrabian, A. (1971) Silent Messages: Implicit Communication of Emotions and Attitudes. Belmont, CA: Wadsworth.</p></div>
+      </article>
+      <article class="gl-item" id="term-9-8">
+        <div class="gl-h"><span class="gl-num">9.8</span><h3 class="gl-term">Social Proof</h3></div>
+        <p class="gl-strap">People judge what is right by observing what similar others think or do</p>
+        <p class="gl-def">Social proof is the principle of influence whereby people determine appropriate beliefs or behaviour by observing what others, particularly similar others, are doing, especially under uncertainty. Cialdini identifies it alongside reciprocation, commitment and consistency, liking, authority and scarcity as a powerful lever of compliance. In a pitch, social proof is supplied by evidence of traction such as paying customers, letters of intent, reputable advisers or committed co-investors; it is distinguished from authority, which relies on the status of a single expert source (Cialdini, 1984).</p>
+        <div class="gl-ref"><span>Reference</span><p>Cialdini, R.B. (1984) Influence: The Psychology of Persuasion. New York: Quill William Morrow.</p></div>
+      </article>
+    </div>
+  </section>
+  <section class="gl-group" id="unit10" data-u="10" style="--uc:#B4444E">
+    <div class="gl-ghead"><span class="unit-dot">10</span><div>
+      <div class="gl-kick">Unit 10 &middot; Growing a Business &middot; 8 terms</div>
+      <h2>Finalizing &amp; Presenting the Business Plan</h2>
+      <p class="gl-ilo"><b>Learning focus &middot; ILOs 1 &amp; 5 · integrates ILOs 1–5</b> &mdash; Finalise, present and defend a feasible business plan, and evaluate the feasibility and potential of others&#x27; plans.</p>
+      <a href="unit10.html">Unit 10 Framework Gallery &rarr;</a></div></div>
+    <div class="gl-list">
+      <article class="gl-item" id="term-10-1">
+        <div class="gl-h"><span class="gl-num">10.1</span><h3 class="gl-term">Due Diligence</h3></div>
+        <p class="gl-strap">The investor&#x27;s systematic checking of a venture&#x27;s claims, team, market, finances and legal position</p>
+        <p class="gl-def">Due diligence is the structured investigation an investor or acquirer undertakes before committing capital, to verify the claims made in a business plan and to identify risks. It typically examines the management team, market and competition, product or technology, financial projections and legal matters such as ownership of intellectual property and the cap table. Survey evidence shows that venture capitalists regard the management team as the most important factor in both selecting investments and explaining their success or failure (Gompers et al., 2020).</p>
+        <div class="gl-ref"><span>Reference</span><p>Gompers, P., Gornall, W., Kaplan, S.N. and Strebulaev, I.A. (2020) &#x27;How do venture capitalists make decisions?&#x27;, Journal of Financial Economics, 135(1), pp. 169–190.</p></div>
+      </article>
+      <article class="gl-item" id="term-10-2">
+        <div class="gl-h"><span class="gl-num">10.2</span><h3 class="gl-term">Venture Screening Criteria</h3></div>
+        <p class="gl-strap">The standards investors use to decide which business proposals deserve further attention or funding</p>
+        <p class="gl-def">Venture screening criteria are the standards against which investors assess new venture proposals, grouped around the entrepreneur&#x27;s personality and experience, the characteristics of the product or service, the market, and the expected financial return and risk. In their study of venture capitalists, Macmillan, Siegel and Subbanarasimha found that the quality of the entrepreneur was the decisive consideration, summarised in the view that a strong team with a second-rate idea is preferred to the reverse. Plans that ignore these criteria are often rejected without detailed analysis (Macmillan, Siegel and Subbanarasimha, 1985).</p>
+        <div class="gl-ref"><span>Reference</span><p>Macmillan, I.C., Siegel, R. and Subbanarasimha, P.N. (1985) &#x27;Criteria used by venture capitalists to evaluate new venture proposals&#x27;, Journal of Business Venturing, 1(1), pp. 119–128.</p></div>
+      </article>
+      <article class="gl-item" id="term-10-3">
+        <div class="gl-h"><span class="gl-num">10.3</span><h3 class="gl-term">Risk–Reward Profile</h3></div>
+        <p class="gl-strap">The balance between what can go wrong in a venture and the potential upside, with responses to each</p>
+        <p class="gl-def">A risk–reward profile is the assessment of everything that can go wrong and right in a venture, and of how the entrepreneur will respond to each, set against the potential return to founders and investors. Sahlman argues that a strong business plan addresses four interdependent factors, namely the people, the opportunity, the context and risk and reward, and that it should acknowledge risks openly rather than present a single optimistic scenario. It is distinguished from risk avoidance: the aim is to show that risks are understood and managed (Sahlman, 1997).</p>
+        <div class="gl-ref"><span>Reference</span><p>Sahlman, W.A. (1997) &#x27;How to write a great business plan&#x27;, Harvard Business Review, July–August, pp. 98–108.</p></div>
+      </article>
+      <article class="gl-item" id="term-10-4">
+        <div class="gl-h"><span class="gl-num">10.4</span><h3 class="gl-term">Net Present Value (NPV)</h3></div>
+        <p class="gl-strap">Today&#x27;s value of a project&#x27;s future cash flows minus its cost, allowing for the time value of money</p>
+        <p class="gl-def">Net present value is the sum of a project&#x27;s expected future cash flows discounted at the opportunity cost of capital, minus the initial investment. A positive NPV indicates that the project is expected to create value for its owners beyond what they could earn on investments of comparable risk, so the rule is to accept projects with a positive NPV. Because start-up cash flows are highly uncertain, NPV results are sensitive to the discount rate and forecast assumptions and should be accompanied by sensitivity analysis (Brealey, Myers and Allen, 2020).</p>
+        <div class="gl-ref"><span>Reference</span><p>Brealey, R.A., Myers, S.C. and Allen, F. (2020) Principles of Corporate Finance. 13th edn. New York: McGraw-Hill Education.</p></div>
+      </article>
+      <article class="gl-item" id="term-10-5">
+        <div class="gl-h"><span class="gl-num">10.5</span><h3 class="gl-term">Internal Rate of Return (IRR)</h3></div>
+        <p class="gl-strap">The discount rate at which a project&#x27;s net present value equals zero, read as its annual percentage return</p>
+        <p class="gl-def">The internal rate of return is the discount rate at which the net present value of a project&#x27;s cash flows equals zero. A project is attractive if its IRR exceeds the opportunity cost of capital, and investors often use IRR to compare venture returns with their target hurdle rate. IRR can mislead when comparing mutually exclusive projects of different scale or timing, or when cash flows change sign more than once, so it should be read alongside NPV rather than instead of it (Brealey, Myers and Allen, 2020).</p>
+        <div class="gl-ref"><span>Reference</span><p>Brealey, R.A., Myers, S.C. and Allen, F. (2020) Principles of Corporate Finance. 13th edn. New York: McGraw-Hill Education.</p></div>
+      </article>
+      <article class="gl-item" id="term-10-6">
+        <div class="gl-h"><span class="gl-num">10.6</span><h3 class="gl-term">Risk Appetite</h3></div>
+        <p class="gl-strap">The types and amount of risk an organisation is willing to accept in pursuit of its goals</p>
+        <p class="gl-def">Risk appetite is the types and amount of risk, on a broad level, that an organisation is willing to accept in pursuit of value. COSO&#x27;s enterprise risk management framework positions risk appetite as an input to strategy setting, so that the chosen strategy and its performance targets are consistent with what owners and stakeholders can bear. It is distinguished from risk tolerance, which specifies acceptable variation in performance around particular targets. For a business plan, stating risk appetite links the risk–reward analysis to funding and growth decisions (COSO, 2017).</p>
+        <div class="gl-ref"><span>Reference</span><p>COSO (2017) Enterprise Risk Management: Integrating with Strategy and Performance. Committee of Sponsoring Organizations of the Treadway Commission.</p></div>
+      </article>
+      <article class="gl-item" id="term-10-7">
+        <div class="gl-h"><span class="gl-num">10.7</span><h3 class="gl-term">Human-Centred Design</h3></div>
+        <p class="gl-strap">Designing solutions by starting from people&#x27;s needs and testing ideas with them through rapid prototypes</p>
+        <p class="gl-def">Human-centred design is an approach to innovation that begins with deep empathy for the needs, behaviours and contexts of the people being served, and integrates these with what is technologically feasible and economically viable. Brown describes design thinking as moving through overlapping spaces of inspiration, ideation and implementation, using observation, rapid prototyping and iteration. It is distinguished from technology-push development, which begins with a capability and looks for an application; in finalising a plan, it helps test whether the offering fits real user needs (Brown, 2008, 2009).</p>
+        <div class="gl-ref"><span>Reference</span><p>Brown, T. (2008) &#x27;Design thinking&#x27;, Harvard Business Review, June, pp. 84–92.</p></div>
+      </article>
+      <article class="gl-item" id="term-10-8">
+        <div class="gl-h"><span class="gl-num">10.8</span><h3 class="gl-term">Reflective Observation</h3></div>
+        <p class="gl-strap">Stepping back to review an experience from different perspectives before drawing conclusions</p>
+        <p class="gl-def">Reflective observation is the stage of Kolb&#x27;s experiential learning cycle in which the learner reviews and considers a concrete experience from multiple perspectives. It links concrete experience to abstract conceptualisation, where general principles are formed, and to active experimentation, where those principles are tested in new situations. Kolb defines learning as the process whereby knowledge is created through the transformation of experience. In presenting and defending a business plan, reflection on feedback turns investor questions into improvements rather than defensive reactions (Kolb, 1984).</p>
+        <div class="gl-ref"><span>Reference</span><p>Kolb, D.A. (1984) Experiential Learning: Experience as the Source of Learning and Development. Englewood Cliffs, NJ: Prentice Hall.</p></div>
+      </article>
+    </div>
+  </section>
+  <div class="gl-empty hidden" id="glempty">No terms match your search.</div>
+</div>
+
+<footer class="site">
+  <hr class="divider">
+  <p><strong>BCOBM214</strong> · Entrepreneurship &amp; Business Development · © 2026 Dr. Hildegard Haas</p>
+  <p style="font-size:12px;opacity:.7">EU Business School · Applying JD Meier's <strong>Thumbnail Thinking</strong> (2025) and Kurt Bostelaar's core-message method across the entire course</p>
+</footer>
+<script>
+(function(){
+  var box=document.getElementById('gsearch'),chips=[].slice.call(document.querySelectorAll('.chip')),
+      groups=[].slice.call(document.querySelectorAll('.gl-group')),cnt=document.getElementById('glcount'),
+      empty=document.getElementById('glempty'),unit='all';
+  var orig=new Map();
+  document.querySelectorAll('.gl-term,.gl-strap,.gl-def').forEach(function(el){orig.set(el,el.textContent);});
+  function esc(s){return s.replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function apply(){
+    var q=box.value.trim().toLowerCase(),n=0;
+    var re=q?new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig'):null;
+    groups.forEach(function(g){
+      var vis=0,show=unit==='all'||g.getAttribute('data-u')===unit;
+      g.querySelectorAll('.gl-item').forEach(function(it){
+        var hit=show&&(!q||it.textContent.toLowerCase().indexOf(q)!==-1);
+        it.classList.toggle('hidden',!hit); if(hit)vis++;
+        it.querySelectorAll('.gl-term,.gl-strap,.gl-def').forEach(function(el){
+          var t=orig.get(el); el.innerHTML=re&&hit?esc(t).replace(re,'<mark>$1</mark>'):esc(t);
+        });
+      });
+      g.classList.toggle('hidden',vis===0); n+=vis;
+    });
+    cnt.textContent=n+(n===1?' term':' terms'); empty.classList.toggle('hidden',n>0);
+  }
+  chips.forEach(function(c){c.addEventListener('click',function(){
+    unit=c.getAttribute('data-u'); chips.forEach(function(x){x.classList.toggle('on',x===c);}); apply();
+  });});
+  box.addEventListener('input',apply);
+  var h=(location.hash||'').match(/^#unit(\d+)$/);
+  if(h){chips.forEach(function(c){if(c.getAttribute('data-u')===h[1])c.click();});
+    setTimeout(function(){var g=document.getElementById('unit'+h[1]);if(g)g.scrollIntoView();},50);}
+})();
+</script>
+<style id="bco-protect-css">
+  *{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none}
+  input,textarea{-webkit-user-select:text;-moz-user-select:text;-ms-user-select:text;user-select:text}
+  @media print{html,body{display:none !important}}
+</style>
+<script id="bco-protect-js">
+(function(){
+  document.addEventListener('contextmenu',function(e){e.preventDefault();},{capture:true});
+  ['copy','cut'].forEach(function(ev){document.addEventListener(ev,function(e){e.preventDefault();},{capture:true});});
+  document.addEventListener('dragstart',function(e){e.preventDefault();},{capture:true});
+  document.addEventListener('keydown',function(e){
+    var k=(e.key||'').toLowerCase(),meta=e.ctrlKey||e.metaKey;
+    if(meta&&['c','x','s','p','u','a'].indexOf(k)!==-1){e.preventDefault();return false;}
+    if(k==='f12'){e.preventDefault();return false;}
+    if(meta&&e.shiftKey&&['i','j','c'].indexOf(k)!==-1){e.preventDefault();return false;}
+  },{capture:true});
+})();
+</script>
+</body>
+</html>
