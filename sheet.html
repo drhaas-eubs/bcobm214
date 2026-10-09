@@ -199,6 +199,7 @@ ol li, ul li { margin-bottom: 6px; line-height: 1.55; font-size: .9rem; }
 </div>
 
 <script src="assets/frameworks.js"></script>
+<script src="assets/thumbs.js"></script>
 <script src="assets/authors.js"></script>
 <script>
 (function () {
@@ -272,7 +273,7 @@ ol li, ul li { margin-bottom: 6px; line-height: 1.55; font-size: .9rem; }
     var sourcesHtml = sourceList.map(function (s) { return '<p>' + escapeHtml(s) + '</p>'; }).join('') || '<p>—</p>';
 
     var color = '#155e4a';
-    var iconSvg =
+    var iconSvg = (window.BCOBM214_THUMBS && window.BCOBM214_THUMBS[fw.num]) ||
       '<svg viewBox="0 0 220 130" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="220" height="130" fill="#fbfaf6"/>' +
       '<rect x="14" y="14" width="192" height="102" fill="none" stroke="' + color + '" stroke-width="1.4" rx="6"/>' +
       '<text x="110" y="58" text-anchor="middle" font-family="Arial" font-size="22" font-weight="700" fill="' + color + '">' + escapeHtml(fw.num) + '</text>' +

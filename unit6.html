@@ -1,48 +1,307 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BCOBM214 Unit 6 — Intrapreneurship &amp; Corporate Business Development</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Source+Serif+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css">
+<title>BCOBM214 · Unit 6 Framework Gallery — Intrapreneurship &amp; Corporate Business Development</title>
+<meta name="description" content="BCOBM214 Unit 6 — Intrapreneurship &amp; Corporate Business Development: 8 Thumbnail-Thinking frameworks. Dr. Hildegard Haas, EU Business School.">
+<style>
+  :root{--navy:#1D2660;--teal:#00B388;--ink:#1D3A5C;--gray:#F4F6F9;--line:#E3E8F0;--muted:#5A6072;--shadow:0 2px 8px rgba(29,38,96,.08);--shadow-h:0 10px 26px rgba(29,38,96,.18)}
+  *{box-sizing:border-box}html{scroll-behavior:smooth}
+  body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#1a1a1a;background:#FAFBFC}
+  .topbar{background:#eef4f0;padding:14px 22px;display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center}
+  .topbar a{color:#2E8B6F;text-decoration:none;font-weight:bold;font-size:14px}
+  .topbar a:hover{text-decoration:underline}
+  .topbar .sp{flex:1}
+  .searchwrap{max-width:1180px;margin:20px auto 0;padding:0 22px}
+  .searchwrap input{width:100%;font-family:inherit;font-size:15px;padding:13px 16px 13px 42px;border:1px solid #DADEE6;border-radius:9px;background:#fff url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2'><circle cx='11' cy='11' r='7'/><line x1='21' y1='21' x2='16.65' y2='16.65'/></svg>") no-repeat 15px center;box-shadow:var(--shadow)}
+  .searchwrap input:focus{outline:none;border-color:var(--teal)}
+  .unit-sec{max-width:1180px;margin:26px auto;padding:0 22px;scroll-margin-top:12px}
+  .unit-hd{color:#fff;border-radius:12px;padding:26px 28px 22px;position:relative;overflow:hidden}
+  .unit-hd::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--teal)}
+  .unit-hd-kick{font-size:12px;font-weight:bold;letter-spacing:2px;opacity:.85}
+  .unit-hd h2{margin:8px 0 4px;font-size:clamp(22px,3vw,30px)}
+  .unit-hd-core{margin:10px 0 0;font-size:15px;font-style:italic;font-weight:bold;max-width:820px;line-height:1.45}
+  .unit-hd-sub{margin:10px 0 0;opacity:.9;font-size:14px}
+  .unit-hd-c{margin:6px 0 0;font-size:12px;opacity:.6;font-style:italic}
+  .unit-hd-stats{display:flex;flex-wrap:wrap;gap:16px 40px;margin-top:16px}
+  .unit-hd-stats div{font-size:11px;letter-spacing:1px;opacity:.85}
+  .unit-hd-stats span{display:block;font-size:26px;font-weight:bold;letter-spacing:0;color:#fff}
+  .set-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:28px 0 14px}
+  .set-dot{width:11px;height:11px;border-radius:50%}
+  .set-name{font-size:16px;font-weight:bold;color:var(--ink)}
+  .set-count{font-size:12px;color:var(--muted);background:var(--gray);border:1px solid var(--line);border-radius:12px;padding:3px 10px}
+  .fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:18px}
+  .fcard{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;cursor:pointer;text-align:left;font-family:inherit;padding:0;box-shadow:var(--shadow);transition:transform .16s,box-shadow .16s,border-color .16s;display:flex;flex-direction:column;border-top:3px solid var(--acc);scroll-margin-top:16px}
+  .fcard:hover{transform:translateY(-4px);box-shadow:var(--shadow-h);border-color:var(--acc)}
+  .fcard:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+  .fcard-fig{background:var(--gray);padding:12px;height:150px;display:flex;align-items:center;justify-content:center}
+  .fcard-fig svg{width:100%;height:100%}
+  .fcard-body{padding:14px 15px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .fcard-body h3{margin:0;color:var(--ink);font-size:14.5px;line-height:1.25}
+  .fcard-def{margin:0;color:var(--muted);font-size:12px;line-height:1.4;flex:1}
+  .fcard-badge{align-self:flex-start;color:#fff;font-size:11px;font-weight:bold;padding:4px 11px;border-radius:5px}
+  .overlay{position:fixed;inset:0;background:rgba(20,25,50,.8);display:none;z-index:100;overflow-y:auto;padding:28px 16px}
+  .overlay.open{display:flex;justify-content:center;align-items:flex-start}
+  .qbox{background:#fff;border-radius:12px;max-width:600px;width:100%;margin:20px auto;box-shadow:0 16px 44px rgba(0,0,0,.4);position:relative;padding:30px 30px 26px}
+  .qclose{position:absolute;top:14px;right:16px;width:36px;height:36px;border-radius:50%;background:var(--gray);border:1px solid var(--line);cursor:pointer;font-size:19px;color:#555;display:flex;align-items:center;justify-content:center}
+  .qclose:hover{background:#e2e7f0}
+  .qmodal{display:none}.qmodal.active{display:block}
+  .qm-slib{font-size:11px;font-weight:bold;letter-spacing:1.2px;padding-right:40px}
+  .qm-title{color:var(--ink);font-size:22px;margin:6px 0 4px}
+  .qm-author{color:var(--muted);font-size:13px;margin:0 0 12px}
+  .qm-reddef{border-left:4px solid;font-weight:bold;font-size:14.5px;line-height:1.45;padding:4px 0 4px 14px;margin:0 0 12px}
+  .qm-sub{color:var(--muted);font-size:13px;margin:0 0 16px}
+  .qm-fig{background:var(--gray);border-radius:8px;padding:18px;display:flex;align-items:center;justify-content:center;margin:0 0 18px}
+  .qm-fig svg{width:100%;max-width:480px;height:auto}
+  .qm-ref{background:var(--gray);border-left:4px solid #2E8B6F;border-radius:0 6px 6px 0;padding:12px 15px;margin:0 0 20px}
+  .qm-ref-l{font-size:11px;font-weight:bold;letter-spacing:.6px;display:block;margin-bottom:4px}
+  .qm-ref p{margin:0;font-size:12px;line-height:1.5;color:#333}
+  .qm-full{display:block;text-align:center;color:#fff;text-decoration:none;font-weight:bold;font-size:14px;padding:14px;border-radius:26px;transition:opacity .15s}
+  .qm-full:hover{opacity:.9}
+  .unit-nav{max-width:1180px;margin:34px auto 0;padding:0 22px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .unit-nav a{flex:1;min-width:220px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 18px;text-decoration:none;color:var(--ink);font-weight:bold;font-size:14px;box-shadow:var(--shadow)}
+  .unit-nav a:hover{border-color:var(--teal)}
+  .unit-nav a small{display:block;color:var(--muted);font-weight:normal;font-size:11px;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px}
+  .unit-nav a.next{text-align:right}
+  .jump{max-width:1180px;margin:18px auto 0;padding:0 22px;display:flex;flex-wrap:wrap;gap:8px}
+  .jump a{font-size:12px;font-weight:bold;text-decoration:none;color:#fff;padding:6px 11px;border-radius:6px}
+  .hidden{display:none !important}
+  footer.site{background:var(--navy);color:#fff;padding:28px 22px;text-align:center;margin-top:44px}
+  footer.site .divider{height:2px;width:60px;background:var(--teal);border:none;margin:0 auto 14px}
+  footer.site p{margin:4px 0;font-size:13px;opacity:.9}
+  footer.site strong{color:var(--teal)}
+  @media(max-width:600px){.fgrid{grid-template-columns:1fr 1fr;gap:12px}.fcard-fig{height:110px;padding:8px}.unit-hd{padding:22px 20px 20px}.qbox{padding:26px 18px 20px}}
+  @media(max-width:380px){.fgrid{grid-template-columns:1fr}.fcard-fig{height:150px}}
+</style>
 </head>
 <body>
-<header class="topbar"><div class="wrap row"><div class="brand">BCOBM214 <small>· Unit 6</small></div><nav class="nav"><a href="index.html">Course</a><a href="pedagogy.html">Pedagogy</a><a href="slibrary.html#unit6">Authors</a></nav></div></header>
-<main class="wrap">
-<a class="back-link" href="index.html">← Back to Course Overview</a>
-<section class="unit-hero">
-<span class="kicker">BCOBM214 · Unit 6 · Phase 2 — Scaling</span>
-<h1>Intrapreneurship &amp; Corporate Business Development</h1>
-<p class="subtitle">Eight frameworks for entrepreneurial behaviour inside large organisations — and for how BD differs from marketing, sales and leadership.</p>
-<p class="byline">© 2026 Dr. Hildegard Haas · EU Business School</p>
-</section>
-<section class="stats">
-<div class="stat"><span class="num">2</span><span class="label">Slibraries</span></div>
-<div class="stat"><span class="num">8</span><span class="label">Frameworks</span></div>
-<div class="stat"><span class="num">11–12</span><span class="label">Set Range</span></div>
-<div class="stat"><span class="num">CS</span><span class="label">Three Horizons</span></div>
-</section>
+<div class="topbar"><a href="index.html">&larr; Back to Course Overview</a><span class="sp"></span><a href="all-frameworks.html">All 80 Frameworks</a><a href="slibrary.html">Authors</a><a href="pedagogy.html">Pedagogy</a></div>
+<div class="searchwrap"><input id="gsearch" type="text" placeholder="Search 8 frameworks by name, author, definition or Slibrary…" aria-label="Search frameworks"></div>
 
-<div class="slibrary-block"><h3>Slibrary 11 — Intrapreneurship</h3><span class="count">4 frameworks</span></div>
-<div class="gallery">
-<div class="framework-card"><span class="num">F41</span><h4>Pinchot's 10 Commandments</h4><p>Come to work willing to be fired · Circumvent orders · Ask for forgiveness, not permission · etc.</p><span class="slib">Slibrary 11</span></div>
-<div class="framework-card"><span class="num">F42</span><h4>Govindarajan's 3-Box Solution</h4><p>Manage the present · Selectively forget the past · Create the future — concurrently.</p><span class="slib">Slibrary 11</span></div>
-<div class="framework-card"><span class="num">F43</span><h4>McKinsey's Three Horizons</h4><p>H1 core · H2 emerging · H3 future — pipeline management for sustained growth.</p><span class="slib">Slibrary 11</span></div>
-<div class="framework-card"><span class="num">F44</span><h4>Core / Adjacent / Transformational</h4><p>Three innovation ambition zones — typical 70/20/10 resource split.</p><span class="slib">Slibrary 11</span></div>
+<section class="unit-sec" id="unit6">
+    <div class="unit-hd" style="background:#3E6E8E">
+      <div class="unit-hd-kick">BCOBM214 &middot; UNIT 6 &middot; SCALING A BUSINESS</div>
+      <h2>Intrapreneurship &amp; Corporate Business Development</h2>
+      <p class="unit-hd-core">&ldquo;Large firms do not lack ideas; they lack people with the mandate to protect tomorrow&#x27;s business from today&#x27;s.&rdquo;</p>
+      <p class="unit-hd-sub">Select any framework to explore it in detail</p>
+      <p class="unit-hd-c">&copy; 2026 Dr. Hildegard Haas</p>
+      <div class="unit-hd-stats"><div><span>2</span>SLIBRARIES</div><div><span>8</span>FRAMEWORKS</div><div><span>11&ndash;12</span>SLIBRARY RANGE</div><div><span>CS</span>CASE STUDY</div></div>
+    </div>
+
+      <div class="set-head"><span class="set-dot" style="background:#3E6E8E"></span><span class="set-name">Slibrary 11 &mdash; Intrapreneurship</span><span class="set-count">4 frameworks</span></div>
+      <div class="fgrid">
+<button class="fcard" id="F41" data-fw="F41" style="--acc:#3E6E8E" data-search="f41 pinchot&#x27;s 10 commandments of intrapreneurship how to behave as an entrepreneur inside a corporation. gifford pinchot iii (1985) intrapreneurship" aria-label="Pinchot&#x27;s 10 Commandments of Intrapreneurship — open quick look">
+      <div class="fcard-fig"><svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg"><rect x="36" y="22" width="228" height="160" fill="#EAF0F7" stroke="#4A7BB0" stroke-width="1.5"/><path d="M30,14 h240 a8,8 0 0 1 0,16 h-240 a8,8 0 0 1 0,-16z" fill="#1D3A5C" stroke="#1D3A5C" stroke-width="1"/><path d="M30,174 h240 a8,8 0 0 1 0,16 h-240 a8,8 0 0 1 0,-16z" fill="#1D3A5C" stroke="#1D3A5C" stroke-width="1"/><circle cx="52" cy="45" r="8" fill="#4A7BB0"/><text x="52" y="48" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="bold">1</text><text x="65" y="48" font-family="Arial" font-size="9" fill="#1D3A5C">Risk being fired</text><circle cx="52" cy="71" r="8" fill="#4A7BB0"/><text x="52" y="74" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="bold">2</text><text x="65" y="74" font-family="Arial" font-size="9" fill="#1D3A5C">Bypass blockers</text><circle cx="52" cy="97" r="8" fill="#4A7BB0"/><text x="52" y="100" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="bold">3</text><text x="65" y="100" font-family="Arial" font-size="9" fill="#1D3A5C">Do any job</text><circle cx="52" cy="123" r="8" fill="#4A7BB0"/><text x="52" y="126" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="bold">4</text><text x="65" y="126" font-family="Arial" font-size="9" fill="#1D3A5C">Find helpers</text><circle cx="52" cy="149" r="8" fill="#4A7BB0"/><text x="52" y="152" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="bold">5</text><text x="65" y="152" font-family="Arial" font-size="9" fill="#1D3A5C">Pick the best</text><circle cx="164" cy="45" r="8" fill="#4A7BB0"/><text x="164" y="48" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="bold">6</text><text x="177" y="48" font-family="Arial" font-size="9" fill="#1D3A5C">Work underground</text><circle cx="164" cy="71" r="8" fill="#4A7BB0"/><text x="164" y="74" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="bold">7</text><text x="177" y="74" font-family="Arial" font-size="9" fill="#1D3A5C">Run your race</text><circle cx="164" cy="97" r="8" fill="#B4232A"/><text x="164" y="100" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="bold">8</text><text x="177" y="100" font-family="Arial" font-size="9" fill="#B4232A" font-weight="bold">Ask forgiveness</text><circle cx="164" cy="123" r="8" fill="#4A7BB0"/><text x="164" y="126" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="bold">9</text><text x="177" y="126" font-family="Arial" font-size="9" fill="#1D3A5C">Be realistic</text><circle cx="164" cy="149" r="8" fill="#4A7BB0"/><text x="164" y="152" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="bold">10</text><text x="177" y="152" font-family="Arial" font-size="9" fill="#1D3A5C">Honour sponsors</text></svg></div>
+      <div class="fcard-body">
+        <h3>Pinchot&#x27;s 10 Commandments of Intrapreneurship</h3>
+        <p class="fcard-def">How to behave as an entrepreneur inside a corporation.</p>
+        <span class="fcard-badge" style="background:#3E6E8E">F41 &middot; Slibrary 11</span>
+      </div>
+    </button>
+<button class="fcard" id="F42" data-fw="F42" style="--acc:#3E6E8E" data-search="f42 govindarajan&#x27;s 3-box solution manage present · selectively forget past · create future — concurrently. vijay govindarajan (2016) intrapreneurship" aria-label="Govindarajan&#x27;s 3-Box Solution — open quick look">
+      <div class="fcard-fig"><svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="22" width="280" height="138" fill="none" stroke="#4A7BB0" stroke-width="1.5" rx="6" stroke-dasharray="5 4"/><text x="150" y="16" font-family="Arial" font-size="9" fill="#5A6072" text-anchor="middle" font-weight="bold">Concurrently</text><rect x="22" y="34" width="80" height="114" fill="#EAF0F7" stroke="#4A7BB0" stroke-width="1.5" rx="5"/><text x="62" y="64" font-family="Arial" font-size="13" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Box 1</text><text x="62" y="92" font-family="Arial" font-size="9" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Manage present</text><text x="62" y="108" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="middle">Core business</text><line x1="38" y1="132" x2="81.8" y2="132.0" stroke="#4A7BB0" stroke-width="1.5"/><polygon points="86.0,132.0 80.8,135.0 80.8,129.0" fill="#4A7BB0"/><rect x="110" y="34" width="80" height="114" fill="#E3F5EF" stroke="#4A7BB0" stroke-width="1.5" rx="5"/><text x="150" y="64" font-family="Arial" font-size="13" fill="#B4232A" text-anchor="middle" font-weight="bold">Box 2</text><text x="150" y="92" font-family="Arial" font-size="9" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Forget the past</text><text x="150" y="108" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="middle">Let go of traps</text><line x1="126" y1="132" x2="169.8" y2="132.0" stroke="#4A7BB0" stroke-width="1.5"/><polygon points="174.0,132.0 168.8,135.0 168.8,129.0" fill="#4A7BB0"/><rect x="198" y="34" width="80" height="114" fill="#1D3A5C" rx="5"/><text x="238" y="64" font-family="Arial" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="bold">Box 3</text><text x="238" y="92" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">Create future</text><text x="238" y="108" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle">Breakthroughs</text><line x1="214" y1="132" x2="257.8" y2="132.0" stroke="#FFFFFF" stroke-width="1.5"/><polygon points="262.0,132.0 256.8,135.0 256.8,129.0" fill="#FFFFFF"/><line x1="20" y1="180" x2="275.1" y2="180.0" stroke="#1D3A5C" stroke-width="1.5"/><polygon points="280.0,180.0 273.9,183.5 273.9,176.5" fill="#1D3A5C"/><text x="24" y="175" font-family="Arial" font-size="9" fill="#5A6072">Past</text><text x="268" y="175" font-family="Arial" font-size="9" fill="#5A6072" text-anchor="end">Future</text></svg></div>
+      <div class="fcard-body">
+        <h3>Govindarajan&#x27;s 3-Box Solution</h3>
+        <p class="fcard-def">Manage present · Selectively forget past · Create future — concurrently.</p>
+        <span class="fcard-badge" style="background:#3E6E8E">F42 &middot; Slibrary 11</span>
+      </div>
+    </button>
+<button class="fcard" id="F43" data-fw="F43" style="--acc:#3E6E8E" data-search="f43 mckinsey&#x27;s three horizons of growth h1 core · h2 emerging · h3 future — pipeline management. baghai, coley &amp; white, mckinsey (1999) intrapreneurship" aria-label="McKinsey&#x27;s Three Horizons of Growth — open quick look">
+      <div class="fcard-fig"><svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg"><line x1="28" y1="175" x2="283.1" y2="175.0" stroke="#1D3A5C" stroke-width="1.5"/><polygon points="288.0,175.0 281.9,178.5 281.9,171.5" fill="#1D3A5C"/><line x1="28" y1="175" x2="28.0" y2="14.9" stroke="#1D3A5C" stroke-width="1.5"/><polygon points="28.0,10.0 31.5,16.1 24.5,16.1" fill="#1D3A5C"/><text x="282" y="190" font-family="Arial" font-size="9" fill="#5A6072" text-anchor="end">Time</text><text x="16" y="92" font-family="Arial" font-size="9" fill="#5A6072" text-anchor="middle" transform="rotate(-90 16 92)">Value</text><path d="M34,150 C80,40 120,40 150,70 S240,150 280,165" fill="none" stroke="#1D3A5C" stroke-width="2.5"/><path d="M70,170 C130,160 160,40 230,45 S275,70 285,80" fill="none" stroke="#4A7BB0" stroke-width="2.5"/><path d="M120,172 C200,170 230,110 285,22" fill="none" stroke="#00B388" stroke-width="2.5"/><text x="88" y="40" font-family="Arial" font-size="10" fill="#1D3A5C" text-anchor="middle" font-weight="bold">H1 Core</text><text x="206" y="36" font-family="Arial" font-size="10" fill="#4A7BB0" text-anchor="middle" font-weight="bold">H2 Emerging</text><text x="240" y="108" font-family="Arial" font-size="10" fill="#00B388" font-weight="bold">H3 Future</text><text x="60" y="190" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="middle">Defend core</text><text x="150" y="190" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="middle">Build emerging</text></svg></div>
+      <div class="fcard-body">
+        <h3>McKinsey&#x27;s Three Horizons of Growth</h3>
+        <p class="fcard-def">H1 core · H2 emerging · H3 future — pipeline management.</p>
+        <span class="fcard-badge" style="background:#3E6E8E">F43 &middot; Slibrary 11</span>
+      </div>
+    </button>
+<button class="fcard" id="F44" data-fw="F44" style="--acc:#3E6E8E" data-search="f44 innovation ambition matrix core · adjacent · transformational — typical 70/20/10 allocation. bansi nagji &amp; geoff tuff (2012) intrapreneurship" aria-label="Innovation Ambition Matrix — open quick look">
+      <div class="fcard-fig"><svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg"><rect x="76" y="106" width="68" height="46" fill="#E3F5EF" stroke="#FFFFFF" stroke-width="1.5"/><rect x="76" y="60" width="68" height="46" fill="#E3F5EF" stroke="#FFFFFF" stroke-width="1.5"/><rect x="76" y="14" width="68" height="46" fill="#4A7BB0" stroke="#FFFFFF" stroke-width="1.5"/><rect x="144" y="106" width="68" height="46" fill="#E3F5EF" stroke="#FFFFFF" stroke-width="1.5"/><rect x="144" y="60" width="68" height="46" fill="#4A7BB0" stroke="#FFFFFF" stroke-width="1.5"/><rect x="144" y="14" width="68" height="46" fill="#1D3A5C" stroke="#FFFFFF" stroke-width="1.5"/><rect x="212" y="106" width="68" height="46" fill="#4A7BB0" stroke="#FFFFFF" stroke-width="1.5"/><rect x="212" y="60" width="68" height="46" fill="#1D3A5C" stroke="#FFFFFF" stroke-width="1.5"/><rect x="212" y="14" width="68" height="46" fill="#1D3A5C" stroke="#FFFFFF" stroke-width="1.5"/><text x="110" y="128" font-family="Arial" font-size="11" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Core</text><text x="110" y="141" font-family="Arial" font-size="9" fill="#1D3A5C" text-anchor="middle">70%</text><text x="178" y="82" font-family="Arial" font-size="11" fill="#FFFFFF" text-anchor="middle" font-weight="bold">Adjacent</text><text x="178" y="95" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">20%</text><text x="246" y="34" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle" font-weight="bold">Transform.</text><text x="246" y="47" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">10%</text><text x="72" y="132" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="end">Existing</text><text x="110" y="163" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="middle">Existing</text><text x="72" y="86" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="end">Adjacent</text><text x="178" y="163" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="middle">Adjacent</text><text x="72" y="40" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="end">New</text><text x="246" y="163" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="middle">New</text><text x="14" y="83" font-family="Arial" font-size="9" fill="#1D3A5C" text-anchor="middle" font-weight="bold" transform="rotate(-90 14 83.0)">How to win</text><text x="178" y="178" font-family="Arial" font-size="9" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Where to play</text></svg></div>
+      <div class="fcard-body">
+        <h3>Innovation Ambition Matrix</h3>
+        <p class="fcard-def">Core · Adjacent · Transformational — typical 70/20/10 allocation.</p>
+        <span class="fcard-badge" style="background:#3E6E8E">F44 &middot; Slibrary 11</span>
+      </div>
+    </button>
+      </div>
+
+      <div class="set-head"><span class="set-dot" style="background:#3E6E8E"></span><span class="set-name">Slibrary 12 &mdash; Innovation, BD &amp; Leadership</span><span class="set-count">4 frameworks</span></div>
+      <div class="fgrid">
+<button class="fcard" id="F45" data-fw="F45" style="--acc:#3E6E8E" data-search="f45 drucker — innovation vs invention invention creates novelty; innovation creates value. peter drucker innovation, bd &amp; leadership" aria-label="Drucker — Innovation vs Invention — open quick look">
+      <div class="fcard-fig"><svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="100" r="22" fill="#1D3A5C"/><text x="40" y="103" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">Novelty</text><path d="M62,92 C90,60 110,50 150,50" fill="none" stroke="#4A7BB0" stroke-width="2"/><line x1="150" y1="50" x2="185.1" y2="50.0" stroke="#4A7BB0" stroke-width="2"/><polygon points="190.0,50.0 183.9,53.5 183.9,46.5" fill="#4A7BB0"/><text x="120" y="40" font-family="Arial" font-size="11" fill="#4A7BB0" text-anchor="middle" font-weight="bold">Invention</text><rect x="198" y="24" width="30" height="52" fill="#EAF0F7" stroke="#1D3A5C" stroke-width="1.5" rx="2"/><circle cx="222" cy="52" r="2.5" fill="#1D3A5C"/><line x1="204" y1="36" x2="222" y2="64" stroke="#B4232A" stroke-width="2"/><line x1="222" y1="36" x2="204" y2="64" stroke="#B4232A" stroke-width="2"/><text x="213" y="90" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="middle">No market</text><path d="M62,108 C90,140 110,150 150,150" fill="none" stroke="#00B388" stroke-width="2.5"/><line x1="150" y1="150" x2="226.4" y2="150.0" stroke="#00B388" stroke-width="2.5"/><polygon points="232.0,150.0 225.1,154.0 225.1,146.0" fill="#00B388"/><text x="120" y="170" font-family="Arial" font-size="11" fill="#00B388" text-anchor="middle" font-weight="bold">Innovation</text><circle cx="256" cy="122" r="9" fill="#1D3A5C"/><path d="M240,160 v-12 a16,14 0 0 1 32,0 v12z" fill="#1D3A5C"/><text x="256" y="178" font-family="Arial" font-size="9" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Paying</text><text x="256" y="190" font-family="Arial" font-size="9" fill="#1D3A5C" text-anchor="middle" font-weight="bold">customer</text><text x="190" y="140" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="middle">Value created</text></svg></div>
+      <div class="fcard-body">
+        <h3>Drucker — Innovation vs Invention</h3>
+        <p class="fcard-def">Invention creates novelty; innovation creates value.</p>
+        <span class="fcard-badge" style="background:#3E6E8E">F45 &middot; Slibrary 12</span>
+      </div>
+    </button>
+<button class="fcard" id="F46" data-fw="F46" style="--acc:#3E6E8E" data-search="f46 sørensen&#x27;s market-oriented bd bd as the cross-functional bridge between market insight, strategy and operations. hans eibe sørensen (2012) innovation, bd &amp; leadership" aria-label="Sørensen&#x27;s Market-Oriented BD — open quick look">
+      <div class="fcard-fig"><svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="70" r="52" fill="#EAF0F7" stroke="#4A7BB0" stroke-width="1.5" fill-opacity="0.85"/><circle cx="112" cy="128" r="52" fill="#E3F5EF" stroke="#00B388" stroke-width="1.5" fill-opacity="0.85"/><circle cx="188" cy="128" r="52" fill="#EAF0F7" stroke="#1D3A5C" stroke-width="1.5" fill-opacity="0.6"/><text x="150" y="46" font-family="Arial" font-size="10" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Market</text><text x="150" y="58" font-family="Arial" font-size="10" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Insight</text><text x="92" y="146" font-family="Arial" font-size="10" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Strategy</text><text x="208" y="146" font-family="Arial" font-size="10" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Operations</text><circle cx="150" cy="108" r="17" fill="#1D3A5C"/><text x="150" y="112" font-family="Arial" font-size="12" fill="#FFFFFF" text-anchor="middle" font-weight="bold">BD</text><text x="268" y="24" font-family="Arial" font-size="9" fill="#5A6072" text-anchor="middle">bridge</text><line x1="255" y1="30" x2="198.4" y2="89.5" stroke="#5A6072" stroke-width="1"/><polygon points="196.0,92.0 197.2,87.1 200.8,90.6" fill="#5A6072"/></svg></div>
+      <div class="fcard-body">
+        <h3>Sørensen&#x27;s Market-Oriented BD</h3>
+        <p class="fcard-def">BD as the cross-functional bridge between market insight, strategy and operations.</p>
+        <span class="fcard-badge" style="background:#3E6E8E">F46 &middot; Slibrary 12</span>
+      </div>
+    </button>
+<button class="fcard" id="F47" data-fw="F47" style="--acc:#3E6E8E" data-search="f47 yukl&#x27;s influence tactics eleven proactive influence tactics ranked by effectiveness. gary yukl (1980s onward) innovation, bd &amp; leadership" aria-label="Yukl&#x27;s Influence Tactics — open quick look">
+      <div class="fcard-fig"><svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg"><rect x="94" y="10" width="180" height="11" fill="#00B388" rx="2"/><text x="89" y="19" font-family="Arial" font-size="8" fill="#1D3A5C" text-anchor="end" font-weight="bold">Rational</text><rect x="94" y="25" width="170" height="11" fill="#00B388" rx="2"/><text x="89" y="34" font-family="Arial" font-size="8" fill="#1D3A5C" text-anchor="end" font-weight="bold">Inspirational</text><rect x="94" y="40" width="160" height="11" fill="#00B388" rx="2"/><text x="89" y="49" font-family="Arial" font-size="8" fill="#1D3A5C" text-anchor="end" font-weight="bold">Consultation</text><rect x="94" y="55" width="140" height="11" fill="#4A7BB0" rx="2"/><text x="89" y="64" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="end">Collaboration</text><rect x="94" y="70" width="120" height="11" fill="#4A7BB0" rx="2"/><text x="89" y="79" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="end">Apprising</text><rect x="94" y="85" width="110" height="11" fill="#4A7BB0" rx="2"/><text x="89" y="94" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="end">Ingratiation</text><rect x="94" y="100" width="100" height="11" fill="#4A7BB0" rx="2"/><text x="89" y="109" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="end">Exchange</text><rect x="94" y="115" width="90" height="11" fill="#4A7BB0" rx="2"/><text x="89" y="124" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="end">Personal appeal</text><rect x="94" y="130" width="70" height="11" fill="#4A7BB0" rx="2"/><text x="89" y="139" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="end">Legitimating</text><rect x="94" y="145" width="45" height="11" fill="#B4232A" rx="2"/><text x="89" y="154" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="end">Pressure</text><rect x="94" y="160" width="38" height="11" fill="#B4232A" rx="2"/><text x="89" y="169" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="end">Coalition</text><line x1="94" y1="8" x2="94" y2="178" stroke="#1D3A5C" stroke-width="1"/><line x1="100" y1="188" x2="283.8" y2="188.0" stroke="#1D3A5C" stroke-width="1.2"/><polygon points="288.0,188.0 282.8,191.0 282.8,185.0" fill="#1D3A5C"/><text x="190" y="184" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="middle">more effective</text></svg></div>
+      <div class="fcard-body">
+        <h3>Yukl&#x27;s Influence Tactics</h3>
+        <p class="fcard-def">Eleven proactive influence tactics ranked by effectiveness.</p>
+        <span class="fcard-badge" style="background:#3E6E8E">F47 &middot; Slibrary 12</span>
+      </div>
+    </button>
+<button class="fcard" id="F48" data-fw="F48" style="--acc:#3E6E8E" data-search="f48 goleman&#x27;s emotional intelligence self-awareness · self-management · social awareness · relationship management. daniel goleman (1995, 2002) innovation, bd &amp; leadership" aria-label="Goleman&#x27;s Emotional Intelligence — open quick look">
+      <div class="fcard-fig"><svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg"><rect x="62" y="28" width="108" height="68" fill="#EAF0F7" stroke="#4A7BB0" stroke-width="1" rx="5"/><text x="116" y="59" font-family="Arial" font-size="10" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Self-</text><text x="116" y="72" font-family="Arial" font-size="10" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Awareness</text><rect x="174" y="28" width="108" height="68" fill="#EAF0F7" stroke="#4A7BB0" stroke-width="1" rx="5"/><text x="228" y="59" font-family="Arial" font-size="10" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Social</text><text x="228" y="72" font-family="Arial" font-size="10" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Awareness</text><rect x="62" y="100" width="108" height="68" fill="#EAF0F7" stroke="#4A7BB0" stroke-width="1" rx="5"/><text x="116" y="131" font-family="Arial" font-size="10" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Self-</text><text x="116" y="144" font-family="Arial" font-size="10" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Management</text><rect x="174" y="100" width="108" height="68" fill="#1D3A5C" rx="5"/><text x="228" y="131" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle" font-weight="bold">Relationship</text><text x="228" y="144" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle" font-weight="bold">Management</text><text x="116" y="18" font-family="Arial" font-size="10" fill="#4A7BB0" text-anchor="middle" font-weight="bold">Self</text><text x="228" y="18" font-family="Arial" font-size="10" fill="#4A7BB0" text-anchor="middle" font-weight="bold">Others</text><text x="52" y="65" font-family="Arial" font-size="9" fill="#4A7BB0" text-anchor="end" font-weight="bold">Recognise</text><text x="52" y="137" font-family="Arial" font-size="9" fill="#4A7BB0" text-anchor="end" font-weight="bold">Regulate</text><line x1="116.0" y1="86" x2="116.0" y2="105.8" stroke="#00B388" stroke-width="2"/><polygon points="116.0,110.0 113.0,104.8 119.0,104.8" fill="#00B388"/><line x1="160" y1="150.0" x2="179.8" y2="150.0" stroke="#00B388" stroke-width="2"/><polygon points="184.0,150.0 178.8,153.0 178.8,147.0" fill="#00B388"/><line x1="160" y1="78.0" x2="179.8" y2="78.0" stroke="#00B388" stroke-width="2"/><polygon points="184.0,78.0 178.8,81.0 178.8,75.0" fill="#00B388"/><line x1="228.0" y1="86" x2="228.0" y2="105.8" stroke="#00B388" stroke-width="2"/><polygon points="228.0,110.0 225.0,104.8 231.0,104.8" fill="#00B388"/><text x="172" y="194" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="middle">self → others</text></svg></div>
+      <div class="fcard-body">
+        <h3>Goleman&#x27;s Emotional Intelligence</h3>
+        <p class="fcard-def">Self-awareness · Self-management · Social awareness · Relationship management.</p>
+        <span class="fcard-badge" style="background:#3E6E8E">F48 &middot; Slibrary 12</span>
+      </div>
+    </button>
+      </div>
+  </section>
+<nav class="unit-nav"><a href="unit5.html"><small>&larr; Unit 5</small>Developing the Business Plan</a><a class="next" href="unit7.html"><small>Unit 7 &rarr;</small>Growth Management &amp; Strategies</a></nav>
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-label="Framework quick look">
+  <div class="qbox">
+    <button class="qclose" id="qclose" aria-label="Close">&times;</button>
+<div class="qmodal" id="q-F41">
+      <div class="qm-slib" style="color:#3E6E8E">F41 &middot; SLIBRARY 11 &mdash; INTRAPRENEURSHIP</div>
+      <h2 class="qm-title">Pinchot&#x27;s 10 Commandments of Intrapreneurship</h2>
+      <p class="qm-author">Gifford Pinchot III (1985)</p>
+      <p class="qm-reddef" style="border-color:#3E6E8E;color:#3E6E8E">Pinchot&#x27;s 10 Commandments are a set of behavioural prescriptions for the corporate intrapreneur — the person seeking to create new ventures inside a large organisation — that name the political and cultural obstacles distinct from independent entrepreneurship and prescribe the practices that overcome them (Pinchot, 1985).</p>
+      <p class="qm-sub">How to behave as an entrepreneur inside a corporation.</p>
+      <div class="qm-fig"><svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg"><rect x="36" y="22" width="228" height="160" fill="#EAF0F7" stroke="#4A7BB0" stroke-width="1.5"/><path d="M30,14 h240 a8,8 0 0 1 0,16 h-240 a8,8 0 0 1 0,-16z" fill="#1D3A5C" stroke="#1D3A5C" stroke-width="1"/><path d="M30,174 h240 a8,8 0 0 1 0,16 h-240 a8,8 0 0 1 0,-16z" fill="#1D3A5C" stroke="#1D3A5C" stroke-width="1"/><circle cx="52" cy="45" r="8" fill="#4A7BB0"/><text x="52" y="48" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="bold">1</text><text x="65" y="48" font-family="Arial" font-size="9" fill="#1D3A5C">Risk being fired</text><circle cx="52" cy="71" r="8" fill="#4A7BB0"/><text x="52" y="74" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="bold">2</text><text x="65" y="74" font-family="Arial" font-size="9" fill="#1D3A5C">Bypass blockers</text><circle cx="52" cy="97" r="8" fill="#4A7BB0"/><text x="52" y="100" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="bold">3</text><text x="65" y="100" font-family="Arial" font-size="9" fill="#1D3A5C">Do any job</text><circle cx="52" cy="123" r="8" fill="#4A7BB0"/><text x="52" y="126" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="bold">4</text><text x="65" y="126" font-family="Arial" font-size="9" fill="#1D3A5C">Find helpers</text><circle cx="52" cy="149" r="8" fill="#4A7BB0"/><text x="52" y="152" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="bold">5</text><text x="65" y="152" font-family="Arial" font-size="9" fill="#1D3A5C">Pick the best</text><circle cx="164" cy="45" r="8" fill="#4A7BB0"/><text x="164" y="48" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="bold">6</text><text x="177" y="48" font-family="Arial" font-size="9" fill="#1D3A5C">Work underground</text><circle cx="164" cy="71" r="8" fill="#4A7BB0"/><text x="164" y="74" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="bold">7</text><text x="177" y="74" font-family="Arial" font-size="9" fill="#1D3A5C">Run your race</text><circle cx="164" cy="97" r="8" fill="#B4232A"/><text x="164" y="100" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="bold">8</text><text x="177" y="100" font-family="Arial" font-size="9" fill="#B4232A" font-weight="bold">Ask forgiveness</text><circle cx="164" cy="123" r="8" fill="#4A7BB0"/><text x="164" y="126" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="bold">9</text><text x="177" y="126" font-family="Arial" font-size="9" fill="#1D3A5C">Be realistic</text><circle cx="164" cy="149" r="8" fill="#4A7BB0"/><text x="164" y="152" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="bold">10</text><text x="177" y="152" font-family="Arial" font-size="9" fill="#1D3A5C">Honour sponsors</text></svg></div>
+      <div class="qm-ref"><span class="qm-ref-l" style="color:#3E6E8E">REFERENCE</span><p>Pinchot, G. III (1985) Intrapreneuring: Why You Don&#x27;t Have to Leave the Corporation to Become an Entrepreneur. New York: Harper &amp; Row.</p></div>
+      <a class="qm-full" href="sheet.html#F41" target="_blank" rel="noopener" style="background:#3E6E8E">&#128196;&nbsp; View Full A4 Reference Sheet</a>
+    </div>
+<div class="qmodal" id="q-F42">
+      <div class="qm-slib" style="color:#3E6E8E">F42 &middot; SLIBRARY 11 &mdash; INTRAPRENEURSHIP</div>
+      <h2 class="qm-title">Govindarajan&#x27;s 3-Box Solution</h2>
+      <p class="qm-author">Vijay Govindarajan (2016)</p>
+      <p class="qm-reddef" style="border-color:#3E6E8E;color:#3E6E8E">The 3-Box Solution is a framework for sustaining corporate innovation that prescribes three concurrent activities — Box 1 (manage the present efficiently), Box 2 (selectively forget the practices and assumptions that no longer serve), and Box 3 (create the future through experimental ventures) — with deliberate balance across all three (Govindarajan, 2016).</p>
+      <p class="qm-sub">Manage present · Selectively forget past · Create future — concurrently.</p>
+      <div class="qm-fig"><svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="22" width="280" height="138" fill="none" stroke="#4A7BB0" stroke-width="1.5" rx="6" stroke-dasharray="5 4"/><text x="150" y="16" font-family="Arial" font-size="9" fill="#5A6072" text-anchor="middle" font-weight="bold">Concurrently</text><rect x="22" y="34" width="80" height="114" fill="#EAF0F7" stroke="#4A7BB0" stroke-width="1.5" rx="5"/><text x="62" y="64" font-family="Arial" font-size="13" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Box 1</text><text x="62" y="92" font-family="Arial" font-size="9" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Manage present</text><text x="62" y="108" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="middle">Core business</text><line x1="38" y1="132" x2="81.8" y2="132.0" stroke="#4A7BB0" stroke-width="1.5"/><polygon points="86.0,132.0 80.8,135.0 80.8,129.0" fill="#4A7BB0"/><rect x="110" y="34" width="80" height="114" fill="#E3F5EF" stroke="#4A7BB0" stroke-width="1.5" rx="5"/><text x="150" y="64" font-family="Arial" font-size="13" fill="#B4232A" text-anchor="middle" font-weight="bold">Box 2</text><text x="150" y="92" font-family="Arial" font-size="9" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Forget the past</text><text x="150" y="108" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="middle">Let go of traps</text><line x1="126" y1="132" x2="169.8" y2="132.0" stroke="#4A7BB0" stroke-width="1.5"/><polygon points="174.0,132.0 168.8,135.0 168.8,129.0" fill="#4A7BB0"/><rect x="198" y="34" width="80" height="114" fill="#1D3A5C" rx="5"/><text x="238" y="64" font-family="Arial" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="bold">Box 3</text><text x="238" y="92" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">Create future</text><text x="238" y="108" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle">Breakthroughs</text><line x1="214" y1="132" x2="257.8" y2="132.0" stroke="#FFFFFF" stroke-width="1.5"/><polygon points="262.0,132.0 256.8,135.0 256.8,129.0" fill="#FFFFFF"/><line x1="20" y1="180" x2="275.1" y2="180.0" stroke="#1D3A5C" stroke-width="1.5"/><polygon points="280.0,180.0 273.9,183.5 273.9,176.5" fill="#1D3A5C"/><text x="24" y="175" font-family="Arial" font-size="9" fill="#5A6072">Past</text><text x="268" y="175" font-family="Arial" font-size="9" fill="#5A6072" text-anchor="end">Future</text></svg></div>
+      <div class="qm-ref"><span class="qm-ref-l" style="color:#3E6E8E">REFERENCE</span><p>Govindarajan, V. (2016) The Three-Box Solution: A Strategy for Leading Innovation. Boston: HBR Press.</p></div>
+      <a class="qm-full" href="sheet.html#F42" target="_blank" rel="noopener" style="background:#3E6E8E">&#128196;&nbsp; View Full A4 Reference Sheet</a>
+    </div>
+<div class="qmodal" id="q-F43">
+      <div class="qm-slib" style="color:#3E6E8E">F43 &middot; SLIBRARY 11 &mdash; INTRAPRENEURSHIP</div>
+      <h2 class="qm-title">McKinsey&#x27;s Three Horizons of Growth</h2>
+      <p class="qm-author">Baghai, Coley &amp; White, McKinsey (1999)</p>
+      <p class="qm-reddef" style="border-color:#3E6E8E;color:#3E6E8E">The Three Horizons of Growth is a portfolio framework that classifies a firm&#x27;s growth initiatives into three categories — Horizon 1 (extending and defending the core business), Horizon 2 (building emerging businesses with proven models that are scaling rapidly), and Horizon 3 (creating viable options for future businesses) — and prescribes concurrent investment across all three (Baghai, Coley &amp; White, 1999).</p>
+      <p class="qm-sub">H1 core · H2 emerging · H3 future — pipeline management.</p>
+      <div class="qm-fig"><svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg"><line x1="28" y1="175" x2="283.1" y2="175.0" stroke="#1D3A5C" stroke-width="1.5"/><polygon points="288.0,175.0 281.9,178.5 281.9,171.5" fill="#1D3A5C"/><line x1="28" y1="175" x2="28.0" y2="14.9" stroke="#1D3A5C" stroke-width="1.5"/><polygon points="28.0,10.0 31.5,16.1 24.5,16.1" fill="#1D3A5C"/><text x="282" y="190" font-family="Arial" font-size="9" fill="#5A6072" text-anchor="end">Time</text><text x="16" y="92" font-family="Arial" font-size="9" fill="#5A6072" text-anchor="middle" transform="rotate(-90 16 92)">Value</text><path d="M34,150 C80,40 120,40 150,70 S240,150 280,165" fill="none" stroke="#1D3A5C" stroke-width="2.5"/><path d="M70,170 C130,160 160,40 230,45 S275,70 285,80" fill="none" stroke="#4A7BB0" stroke-width="2.5"/><path d="M120,172 C200,170 230,110 285,22" fill="none" stroke="#00B388" stroke-width="2.5"/><text x="88" y="40" font-family="Arial" font-size="10" fill="#1D3A5C" text-anchor="middle" font-weight="bold">H1 Core</text><text x="206" y="36" font-family="Arial" font-size="10" fill="#4A7BB0" text-anchor="middle" font-weight="bold">H2 Emerging</text><text x="240" y="108" font-family="Arial" font-size="10" fill="#00B388" font-weight="bold">H3 Future</text><text x="60" y="190" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="middle">Defend core</text><text x="150" y="190" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="middle">Build emerging</text></svg></div>
+      <div class="qm-ref"><span class="qm-ref-l" style="color:#3E6E8E">REFERENCE</span><p>Baghai, M., Coley, S. &amp; White, D. (1999) The Alchemy of Growth. Cambridge, MA: Perseus Books.</p></div>
+      <a class="qm-full" href="sheet.html#F43" target="_blank" rel="noopener" style="background:#3E6E8E">&#128196;&nbsp; View Full A4 Reference Sheet</a>
+    </div>
+<div class="qmodal" id="q-F44">
+      <div class="qm-slib" style="color:#3E6E8E">F44 &middot; SLIBRARY 11 &mdash; INTRAPRENEURSHIP</div>
+      <h2 class="qm-title">Innovation Ambition Matrix</h2>
+      <p class="qm-author">Bansi Nagji &amp; Geoff Tuff (2012)</p>
+      <p class="qm-reddef" style="border-color:#3E6E8E;color:#3E6E8E">The Innovation Ambition Matrix classifies innovation investments along two dimensions (where to play × how to win) into three ambition zones — Core (optimising existing offerings for existing customers), Adjacent (expanding into new markets or new offerings), and Transformational (creating new markets with new offerings) — with empirical research suggesting a typical 70/20/10 resource allocation across the three zones (Nagji &amp; Tuff, 2012).</p>
+      <p class="qm-sub">Core · Adjacent · Transformational — typical 70/20/10 allocation.</p>
+      <div class="qm-fig"><svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg"><rect x="76" y="106" width="68" height="46" fill="#E3F5EF" stroke="#FFFFFF" stroke-width="1.5"/><rect x="76" y="60" width="68" height="46" fill="#E3F5EF" stroke="#FFFFFF" stroke-width="1.5"/><rect x="76" y="14" width="68" height="46" fill="#4A7BB0" stroke="#FFFFFF" stroke-width="1.5"/><rect x="144" y="106" width="68" height="46" fill="#E3F5EF" stroke="#FFFFFF" stroke-width="1.5"/><rect x="144" y="60" width="68" height="46" fill="#4A7BB0" stroke="#FFFFFF" stroke-width="1.5"/><rect x="144" y="14" width="68" height="46" fill="#1D3A5C" stroke="#FFFFFF" stroke-width="1.5"/><rect x="212" y="106" width="68" height="46" fill="#4A7BB0" stroke="#FFFFFF" stroke-width="1.5"/><rect x="212" y="60" width="68" height="46" fill="#1D3A5C" stroke="#FFFFFF" stroke-width="1.5"/><rect x="212" y="14" width="68" height="46" fill="#1D3A5C" stroke="#FFFFFF" stroke-width="1.5"/><text x="110" y="128" font-family="Arial" font-size="11" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Core</text><text x="110" y="141" font-family="Arial" font-size="9" fill="#1D3A5C" text-anchor="middle">70%</text><text x="178" y="82" font-family="Arial" font-size="11" fill="#FFFFFF" text-anchor="middle" font-weight="bold">Adjacent</text><text x="178" y="95" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">20%</text><text x="246" y="34" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle" font-weight="bold">Transform.</text><text x="246" y="47" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle">10%</text><text x="72" y="132" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="end">Existing</text><text x="110" y="163" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="middle">Existing</text><text x="72" y="86" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="end">Adjacent</text><text x="178" y="163" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="middle">Adjacent</text><text x="72" y="40" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="end">New</text><text x="246" y="163" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="middle">New</text><text x="14" y="83" font-family="Arial" font-size="9" fill="#1D3A5C" text-anchor="middle" font-weight="bold" transform="rotate(-90 14 83.0)">How to win</text><text x="178" y="178" font-family="Arial" font-size="9" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Where to play</text></svg></div>
+      <div class="qm-ref"><span class="qm-ref-l" style="color:#3E6E8E">REFERENCE</span><p>Nagji, B. &amp; Tuff, G. (2012) Managing Your Innovation Portfolio. Harvard Business Review, May, pp. 66–74.</p></div>
+      <a class="qm-full" href="sheet.html#F44" target="_blank" rel="noopener" style="background:#3E6E8E">&#128196;&nbsp; View Full A4 Reference Sheet</a>
+    </div>
+<div class="qmodal" id="q-F45">
+      <div class="qm-slib" style="color:#3E6E8E">F45 &middot; SLIBRARY 12 &mdash; INNOVATION, BD &amp; LEADERSHIP</div>
+      <h2 class="qm-title">Drucker — Innovation vs Invention</h2>
+      <p class="qm-author">Peter Drucker</p>
+      <p class="qm-reddef" style="border-color:#3E6E8E;color:#3E6E8E">Drucker&#x27;s Innovation vs Invention distinction holds that invention is the act of creating something novel, while innovation is the disciplined process of converting that novelty into customer-recognised, market-validated value — a distinction that explains why most inventions never become innovations and why innovation is a managerial discipline rather than a creative event (Drucker, 1985).</p>
+      <p class="qm-sub">Invention creates novelty; innovation creates value.</p>
+      <div class="qm-fig"><svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="100" r="22" fill="#1D3A5C"/><text x="40" y="103" font-family="Arial" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">Novelty</text><path d="M62,92 C90,60 110,50 150,50" fill="none" stroke="#4A7BB0" stroke-width="2"/><line x1="150" y1="50" x2="185.1" y2="50.0" stroke="#4A7BB0" stroke-width="2"/><polygon points="190.0,50.0 183.9,53.5 183.9,46.5" fill="#4A7BB0"/><text x="120" y="40" font-family="Arial" font-size="11" fill="#4A7BB0" text-anchor="middle" font-weight="bold">Invention</text><rect x="198" y="24" width="30" height="52" fill="#EAF0F7" stroke="#1D3A5C" stroke-width="1.5" rx="2"/><circle cx="222" cy="52" r="2.5" fill="#1D3A5C"/><line x1="204" y1="36" x2="222" y2="64" stroke="#B4232A" stroke-width="2"/><line x1="222" y1="36" x2="204" y2="64" stroke="#B4232A" stroke-width="2"/><text x="213" y="90" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="middle">No market</text><path d="M62,108 C90,140 110,150 150,150" fill="none" stroke="#00B388" stroke-width="2.5"/><line x1="150" y1="150" x2="226.4" y2="150.0" stroke="#00B388" stroke-width="2.5"/><polygon points="232.0,150.0 225.1,154.0 225.1,146.0" fill="#00B388"/><text x="120" y="170" font-family="Arial" font-size="11" fill="#00B388" text-anchor="middle" font-weight="bold">Innovation</text><circle cx="256" cy="122" r="9" fill="#1D3A5C"/><path d="M240,160 v-12 a16,14 0 0 1 32,0 v12z" fill="#1D3A5C"/><text x="256" y="178" font-family="Arial" font-size="9" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Paying</text><text x="256" y="190" font-family="Arial" font-size="9" fill="#1D3A5C" text-anchor="middle" font-weight="bold">customer</text><text x="190" y="140" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="middle">Value created</text></svg></div>
+      <div class="qm-ref"><span class="qm-ref-l" style="color:#3E6E8E">REFERENCE</span><p>Drucker, P. F. (1985) Innovation and Entrepreneurship. New York: Harper &amp; Row.</p></div>
+      <a class="qm-full" href="sheet.html#F45" target="_blank" rel="noopener" style="background:#3E6E8E">&#128196;&nbsp; View Full A4 Reference Sheet</a>
+    </div>
+<div class="qmodal" id="q-F46">
+      <div class="qm-slib" style="color:#3E6E8E">F46 &middot; SLIBRARY 12 &mdash; INNOVATION, BD &amp; LEADERSHIP</div>
+      <h2 class="qm-title">Sørensen&#x27;s Market-Oriented BD</h2>
+      <p class="qm-author">Hans Eibe Sørensen (2012)</p>
+      <p class="qm-reddef" style="border-color:#3E6E8E;color:#3E6E8E">Market-Oriented Business Development is the discipline of integrating customer-derived market insight into strategic and operational decisions across the firm, positioning Business Development as a boundary-spanning function distinct from marketing (which manages demand creation) and sales (which manages transactions) (Sørensen, 2012).</p>
+      <p class="qm-sub">BD as the cross-functional bridge between market insight, strategy and operations.</p>
+      <div class="qm-fig"><svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="70" r="52" fill="#EAF0F7" stroke="#4A7BB0" stroke-width="1.5" fill-opacity="0.85"/><circle cx="112" cy="128" r="52" fill="#E3F5EF" stroke="#00B388" stroke-width="1.5" fill-opacity="0.85"/><circle cx="188" cy="128" r="52" fill="#EAF0F7" stroke="#1D3A5C" stroke-width="1.5" fill-opacity="0.6"/><text x="150" y="46" font-family="Arial" font-size="10" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Market</text><text x="150" y="58" font-family="Arial" font-size="10" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Insight</text><text x="92" y="146" font-family="Arial" font-size="10" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Strategy</text><text x="208" y="146" font-family="Arial" font-size="10" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Operations</text><circle cx="150" cy="108" r="17" fill="#1D3A5C"/><text x="150" y="112" font-family="Arial" font-size="12" fill="#FFFFFF" text-anchor="middle" font-weight="bold">BD</text><text x="268" y="24" font-family="Arial" font-size="9" fill="#5A6072" text-anchor="middle">bridge</text><line x1="255" y1="30" x2="198.4" y2="89.5" stroke="#5A6072" stroke-width="1"/><polygon points="196.0,92.0 197.2,87.1 200.8,90.6" fill="#5A6072"/></svg></div>
+      <div class="qm-ref"><span class="qm-ref-l" style="color:#3E6E8E">REFERENCE</span><p>Sørensen, H. E. (2012) Business Development: A Market-Oriented Perspective. Chichester: John Wiley &amp; Sons.</p></div>
+      <a class="qm-full" href="sheet.html#F46" target="_blank" rel="noopener" style="background:#3E6E8E">&#128196;&nbsp; View Full A4 Reference Sheet</a>
+    </div>
+<div class="qmodal" id="q-F47">
+      <div class="qm-slib" style="color:#3E6E8E">F47 &middot; SLIBRARY 12 &mdash; INNOVATION, BD &amp; LEADERSHIP</div>
+      <h2 class="qm-title">Yukl&#x27;s Influence Tactics</h2>
+      <p class="qm-author">Gary Yukl (1980s onward)</p>
+      <p class="qm-reddef" style="border-color:#3E6E8E;color:#3E6E8E">Yukl&#x27;s Influence Tactics is a research-derived typology of eleven distinct proactive tactics that leaders, BD professionals and managers use to influence the behaviour of others — including rational persuasion, inspirational appeal, consultation, ingratiation, exchange, personal appeal, coalition, legitimating, pressure, collaboration, and apprising — with empirical evidence on which tactics produce commitment vs compliance vs resistance (Yukl, 2010).</p>
+      <p class="qm-sub">Eleven proactive influence tactics ranked by effectiveness.</p>
+      <div class="qm-fig"><svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg"><rect x="94" y="10" width="180" height="11" fill="#00B388" rx="2"/><text x="89" y="19" font-family="Arial" font-size="8" fill="#1D3A5C" text-anchor="end" font-weight="bold">Rational</text><rect x="94" y="25" width="170" height="11" fill="#00B388" rx="2"/><text x="89" y="34" font-family="Arial" font-size="8" fill="#1D3A5C" text-anchor="end" font-weight="bold">Inspirational</text><rect x="94" y="40" width="160" height="11" fill="#00B388" rx="2"/><text x="89" y="49" font-family="Arial" font-size="8" fill="#1D3A5C" text-anchor="end" font-weight="bold">Consultation</text><rect x="94" y="55" width="140" height="11" fill="#4A7BB0" rx="2"/><text x="89" y="64" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="end">Collaboration</text><rect x="94" y="70" width="120" height="11" fill="#4A7BB0" rx="2"/><text x="89" y="79" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="end">Apprising</text><rect x="94" y="85" width="110" height="11" fill="#4A7BB0" rx="2"/><text x="89" y="94" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="end">Ingratiation</text><rect x="94" y="100" width="100" height="11" fill="#4A7BB0" rx="2"/><text x="89" y="109" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="end">Exchange</text><rect x="94" y="115" width="90" height="11" fill="#4A7BB0" rx="2"/><text x="89" y="124" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="end">Personal appeal</text><rect x="94" y="130" width="70" height="11" fill="#4A7BB0" rx="2"/><text x="89" y="139" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="end">Legitimating</text><rect x="94" y="145" width="45" height="11" fill="#B4232A" rx="2"/><text x="89" y="154" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="end">Pressure</text><rect x="94" y="160" width="38" height="11" fill="#B4232A" rx="2"/><text x="89" y="169" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="end">Coalition</text><line x1="94" y1="8" x2="94" y2="178" stroke="#1D3A5C" stroke-width="1"/><line x1="100" y1="188" x2="283.8" y2="188.0" stroke="#1D3A5C" stroke-width="1.2"/><polygon points="288.0,188.0 282.8,191.0 282.8,185.0" fill="#1D3A5C"/><text x="190" y="184" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="middle">more effective</text></svg></div>
+      <div class="qm-ref"><span class="qm-ref-l" style="color:#3E6E8E">REFERENCE</span><p>Yukl, G. A. (2010) Leadership in Organizations. 7th ed. Upper Saddle River, NJ: Pearson.</p></div>
+      <a class="qm-full" href="sheet.html#F47" target="_blank" rel="noopener" style="background:#3E6E8E">&#128196;&nbsp; View Full A4 Reference Sheet</a>
+    </div>
+<div class="qmodal" id="q-F48">
+      <div class="qm-slib" style="color:#3E6E8E">F48 &middot; SLIBRARY 12 &mdash; INNOVATION, BD &amp; LEADERSHIP</div>
+      <h2 class="qm-title">Goleman&#x27;s Emotional Intelligence</h2>
+      <p class="qm-author">Daniel Goleman (1995, 2002)</p>
+      <p class="qm-reddef" style="border-color:#3E6E8E;color:#3E6E8E">Emotional Intelligence (EI) is a four-quadrant capability model identifying the personal and social competencies that distinguish effective leaders, BD professionals and managers — Self-Awareness (recognising one&#x27;s own emotions), Self-Management (regulating them), Social Awareness (recognising others&#x27; emotions), and Relationship Management (influencing them) — with empirical evidence linking EI to professional and BD effectiveness (Goleman, 1995, 2002).</p>
+      <p class="qm-sub">Self-awareness · Self-management · Social awareness · Relationship management.</p>
+      <div class="qm-fig"><svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg"><rect x="62" y="28" width="108" height="68" fill="#EAF0F7" stroke="#4A7BB0" stroke-width="1" rx="5"/><text x="116" y="59" font-family="Arial" font-size="10" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Self-</text><text x="116" y="72" font-family="Arial" font-size="10" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Awareness</text><rect x="174" y="28" width="108" height="68" fill="#EAF0F7" stroke="#4A7BB0" stroke-width="1" rx="5"/><text x="228" y="59" font-family="Arial" font-size="10" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Social</text><text x="228" y="72" font-family="Arial" font-size="10" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Awareness</text><rect x="62" y="100" width="108" height="68" fill="#EAF0F7" stroke="#4A7BB0" stroke-width="1" rx="5"/><text x="116" y="131" font-family="Arial" font-size="10" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Self-</text><text x="116" y="144" font-family="Arial" font-size="10" fill="#1D3A5C" text-anchor="middle" font-weight="bold">Management</text><rect x="174" y="100" width="108" height="68" fill="#1D3A5C" rx="5"/><text x="228" y="131" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle" font-weight="bold">Relationship</text><text x="228" y="144" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle" font-weight="bold">Management</text><text x="116" y="18" font-family="Arial" font-size="10" fill="#4A7BB0" text-anchor="middle" font-weight="bold">Self</text><text x="228" y="18" font-family="Arial" font-size="10" fill="#4A7BB0" text-anchor="middle" font-weight="bold">Others</text><text x="52" y="65" font-family="Arial" font-size="9" fill="#4A7BB0" text-anchor="end" font-weight="bold">Recognise</text><text x="52" y="137" font-family="Arial" font-size="9" fill="#4A7BB0" text-anchor="end" font-weight="bold">Regulate</text><line x1="116.0" y1="86" x2="116.0" y2="105.8" stroke="#00B388" stroke-width="2"/><polygon points="116.0,110.0 113.0,104.8 119.0,104.8" fill="#00B388"/><line x1="160" y1="150.0" x2="179.8" y2="150.0" stroke="#00B388" stroke-width="2"/><polygon points="184.0,150.0 178.8,153.0 178.8,147.0" fill="#00B388"/><line x1="160" y1="78.0" x2="179.8" y2="78.0" stroke="#00B388" stroke-width="2"/><polygon points="184.0,78.0 178.8,81.0 178.8,75.0" fill="#00B388"/><line x1="228.0" y1="86" x2="228.0" y2="105.8" stroke="#00B388" stroke-width="2"/><polygon points="228.0,110.0 225.0,104.8 231.0,104.8" fill="#00B388"/><text x="172" y="194" font-family="Arial" font-size="8" fill="#5A6072" text-anchor="middle">self → others</text></svg></div>
+      <div class="qm-ref"><span class="qm-ref-l" style="color:#3E6E8E">REFERENCE</span><p>Goleman, D. (1995) Emotional Intelligence. New York: Bantam Books.</p></div>
+      <a class="qm-full" href="sheet.html#F48" target="_blank" rel="noopener" style="background:#3E6E8E">&#128196;&nbsp; View Full A4 Reference Sheet</a>
+    </div>
+  </div>
 </div>
 
-<div class="slibrary-block"><h3>Slibrary 12 — Innovation, BD &amp; Leadership</h3><span class="count">4 frameworks</span></div>
-<div class="gallery">
-<div class="framework-card"><span class="num">F45</span><h4>Drucker — Innovation vs Invention</h4><p>Invention creates novelty; innovation creates value. Most inventions never become innovations.</p><span class="slib">Slibrary 12</span></div>
-<div class="framework-card"><span class="num">F46</span><h4>Sørensen's Market-Oriented BD</h4><p>BD as the cross-functional bridge between market insight, strategy and operations.</p><span class="slib">Slibrary 12</span></div>
-<div class="framework-card"><span class="num">F47</span><h4>Yukl's Influence Tactics</h4><p>Eleven proactive tactics — rational persuasion, inspirational appeal, consultation, exchange…</p><span class="slib">Slibrary 12</span></div>
-<div class="framework-card"><span class="num">F48</span><h4>Goleman's Emotional Intelligence</h4><p>Self-awareness, self-management, social awareness, relationship management — the BD operating system.</p><span class="slib">Slibrary 12</span></div>
-</div>
-</main>
-<footer><strong>BCOBM214</strong> · Unit 6: Intrapreneurship &amp; Corporate Business Development · © 2026 Dr. Hildegard Haas</footer>
-<script src="assets/frameworks.js"></script>
-<script src="assets/authors.js"></script>
-<script defer src="assets/protect.js"></script>
+<footer class="site">
+  <hr class="divider">
+  <p><strong>BCOBM214</strong> · Entrepreneurship &amp; Business Development · © 2026 Dr. Hildegard Haas</p>
+  <p style="font-size:12px;opacity:.7">EU Business School · Applying JD Meier's <strong>Thumbnail Thinking</strong> (2025) and Kurt Bostelaar's core-message method across the entire course</p>
+</footer>
+<script>
+(function(){
+  var overlay=document.getElementById('overlay'),qclose=document.getElementById('qclose'),last=null;
+  function open(id){last=document.activeElement;
+    document.querySelectorAll('.qmodal').forEach(function(m){m.classList.remove('active')});
+    var m=document.getElementById('q-'+id); if(!m)return; m.classList.add('active');
+    overlay.classList.add('open');document.body.style.overflow='hidden';overlay.scrollTop=0;qclose.focus();}
+  function close(){overlay.classList.remove('open');document.body.style.overflow='';if(last&&last.focus)last.focus();}
+  document.querySelectorAll('.fcard[data-fw]').forEach(function(c){c.addEventListener('click',function(){open(c.getAttribute('data-fw'))});});
+  qclose.addEventListener('click',close);
+  overlay.addEventListener('click',function(e){if(e.target===overlay)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&overlay.classList.contains('open'))close();});
+  var h=(location.hash||'').slice(1); if(/^F\d+$/.test(h)&&document.getElementById(h)){setTimeout(function(){document.getElementById(h).scrollIntoView({block:'center'});open(h);},60);}
+  var box=document.getElementById('gsearch');
+  box.addEventListener('input',function(){
+    var q=this.value.toLowerCase().trim();
+    document.querySelectorAll('.fcard[data-fw]').forEach(function(c){
+      var hay=(c.getAttribute('data-search')||'');
+      c.classList.toggle('hidden',!(!q||hay.indexOf(q)!==-1));
+    });
+    document.querySelectorAll('.fgrid').forEach(function(g){
+      var any=Array.prototype.slice.call(g.querySelectorAll('.fcard')).some(function(c){return !c.classList.contains('hidden')});
+      g.style.display=any?'':'none'; var hd=g.previousElementSibling;
+      if(hd&&hd.classList.contains('set-head'))hd.style.display=any?'':'none';
+    });
+    document.querySelectorAll('.unit-sec').forEach(function(u){
+      var any=Array.prototype.slice.call(u.querySelectorAll('.fcard')).some(function(c){return !c.classList.contains('hidden')});
+      u.style.display=any?'':'none';
+    });
+  });
+})();
+</script>
+<style id="bco-protect-css">
+  *{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none}
+  input,textarea{-webkit-user-select:text;-moz-user-select:text;-ms-user-select:text;user-select:text}
+  @media print{html,body{display:none !important}}
+</style>
+<script id="bco-protect-js">
+(function(){
+  document.addEventListener('contextmenu',function(e){e.preventDefault();},{capture:true});
+  ['copy','cut'].forEach(function(ev){document.addEventListener(ev,function(e){e.preventDefault();},{capture:true});});
+  document.addEventListener('dragstart',function(e){e.preventDefault();},{capture:true});
+  document.addEventListener('keydown',function(e){
+    var k=(e.key||'').toLowerCase(),meta=e.ctrlKey||e.metaKey;
+    if(meta&&['c','x','s','p','u','a'].indexOf(k)!==-1){e.preventDefault();return false;}
+    if(k==='f12'){e.preventDefault();return false;}
+    if(meta&&e.shiftKey&&['i','j','c'].indexOf(k)!==-1){e.preventDefault();return false;}
+  },{capture:true});
+})();
+</script>
 </body>
 </html>

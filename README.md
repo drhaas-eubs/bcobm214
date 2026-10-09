@@ -43,9 +43,10 @@ The script handles git init, staging, committing, setting the remote, and pushin
 
 | Path | Purpose |
 |---|---|
-| `index.html` | Course overview — 10 units, stats, navigation |
-| `unit1.html`–`unit10.html` | Framework gallery for each unit (8 frameworks per unit · 80 total) |
-| `all-frameworks.html` | Complete Slibrary Wall — all 80 frameworks on one page, organised by unit / Slibrary |
+| `index.html` | Course overview in the MARTI101 layout — 10 expandable units grouped by phase, each with a Kurt Bostelaar core message, ILO focus, Convince ⇄ Clarify message-strategy marker, thumbnail strip and resource rows; site search |
+| `unit1.html`–`unit10.html` | Thumbnail-Thinking framework gallery per unit (8 frameworks each) with quick-look modal → A4 sheet; deep links like `unit3.html#F17` open a framework |
+| `all-frameworks.html` | Complete Slibrary Wall — all 80 framework thumbnails on one searchable page, organised by unit / Slibrary |
+| `assets/thumbs.js` | Bespoke JD Meier-style thumbnail SVG for every framework (F1–F80); used by the galleries, the A4 sheets and the modal |
 | `slibrary.html` | Framework authors — bios for every thinker referenced |
 | `pedagogy.html` | Integrated pedagogical approach (Kolb, Effectuation, 5 signature pedagogies, Bloom distribution, ILO alignment) |
 | `activities/` | Per-unit 7-phase session guides (all 10 units complete) |

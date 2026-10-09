@@ -159,6 +159,7 @@
 
   /* ---------- SVG fallback icons ---------- */
   function renderFrameworkIcon(fw) {
+    if (window.BCOBM214_THUMBS && window.BCOBM214_THUMBS[fw.num]) return window.BCOBM214_THUMBS[fw.num];
     var palette = ['#155e4a','#1e7a60','#2d9377','#b8893a','#7a5a14','#1f5563','#3a5a2e','#6b264c','#7a3329','#0f1a17'];
     var c = palette[(fw.unit - 1) % palette.length];
     return (
